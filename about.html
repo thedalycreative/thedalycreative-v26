@@ -30,40 +30,18 @@
 		<!-- ===== NAV BAR ===== -->
 		<div id="navbar"></div>
 
-		<!-- ===== ABOUT SECTION ===== -->
-		<section id="about" class="about-preview" style="height: 100vh">
-			<div
-				class="container"
-				style="display: flex; align-items: center; height: 100%"
-			>
-				<div class="about-content">
-					<h2>Built by Creators, for Creators</h2>
-					<p class="about-text">
-						At The Daly Creative, we believe that great brands are built at the
-						intersection of art and intelligence. Our team brings together designers,
-						developers, strategists, and AI specialists who are passionate about
-						helping businesses grow creatively — and intelligently.
-					</p>
-					<p class="about-text">
-						We're not just about making things look good (though we do that too).
-						We're about creating systems, tools, and strategies that empower your
-						brand to thrive in an ever-changing digital landscape.
-					</p>
-					<a href="#contact" class="cta-button">Work With Us</a>
-				</div>
+		<!-- ===== ABOUT HERO SECTION ===== -->
+		<section id="about" class="hero hero-half">
+			<div class="hero-content">
+				<h1 class="typing-hero" aria-label="Meet the Tim">
+					<span class="typing-text"></span>
+					<span class="typing-cursor">|</span>
+				</h1>
 			</div>
 		</section>
 
 		<!-- ===== MEET THE TEAM SECTION ===== -->
 		<section class="meet-team-section">
-			<div class="container">
-				<div class="section-header">
-					<h2>
-						Meet the
-						<span style="text-decoration: line-through; opacity: 0.4">Team</span> Tim
-					</h2>
-					<p>The brain behind The Daly Creative</p>
-				</div>
 
 				<div class="team-member-detail">
 					<div class="team-member-visual">
@@ -243,67 +221,60 @@
 						</div>
 					</div>
 
-					<!-- Credentials -->
-					<div class="cv-credentials">
-						<h4>Education & Certifications</h4>
-						<div class="credentials-grid">
-							<div class="credential-badge">
-								<i class="bi bi-patch-check-fill"></i>
-								<div class="credential-text">
-									<span>Diploma of IT (Back End Web Development & Cyber Security)</span>
-									<strong>Equinim College</strong>
-									<span class="credential-date">2024-2025</span>
-								</div>
+				</div>
+
+				<!-- Education -->
+				<div class="cv-education">
+					<h4>Education</h4>
+					<div class="education-cards">
+						<div class="education-card">
+							<div class="education-icon">
+								<i class="bi bi-mortarboard-fill"></i>
 							</div>
-							<div class="credential-badge">
-								<i class="bi bi-patch-check-fill"></i>
-								<div class="credential-text">
-									<span>Bachelor of Business Administration (Marketing)</span>
-									<strong>Torrens University Australia</strong>
-									<span class="credential-date">Currently completing</span>
-								</div>
+							<div class="education-details">
+								<h5>Diploma of IT</h5>
+								<p class="education-focus">Back End Web Development & Cyber Security</p>
+								<p class="education-school">Equinim College</p>
+								<p class="education-date">2024 - 2025</p>
 							</div>
-							<div class="credential-badge">
-								<i class="bi bi-patch-check-fill"></i>
-								<div class="credential-text">
-									<span>HTML, CSS & Responsive Design</span>
-								</div>
+						</div>
+						<div class="education-card">
+							<div class="education-icon">
+								<i class="bi bi-mortarboard-fill"></i>
 							</div>
-							<div class="credential-badge">
-								<i class="bi bi-patch-check-fill"></i>
-								<div class="credential-text">
-									<span>JavaScript & Modern Web Development</span>
-								</div>
+							<div class="education-details">
+								<h5>Bachelor of Business Administration</h5>
+								<p class="education-focus">Marketing</p>
+								<p class="education-school">Torrens University Australia</p>
+								<p class="education-date">Currently completing</p>
 							</div>
-							<div class="credential-badge">
-								<i class="bi bi-patch-check-fill"></i>
-								<div class="credential-text">
-									<span>Node.js, Express, MongoDB & REST APIs</span>
-								</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Technical Skills -->
+				<div class="cv-skills">
+					<h4>Technical Skills</h4>
+					<div class="skills-group-grid">
+						<div class="skills-group">
+							<h5>Web Development</h5>
+							<div class="skills-tags">
+								<span class="skill-tag">HTML & CSS</span>
+								<span class="skill-tag">JavaScript</span>
+								<span class="skill-tag">Node.js & Express</span>
+								<span class="skill-tag">REST APIs</span>
+								<span class="skill-tag">Bootstrap</span>
+								<span class="skill-tag">Responsive Design</span>
 							</div>
-							<div class="credential-badge">
-								<i class="bi bi-patch-check-fill"></i>
-								<div class="credential-text">
-									<span>Bootstrap & CSS Frameworks</span>
-								</div>
-							</div>
-							<div class="credential-badge">
-								<i class="bi bi-patch-check-fill"></i>
-								<div class="credential-text">
-									<span>Git, GitHub & Version Control</span>
-								</div>
-							</div>
-							<div class="credential-badge">
-								<i class="bi bi-patch-check-fill"></i>
-								<div class="credential-text">
-									<span>VS Code & Development Tools</span>
-								</div>
-							</div>
-							<div class="credential-badge">
-								<i class="bi bi-patch-check-fill"></i>
-								<div class="credential-text">
-									<span>Microsoft 365, Azure AD & Enterprise Systems</span>
-								</div>
+						</div>
+						<div class="skills-group">
+							<h5>Tools & Platforms</h5>
+							<div class="skills-tags">
+								<span class="skill-tag">Git & GitHub</span>
+								<span class="skill-tag">VS Code</span>
+								<span class="skill-tag">MongoDB</span>
+								<span class="skill-tag">Microsoft 365</span>
+								<span class="skill-tag">Azure AD</span>
 							</div>
 						</div>
 					</div>
@@ -368,15 +339,6 @@
 				});
 			});
 
-			// Form submission handling
-			document
-				.querySelector(".contact-form")
-				.addEventListener("submit", function (e) {
-					e.preventDefault();
-					alert("Thank you for your message! We'll get back to you soon.");
-					this.reset();
-				});
-
 			// Add scroll effect to navbar
 			window.addEventListener("scroll", function () {
 				const nav = document.querySelector("nav");
@@ -389,6 +351,95 @@
 					nav.style.boxShadow = "0 2px 10px rgba(0,0,0,0.1)";
 				}
 			});
+
+			// ===== TYPING HERO ANIMATION =====
+			(function() {
+				const textEl = document.querySelector(".typing-text");
+				if (!textEl) return;
+
+				const TYPING_SPEED = 80;
+				const DELETE_SPEED = 50;
+				const PAUSE_AFTER_TEAM = 600;
+				const PAUSE_BEFORE_TIM = 400;
+				const HOLD_DURATION = 3000;
+				const PAUSE_BEFORE_RESTART = 800;
+
+				function sleep(ms) {
+					return new Promise(resolve => setTimeout(resolve, ms));
+				}
+
+				async function typeText(text) {
+					for (let i = 0; i < text.length; i++) {
+						textEl.textContent += text[i];
+						await sleep(TYPING_SPEED);
+					}
+				}
+
+				async function deleteAll() {
+					// Get the plain text version for backspacing
+					const fullText = textEl.textContent;
+					// "Meet the Team Tim*" -> first delete " Tim*" (5 chars after "Team")
+					// then delete "Team" (remove strikethrough), then "Meet the "
+					const teamEnd = 13; // "Meet the Team" = 13 chars
+					const prefix = "Meet the ";
+
+					// Phase A: Delete " Tim*" character by character (keeping strikethrough)
+					for (let i = fullText.length; i > teamEnd; i--) {
+						const after = fullText.substring(teamEnd, i - 1);
+						textEl.innerHTML = prefix + '<span class="typing-strikethrough">Team</span>' + after;
+						await sleep(DELETE_SPEED);
+					}
+
+					// Phase B: Remove strikethrough, show plain "Meet the Team"
+					textEl.textContent = fullText.substring(0, teamEnd);
+					await sleep(DELETE_SPEED);
+
+					// Phase C: Delete remaining text character by character
+					for (let i = teamEnd; i > 0; i--) {
+						textEl.textContent = fullText.substring(0, i - 1);
+						await sleep(DELETE_SPEED);
+					}
+					textEl.innerHTML = "";
+				}
+
+				async function applyStrikethrough() {
+					const currentText = textEl.textContent;
+					// "Meet the Team" - wrap "Team" (last 4 chars before any addition)
+					const prefix = currentText.substring(0, currentText.length - 4);
+					const team = currentText.substring(currentText.length - 4);
+					textEl.innerHTML = prefix + '<span class="typing-strikethrough">' + team + '</span>';
+				}
+
+				async function typeAfterStrikethrough(text) {
+					for (let i = 0; i < text.length; i++) {
+						textEl.innerHTML += text[i];
+						await sleep(TYPING_SPEED);
+					}
+				}
+
+				async function runAnimation() {
+					while (true) {
+						// Phase 1: Type "Meet the "
+						await typeText("Meet the ");
+						// Phase 2: Type "Team"
+						await typeText("Team");
+						// Phase 3: Pause, then strikethrough "Team"
+						await sleep(PAUSE_AFTER_TEAM);
+						await applyStrikethrough();
+						// Phase 4: Pause, then type " Tim*"
+						await sleep(PAUSE_BEFORE_TIM);
+						await typeAfterStrikethrough(" Tim*");
+						// Phase 5: Hold
+						await sleep(HOLD_DURATION);
+						// Phase 6: Backspace all
+						await deleteAll();
+						// Phase 7: Pause before restart
+						await sleep(PAUSE_BEFORE_RESTART);
+					}
+				}
+
+				runAnimation();
+			})();
 		</script>
 		<!-- ===== <<< SCRIPTS <<< ===== -->
 	</body>
