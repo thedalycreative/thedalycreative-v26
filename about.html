@@ -12,7 +12,7 @@
 			content="We help brands grow through design, tech, and tools that think with you. Brand identity, web development, AI tools, and market research."
 		/>
 		<!--Favicon-->
-		<link rel="icon" type="image/png" href="/images/tdc-flavicon1-1563x.png" />
+		<link rel="icon" type="image/png" href="images/icons/icon-x256.png" />
 		<!--Bootstrap Icons-->
 		<link
 			rel="stylesheet"
@@ -31,8 +31,9 @@
 		<div id="navbar"></div>
 
 		<!-- ===== ABOUT HERO SECTION ===== -->
-		<section id="about" class="hero hero-half">
-			<div class="hero-content">
+		<section id="about" class="hero">
+			<div class="hero-bg" style="display:none;"></div>
+			<div class="hero-content" style="position:relative;z-index:1;">
 				<h1 class="typing-hero" aria-label="Meet the Tim">
 					<span class="typing-text"></span>
 					<span class="typing-cursor">|</span>
@@ -41,58 +42,53 @@
 		</section>
 
 		<!-- ===== MEET THE TEAM SECTION ===== -->
-		<section class="meet-team-section">
-
-				<div class="team-member-detail">
-					<div class="team-member-visual">
-						<img
-							src="/images/tdc-meet-tim.jpeg"
-							alt="Tim Daly - Founder of The Daly Creative"
-							class="team-photo"
-						/>
-					</div>
-					<div class="team-member-text">
-						<h3>Tim Daly</h3>
-						<p class="team-role">Founder & Creative Strategist</p>
-
-						<p class="team-bio">
-							Tim is a multi-disciplinary creative who lives at the intersection of
-							design, technology, and strategy. With a background in brand development,
-							web design, and AI automation, he founded The Daly Creative to help
-							businesses cut through the noise and build systems that actually work.
-						</p>
-
-						<p class="team-bio">
-							What sets Tim apart? He doesn't just build websites or design logos—he
-							creates intelligent systems that grow with your business. From custom AI
-							agents to full-stack brand identities, Tim believes in empowering clients
-							with tools and knowledge, not just deliverables.
-						</p>
-
-						<p class="team-bio">
-							As a neurodivergent creative, Tim understands the importance of clear
-							communication, structured workflows, and accessible design. His approach
-							is collaborative, transparent, and focused on long-term success rather
-							than quick wins.
-						</p>
-
-						<p class="team-bio">
-							When he's not building brands or training AI models, you'll find Tim
-							exploring Perth's coffee scene, tinkering with new tech, or advocating
-							for more human-centered digital experiences.
-						</p>
-
-						<div class="team-skills">
-							<span class="skill-tag">Brand Strategy</span>
-							<span class="skill-tag">Web Development</span>
-							<span class="skill-tag">AI Automation</span>
-							<span class="skill-tag">UX Design</span>
-							<span class="skill-tag">Market Research</span>
-							<span class="skill-tag">Content Systems</span>
-						</div>
+		<section class="meet-team-section" style="margin: 0; padding: 0 0 0 5vw; background: none; min-height: 100vh; height: 100svh;">
+			<div style="display: flex; align-items: center; min-height: 100vh; max-width: 1200px; margin: 0 auto;">
+				<div style="flex: 0 0 33.333%; position: relative; min-width: 180px; max-width: 340px; height: 100vh; min-height: 320px; display: flex; align-items: flex-end;">
+					<img
+						src="images/about-page/meet-tim-560x835.png"
+						alt="Tim Daly - Founder of The Daly Creative"
+						style="position: sticky; top: 100px; width: 100%; height: auto; max-width: 320px; min-width: 160px; background: none; display: block; margin: 0 auto; z-index: 1; box-shadow: none; border-radius: 0; padding-bottom: 0;"
+					/>
+				</div>
+				<div style="flex: 1 1 0; padding: 0 2vw 0 3vw; min-width: 0; max-width: 900px; font-family: 'Space Grotesk', Arial, sans-serif;">
+					<h3 style="font-size: 2.1rem; margin-bottom: 0.5rem; font-family: 'Fraunces', serif;">Tim Daly</h3>
+					<p class="team-role" style="font-weight: 600; color: var(--palette-purple); margin-bottom: 1.2rem;">Founder & Creative Strategist</p>
+					<p class="team-bio">Tim is a multi-disciplinary creative who lives at the intersection of design, technology, and strategy. With a background in brand development, web design, and AI automation, he founded The Daly Creative to help businesses cut through the noise and build systems that actually work.</p>
+					<p class="team-bio">What sets Tim apart? He doesn't just build websites or design logos—he creates intelligent systems that grow with your business. From custom AI agents to full-stack brand identities, Tim believes in empowering clients with tools and knowledge, not just deliverables.</p>
+					<p class="team-bio">As a neurodivergent creative, Tim understands the importance of clear communication, structured workflows, and accessible design. His approach is collaborative, transparent, and focused on long-term success rather than quick wins.</p>
+					<p class="team-bio">When he's not building brands or training AI models, you'll find Tim exploring Perth's coffee scene, tinkering with new tech, or advocating for more human-centered digital experiences.</p>
+					<div class="team-skills" style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+						<span class="skill-tag">Brand Strategy</span>
+						<span class="skill-tag">Web Development</span>
+						<span class="skill-tag">AI Automation</span>
+						<span class="skill-tag">UX Design</span>
+						<span class="skill-tag">Market Research</span>
+						<span class="skill-tag">Content Systems</span>
 					</div>
 				</div>
 			</div>
+			<style>
+				@media (max-width: 900px) {
+					.meet-team-section > div {
+						flex-direction: column !important;
+						align-items: stretch !important;
+						padding-left: 0 !important;
+						min-height: 100vh !important;
+					}
+					.meet-team-section img {
+						position: static !important;
+						max-width: 220px !important;
+						margin: 0 auto 1.5rem auto !important;
+						display: block !important;
+					}
+					.meet-team-section > div > div:last-child {
+						padding-left: 0 !important;
+						padding-right: 0 !important;
+					}
+				}
+			</style>
+		</section>
 		</section>
 
 		<!-- ===== EXPERIENCE & CREDENTIALS SECTION ===== -->
@@ -223,26 +219,28 @@
 
 				</div>
 
-				<!-- Education -->
-				<div class="cv-education">
-					<h4>Education</h4>
+				   <!-- Education & Skills Container -->
+				   <div class="container">
+				   <!-- Education -->
+				   <div class="cv-education">
+					<h4 style="margin-bottom: 20px;">Education</h4>
 					<div class="education-cards">
 						<div class="education-card">
-							<div class="education-icon">
-								<i class="bi bi-mortarboard-fill"></i>
+							<div class="education-icon" style="height: 100px; width: 100px;">
+								<i class="bi bi-mortarboard-fill" ></i>
 							</div>
-							<div class="education-details">
+							<div class="education-details" style="text-align: left; margin-left : 1.5rem;">
 								<h5>Diploma of IT</h5>
 								<p class="education-focus">Back End Web Development & Cyber Security</p>
 								<p class="education-school">Equinim College</p>
 								<p class="education-date">2024 - 2025</p>
 							</div>
 						</div>
-						<div class="education-card">
-							<div class="education-icon">
+						<div class="education-card ">
+							<div class="education-icon" style="height: 100px; width: 100px;">	
 								<i class="bi bi-mortarboard-fill"></i>
 							</div>
-							<div class="education-details">
+							<div class="education-details" style="text-align: left;">
 								<h5>Bachelor of Business Administration</h5>
 								<p class="education-focus">Marketing</p>
 								<p class="education-school">Torrens University Australia</p>
@@ -252,29 +250,29 @@
 					</div>
 				</div>
 
-				<!-- Technical Skills -->
-				<div class="cv-skills">
+				   <!-- Technical Skills -->
+				   <div class="cv-skills" style="text-align: center; margin: 50px 0;">
 					<h4>Technical Skills</h4>
-					<div class="skills-group-grid">
 						<div class="skills-group">
-							<h5>Web Development</h5>
-							<div class="skills-tags">
-								<span class="skill-tag">HTML & CSS</span>
-								<span class="skill-tag">JavaScript</span>
-								<span class="skill-tag">Node.js & Express</span>
-								<span class="skill-tag">REST APIs</span>
-								<span class="skill-tag">Bootstrap</span>
-								<span class="skill-tag">Responsive Design</span>
-							</div>
+							<h4>Web Development</h4>
+							<div class="skills-tags" style="justify-content: center;">
+								<span class="skill-tag" style="background-color: var(--palette-sky); color: var(--cream);">HTML & CSS</span>
+								<span class="skill-tag" style="background-color: var(--palette-amber); color: var(--cream);">JavaScript</span>
+								<span class="skill-tag" style="background-color: var(--palette-blue); color: var(--cream);">Node.js & Express</span>
+								<span class="skill-tag" style="background-color: var(--palette-purple); color: var(--cream);">REST APIs</span>
+								<span class="skill-tag" style="background-color: var(--palette-coral); color: var(--cream);">Bootstrap</span>
+								<span class="skill-tag" style="background-color: var(--palette-peach); color: var(--cream);">Responsive Design</span>
+							   </div>
+							   </div> <!-- End container for Education & Skills -->
 						</div>
-						<div class="skills-group">
-							<h5>Tools & Platforms</h5>
-							<div class="skills-tags">
-								<span class="skill-tag">Git & GitHub</span>
-								<span class="skill-tag">VS Code</span>
-								<span class="skill-tag">MongoDB</span>
-								<span class="skill-tag">Microsoft 365</span>
-								<span class="skill-tag">Azure AD</span>
+						<div class="skills-group" style="text-align: center;">
+							<h4>Tools & Platforms</h4>
+							<div class="skills-tags" style="justify-content: center;">
+								<span class="skill-tag" style="background-color: var(--palette-sky); color: var(--cream);">Git & GitHub</span>
+								<span class="skill-tag" style="background-color: var(--palette-amber); color: var(--cream);">VS Code</span>
+								<span class="skill-tag" style="background-color: var(--palette-blue); color: var(--cream);">MongoDB</span>
+								<span class="skill-tag" style="background-color: var(--palette-purple); color: var(--cream);">Microsoft 365</span>
+								<span class="skill-tag" style="background-color: var(--palette-coral); color: var(--cream);">Azure AD</span>
 							</div>
 						</div>
 					</div>
@@ -297,33 +295,58 @@
 		<div id="footer"></div>
 
 		<!-- ===== >>> NAVBAR INCLUDE >>> ===== -->
+
 		<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// Navbar include
 			fetch("-navbar.html")
 				.then((response) => response.text())
 				.then((html) => {
 					const navbar = document.getElementById("navbar");
-					if (navbar) {
-						navbar.innerHTML = html;
-					}
+					if (navbar) navbar.innerHTML = html;
 				})
 				.catch((error) => {
 					console.error("Navbar load failed:", error);
 				});
-		</script>
 
-		<!-- ===== >>> FOOTER INCLUDE >>> ===== -->
-		<script>
+			// Footer include
 			fetch("-footer.html")
 				.then((response) => response.text())
 				.then((html) => {
 					const footer = document.getElementById("footer");
-					if (footer) {
-						footer.innerHTML = html;
-					}
+					if (footer) footer.innerHTML = html;
 				})
 				.catch((error) => {
 					console.error("Footer load failed:", error);
 				});
+
+			// Smooth scroll for navigation links (after navbar is loaded)
+			setTimeout(function() {
+				document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+					anchor.addEventListener("click", function (e) {
+						const href = this.getAttribute("href");
+						if (href && href.startsWith("#")) {
+							e.preventDefault();
+							const target = document.querySelector(href);
+							if (target) {
+								target.scrollIntoView({ behavior: "smooth", block: "start" });
+							}
+						}
+					});
+				});
+			}, 300);
+
+			// Add scroll effect to navbar
+			window.addEventListener("scroll", function () {
+				const nav = document.querySelector("nav");
+				if (!nav) return;
+				if (window.scrollY > 100) {
+					nav.style.boxShadow = "0 4px 20px rgba(0,0,0,0.15)";
+				} else {
+					nav.style.boxShadow = "0 2px 10px rgba(0,0,0,0.1)";
+				}
+			});
+		});
 		</script>
 
 		<!-- ===== >>> SCRIPTS >>> ===== -->
