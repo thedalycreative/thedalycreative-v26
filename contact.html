@@ -1,239 +1,336 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<!--===== HEAD TAGS =====-->
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!--Page Title-->
 		<title>Contact | The Daly Creative</title>
-		<!--Description-->
 		<meta
 			name="description"
-			content="Get in touch with The Daly Creative. Tell us about your project and let's build something extraordinary together."
+			content="Contact The Daly Creative to discuss web, branding, SEO, and growth strategy. Share your project and receive a tailored response."
 		/>
-		<!--Favicon-->
-		<link rel="icon" type="image/png" href="logos/tdc-icon 256x256.png" />
-		<!--Bootstrap Icons-->
+		<link rel="icon" type="image/png" href="images/icons/icon-x256.png" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+		/>
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
 		/>
-		<!-- Lordicon Script -->
+		<script src="https://cdn.tailwindcss.com"></script>
 		<script src="https://cdn.lordicon.com/lordicon.js"></script>
-		<!--Leaflet CSS-->
 		<link
 			rel="stylesheet"
 			href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
 			integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
 			crossorigin=""
 		/>
-		<!--Main Stylesheet-->
 		<link rel="stylesheet" href="styles.css" />
+		<style>
+			.contact-hero {
+				background: radial-gradient(circle at 15% 20%, #dbc8ff 0%, transparent 34%),
+					linear-gradient(135deg, #0f1d2d 0%, #213753 52%, #2d9ea2 115%);
+				padding: 8rem 0 5rem;
+				color: #fff;
+			}
+			.contact-chip {
+				display: inline-flex;
+				gap: 0.45rem;
+				align-items: center;
+				padding: 0.45rem 0.9rem;
+				border: 1px solid rgba(255, 255, 255, 0.4);
+				border-radius: 999px;
+				background: rgba(255, 255, 255, 0.14);
+				font-weight: 600;
+			}
+			.contact-panel {
+				background: rgba(255, 255, 255, 0.1);
+				border: 1px solid rgba(255, 255, 255, 0.24);
+				border-radius: 1rem;
+				backdrop-filter: blur(8px);
+			}
+			.visual-card,
+			.contact-form-wrapper,
+			.contact-info-card {
+				border-radius: 1rem;
+				background: #fff;
+				border: 1px solid #e8edf4;
+				box-shadow: 0 20px 35px rgba(15, 29, 45, 0.1);
+			}
+			.visual-card {
+				padding: 1.25rem;
+				height: 100%;
+			}
+			.contact-grid {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 1.5rem;
+			}
+			@media (min-width: 992px) {
+				.contact-grid {
+					grid-template-columns: 1.1fr 1fr;
+				}
+			}
+			.contact-strip-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+				gap: 1rem;
+			}
+			.strip-item {
+				display: flex;
+				align-items: center;
+				gap: 0.8rem;
+				text-decoration: none;
+				color: #11253c;
+				background: #fff;
+				border-radius: 0.9rem;
+				padding: 1rem;
+				border: 1px solid #e8edf4;
+				box-shadow: 0 14px 24px rgba(15, 29, 45, 0.08);
+			}
+			.strip-icon {
+				width: 42px;
+				height: 42px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: #f3f6fa;
+				border-radius: 12px;
+			}
+			.strip-label {
+				font-size: 0.78rem;
+				text-transform: uppercase;
+				letter-spacing: 0.07em;
+				color: #5b6f86;
+				display: block;
+			}
+			.strip-value {
+				font-weight: 600;
+			}
+			.contact-info-card {
+				padding: 1.5rem;
+			}
+			.contact-method {
+				display: flex;
+				gap: 0.9rem;
+				align-items: flex-start;
+				margin-bottom: 1rem;
+			}
+			.contact-method i {
+				font-size: 1.05rem;
+				background: #eff4fa;
+				color: #1d3550;
+				width: 34px;
+				height: 34px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-radius: 10px;
+			}
+			.contact-form-wrapper {
+				padding: 1.5rem;
+			}
+			.form-group label {
+				font-weight: 600;
+				margin-bottom: 0.45rem;
+				display: block;
+			}
+			.form-control-modern {
+				width: 100%;
+				border: 1px solid #d8e1eb;
+				background: #f9fbfe;
+				border-radius: 0.75rem;
+				padding: 0.75rem 0.85rem;
+			}
+			.form-control-modern:focus {
+				outline: none;
+				border-color: #a079cb;
+				box-shadow: 0 0 0 3px rgba(160, 121, 203, 0.2);
+			}
+			.map-frame {
+				height: 240px;
+				border-radius: 0.9rem;
+				border: 1px solid #dde6f1;
+			}
+			.submit-button {
+				border: none;
+			}
+			.fla-icon {
+				width: 40px;
+				height: 40px;
+				object-fit: contain;
+			}
+		</style>
 	</head>
-	<body>
-		<!-- ===== NAV BAR ===== -->
+	<body class="bg-slate-50">
 		<div id="navbar"></div>
 
-		<!-- ===== CONTACT HERO SECTION ===== -->
-		<section id="contact" class="hero hero-half">
-			<div class="hero-content">
-				<h1>Let's Create Something Extraordinary</h1>
-				<p>Ready to bring your vision to life? We're here to help you grow.</p>
-			</div>
-		</section>
-
-		<!-- ===== CONTACT QUICK STRIP ===== -->
-		<section class="contact-strip">
+		<section class="contact-hero">
 			<div class="container">
-				<div class="contact-strip-grid">
-					<a href="mailto:hello@thedalycreative.com" class="strip-item">
-						<div class="strip-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/wwcjmjhn.json"
-								trigger="loop"
-								colors="primary:#fa9361,secondary:#ff8a3d"
-								style="width: 24px; height: 24px"
-							></lord-icon>
+				<div class="row align-items-center g-4">
+					<div class="col-lg-7">
+						<span class="contact-chip mb-3"><i class="bi bi-stars"></i> Let's build your next growth chapter</span>
+						<h1 class="display-4 fw-bold mb-3">A high-impact digital presence starts with one conversation.</h1>
+						<p class="lead mb-4">Share your goals, timelines, and ideas. You'll get thoughtful strategy, practical guidance, and an execution plan tailored to your brand.</p>
+						<div class="contact-panel p-3 d-flex flex-wrap gap-4">
+							<div><div class="h4 mb-0">24h</div><small>Typical reply time</small></div>
+							<div><div class="h4 mb-0">WA + Remote</div><small>Serving clients everywhere</small></div>
+							<div><div class="h4 mb-0">Strategy-first</div><small>Built for conversion</small></div>
 						</div>
-						<div class="strip-text">
-							<span class="strip-label">Email</span>
-							<span class="strip-value">hello@thedalycreative.com</span>
-						</div>
-					</a>
-					<a href="tel:+61414265050" class="strip-item">
-						<div class="strip-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/zpxybbhl.json"
-								trigger="loop"
-								colors="primary:#48c9b0,secondary:#0f1d2d"
-								style="width: 24px; height: 24px"
-							></lord-icon>
-						</div>
-						<div class="strip-text">
-							<span class="strip-label">Phone</span>
-							<span class="strip-value">+61 414 265 050</span>
-						</div>
-					</a>
-					<div class="strip-item">
-						<div class="strip-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/oqdmqjio.json"
-								trigger="loop"
-								colors="primary:#e3b156,secondary:#7fcbdb"
-								style="width: 24px; height: 24px"
-							></lord-icon>
-						</div>
-						<div class="strip-text">
-							<span class="strip-label">Location</span>
-							<span class="strip-value">Fremantle / Perth, WA</span>
-						</div>
+					</div>
+					<div class="col-lg-5 text-center">
+						<lord-icon src="https://cdn.lordicon.com/gqzfzudq.json" trigger="loop" delay="1200" colors="primary:#ffffff,secondary:#ffd166" style="width:210px;height:210px"></lord-icon>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- ===== CONTACT CONTENT SECTION ===== -->
-		<section class="contact-section">
+		<section class="py-4">
 			<div class="container">
-				<div class="contact-grid">
-					<!-- Contact Info Column -->
-					<div class="contact-info">
-						<h2>Get in Touch</h2>
-						<p class="contact-intro">
-							Whether you're starting from scratch or looking to level up, let's talk
-							about how we can help you achieve your goals.
-						</p>
-
-						<div class="contact-methods">
-							<div class="contact-method">
-								<i class="bi bi-clock-fill"></i>
-								<div>
-									<h3>Response Time</h3>
-									<p>We typically reply within 24 hours</p>
-								</div>
-							</div>
-
-							<div class="contact-method">
-								<i class="bi bi-chat-dots-fill"></i>
-								<div>
-									<h3>Free Consultation</h3>
-									<p>Book a no-obligation discovery call</p>
-								</div>
-							</div>
-
-							<div class="contact-method">
-								<i class="bi bi-globe2"></i>
-								<div>
-									<h3>Remote Friendly</h3>
-									<p>We work with clients across Australia and beyond</p>
-								</div>
-							</div>
+				<div class="contact-strip-grid">
+					<a href="mailto:timothy@thedalycreative.com.au" class="strip-item">
+						<div class="strip-icon">
+							<lord-icon src="https://cdn.lordicon.com/wwcjmjhn.json" trigger="loop" colors="primary:#fa9361,secondary:#ff8a3d" style="width:24px;height:24px"></lord-icon>
 						</div>
+						<div><span class="strip-label">Email</span><span class="strip-value">timothy@thedalycreative.com.au</span></div>
+					</a>
+					<a href="tel:+61414265050" class="strip-item">
+						<div class="strip-icon">
+							<lord-icon src="https://cdn.lordicon.com/zpxybbhl.json" trigger="loop" colors="primary:#48c9b0,secondary:#0f1d2d" style="width:24px;height:24px"></lord-icon>
+						</div>
+						<div><span class="strip-label">Phone</span><span class="strip-value">+61 414 265 050</span></div>
+					</a>
+					<div class="strip-item">
+						<div class="strip-icon"><img class="fla-icon" src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Location icon" /></div>
+						<div><span class="strip-label">Location</span><span class="strip-value">Fremantle / Perth, WA</span></div>
+					</div>
+					<div class="strip-item">
+						<div class="strip-icon"><img class="fla-icon" src="https://cdn-icons-png.flaticon.com/512/3050/3050525.png" alt="Calendar icon" /></div>
+						<div><span class="strip-label">Availability</span><span class="strip-value">Discovery calls this week</span></div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-						<!-- Map Section -->
-						<div class="contact-map">
-							<div
-								id="fremantle-map"
-								class="map-frame"
-								aria-label="Map showing Fremantle, Western Australia"
-							></div>
-							<p class="map-attribution">Map data &copy; OpenStreetMap contributors</p>
+		<section class="pb-5">
+			<div class="container">
+				<div class="row g-4 mb-4">
+					<div class="col-md-6 col-xl-3">
+						<div class="visual-card text-center">
+							<img class="fla-icon mb-2" src="https://cdn-icons-png.flaticon.com/512/3011/3011293.png" alt="Strategy icon" />
+							<h3 class="h6 mb-1">Clear Strategy</h3>
+							<p class="mb-0 text-secondary">We align design and messaging to your growth goals.</p>
 						</div>
 					</div>
+					<div class="col-md-6 col-xl-3">
+						<div class="visual-card text-center">
+							<img class="fla-icon mb-2" src="https://cdn-icons-png.flaticon.com/512/2784/2784487.png" alt="Website icon" />
+							<h3 class="h6 mb-1">Modern Build</h3>
+							<p class="mb-0 text-secondary">Fast, responsive websites built for real users.</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-xl-3">
+						<div class="visual-card text-center">
+							<img class="fla-icon mb-2" src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Growth icon" />
+							<h3 class="h6 mb-1">Growth Focus</h3>
+							<p class="mb-0 text-secondary">Lead generation, SEO, and better conversion pathways.</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-xl-3">
+						<div class="visual-card text-center">
+							<img class="fla-icon mb-2" src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Support icon" />
+							<h3 class="h6 mb-1">Ongoing Support</h3>
+							<p class="mb-0 text-secondary">A practical roadmap plus post-launch momentum.</p>
+						</div>
+					</div>
+				</div>
 
-					<!-- Contact Form Column -->
-					<div class="contact-form-wrapper">
-						<h2>Start a Conversation</h2>
-						<p class="form-intro">
-							Tell us a bit about your project and we'll get back to you with ideas and
-							a plan.
-						</p>
-						<form class="contact-form">
-							<div class="form-row">
-								<div class="form-group">
-									<label for="name">Your Name</label>
-									<input
-										type="text"
-										id="name"
-										name="name"
-										placeholder="Sharon Strzelecki"
-									/>
-								</div>
-								<div class="form-group">
-									<label for="email">Email Address</label>
-									<input
-										type="email"
-										id="email"
-										name="email"
-										placeholder="shaz@fountain-lakes.com.au"
-										required
-									/>
-								</div>
+				<div class="contact-grid">
+					<div class="contact-info-card">
+						<h2 class="h3">What happens after you enquire?</h2>
+						<p class="text-secondary mb-4">You'll receive a thoughtful response outlining quick wins and next steps for your project scope.</p>
+
+						<div class="contact-method">
+							<i class="bi bi-chat-dots-fill"></i>
+							<div>
+								<h3 class="h6 mb-1">Discovery First</h3>
+								<p class="mb-0 text-secondary">We unpack your goals, market, and audience before proposing solutions.</p>
 							</div>
+						</div>
+						<div class="contact-method">
+							<i class="bi bi-lightning-charge-fill"></i>
+							<div>
+								<h3 class="h6 mb-1">Fast Direction</h3>
+								<p class="mb-0 text-secondary">You'll get practical recommendations, not vague theory.</p>
+							</div>
+						</div>
+						<div class="contact-method">
+							<i class="bi bi-shield-check"></i>
+							<div>
+								<h3 class="h6 mb-1">Transparent Process</h3>
+								<p class="mb-0 text-secondary">Clear scope, realistic timeline, and confidence at every stage.</p>
+							</div>
+						</div>
 
-							<div class="form-row">
-								<div class="form-group">
-									<label for="phone">Phone Number (Optional)</label>
-									<input type="tel" id="phone" name="phone" placeholder="0419 123 456" />
+						<div id="fremantle-map" class="map-frame mt-4" aria-label="Map showing Fremantle, Western Australia"></div>
+						<p class="small text-secondary mt-2 mb-0">Map data &copy; OpenStreetMap contributors</p>
+					</div>
+
+					<div class="contact-form-wrapper">
+						<h2 class="h3">Start your project brief</h2>
+						<p class="text-secondary">Complete the form and your message will be prepared securely to send directly to us.</p>
+						<form class="contact-form" id="contact-form">
+							<input type="hidden" id="to-email" value="thetimdaly@gmail.com" />
+							<div class="row g-3">
+								<div class="col-md-6 form-group">
+									<label for="name">Your Name</label>
+									<input class="form-control-modern" type="text" id="name" name="name" placeholder="Jane Citizen" required />
 								</div>
-								<div class="form-group">
-									<label for="service">Which service are you interested in?</label>
-									<select id="service" name="service">
+								<div class="col-md-6 form-group">
+									<label for="email">Email Address</label>
+									<input class="form-control-modern" type="email" id="email" name="email" placeholder="jane@example.com" required />
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="phone">Phone Number (Optional)</label>
+									<input class="form-control-modern" type="tel" id="phone" name="phone" placeholder="0419 123 456" />
+								</div>
+								<div class="col-md-6 form-group">
+									<label for="service">Service</label>
+									<select class="form-control-modern" id="service" name="service">
 										<option value="">Select a service</option>
 										<option value="web-dev">Custom Website Development</option>
 										<option value="branding">Strategic Branding &amp; Identity</option>
 										<option value="seo">SEO &amp; Local Visibility</option>
 										<option value="support">Grow &amp; Support Plan</option>
-										<option value="training">Training &amp; Empowerment</option>
-										<option value="ads">Managed Ad Campaigns</option>
-										<option value="ai-strategy">AI Strategy &amp; Navigation</option>
-										<option value="automation">Workflow Automation</option>
-										<option value="content">AI Content Support</option>
-										<option value="data">Data Insights</option>
-										<option value="chatbots">Smart Chatbots</option>
-										<option value="future">Future-Proofing</option>
+										<option value="ai">AI Strategy &amp; Automation</option>
 										<option value="multiple">Multiple Services</option>
-										<option value="not-sure">Not Sure Yet</option>
 									</select>
 								</div>
+								<div class="col-12 form-group">
+									<label for="message">Tell us about your project</label>
+									<textarea class="form-control-modern" id="message" name="message" rows="5" placeholder="Tell us your goals, timeline, and ideal outcomes..." required></textarea>
+								</div>
 							</div>
-
-							<div class="form-group">
-								<label for="message">Tell us about your project</label>
-								<textarea
-									id="message"
-									name="message"
-									placeholder="Look at moy, look at moy, look at moy... I need a website that's noice, different, unusual!"
-								></textarea>
-							</div>
-
-							<button type="submit" class="submit-button">
-								Send Message <i class="bi bi-send-fill"></i>
-							</button>
+							<button type="submit" class="submit-button cta-button mt-4">Send Message <i class="bi bi-send-fill"></i></button>
+							<p id="form-note" class="small text-secondary mt-3 mb-0"></p>
 						</form>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- ===== FOOTER SECTION ===== -->
 		<div id="footer"></div>
 
-		<!-- ===== MAP LIBRARY ===== -->
 		<script
 			src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
 			integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
 			crossorigin=""
 		></script>
-
-		<!-- ===== SCRIPTS ===== -->
 		<script>
-			// Wait for DOM to be fully loaded
 			document.addEventListener("DOMContentLoaded", function () {
-				// Initialize Fremantle map (no controls)
-				var mapElement = document.getElementById("fremantle-map");
+				const mapElement = document.getElementById("fremantle-map");
 				if (mapElement && window.L) {
-					var map = L.map(mapElement, {
+					const map = L.map(mapElement, {
 						zoomControl: false,
 						attributionControl: false,
 						dragging: false,
@@ -244,72 +341,57 @@
 						tap: false,
 						touchZoom: false,
 					});
-					L.tileLayer(
-						"https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png",
-						{
-							maxZoom: 18,
-						},
-					).addTo(map);
-					var bounds = [
-						[-33.33, 115.45],
-						[-31.74, 116.2],
-					];
-					map.fitBounds(bounds, { padding: [20, 20] });
+					L.tileLayer("https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png", { maxZoom: 18 }).addTo(map);
+					map.fitBounds(
+						[
+							[-33.33, 115.45],
+							[-31.74, 116.2],
+						],
+						{ padding: [20, 20] },
+					);
 					L.marker([-32.0569, 115.747]).addTo(map);
 				}
 
-				// Form submission handling
-				const contactForm = document.querySelector(".contact-form");
+				const contactForm = document.getElementById("contact-form");
+				const note = document.getElementById("form-note");
 				if (contactForm) {
 					contactForm.addEventListener("submit", function (e) {
 						e.preventDefault();
-						alert("Thank you for your message! We'll get back to you soon.");
-						this.reset();
+						const to = document.getElementById("to-email").value;
+						const name = document.getElementById("name").value.trim();
+						const email = document.getElementById("email").value.trim();
+						const phone = document.getElementById("phone").value.trim() || "Not provided";
+						const service = document.getElementById("service").value || "Not selected";
+						const message = document.getElementById("message").value.trim();
+
+						const subject = encodeURIComponent(`New project enquiry from ${name}`);
+						const body = encodeURIComponent(
+							`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}\n\nProject Details:\n${message}`,
+						);
+						window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+						if (note) {
+							note.textContent = "Your email app should now open with your message pre-filled.";
+						}
 					});
 				}
-
-				// Add scroll effect to navbar
-				window.addEventListener("scroll", function () {
-					const nav = document.querySelector("nav");
-					if (nav) {
-						if (window.scrollY > 100) {
-							nav.style.boxShadow = "0 4px 20px rgba(0,0,0,0.15)";
-						} else {
-							nav.style.boxShadow = "0 2px 10px rgba(0,0,0,0.1)";
-						}
-					}
-				});
 			});
 		</script>
-
-		<!-- ===== NAVBAR INCLUDE ===== -->
 		<script>
 			fetch("-navbar.html")
 				.then((response) => response.text())
 				.then((html) => {
 					const navbar = document.getElementById("navbar");
-					if (navbar) {
-						navbar.innerHTML = html;
-					}
+					if (navbar) navbar.innerHTML = html;
 				})
-				.catch((error) => {
-					console.error("Navbar load failed:", error);
-				});
-		</script>
+				.catch((error) => console.error("Navbar load failed:", error));
 
-		<!-- ===== FOOTER INCLUDE ===== -->
-		<script>
 			fetch("-footer.html")
 				.then((response) => response.text())
 				.then((html) => {
 					const footer = document.getElementById("footer");
-					if (footer) {
-						footer.innerHTML = html;
-					}
+					if (footer) footer.innerHTML = html;
 				})
-				.catch((error) => {
-					console.error("Footer load failed:", error);
-				});
+				.catch((error) => console.error("Footer load failed:", error));
 		</script>
 	</body>
 </html>
