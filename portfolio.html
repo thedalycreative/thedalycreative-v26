@@ -5,18 +5,34 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!--Page Title-->
-		<title>Work | The Daly Creative</title>
+		<title>Projects | The Daly Creative</title>
 		<!--Description-->
 		<meta
 			name="description"
 			content="Explore our portfolio of creative projects including brand identity, web design, and digital strategy for businesses across Australia."
 		/>
 		<!--Favicon-->
-		<link rel="icon" type="image/png" href="logos/tdc-icon 256x256.png" />
+		<link rel="icon" type="image/png" href="images/icons/icon-x256.png" />
 		<!--Bootstrap Icons-->
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+		/>
+		<!-- Flaticon UICONS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css"
+		/>
+		<!-- Lordicon Script -->
+		<script src="https://cdn.lordicon.com/lordicon.js"></script>
+		<!-- AOS Animate on Scroll -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
 		/>
 		<!--Main Stylesheet-->
 		<link rel="stylesheet" href="styles.css" />
@@ -25,395 +41,729 @@
 		<!-- ===== NAV BAR ===== -->
 		<div id="navbar"></div>
 
-		<!-- ===== PORTFOLIO HERO ===== -->
-		<section id="work" class="hero hero-half">
-			<div class="hero-content">
-				<h1>My Work</h1>
-				<p>
-					Real projects. Real results. Here's a look at the brands we've helped
-					build, launch, and grow.
+		<!-- ===== PROJECTS HERO ===== -->
+		<section class="pf-hero">
+			<div class="pf-hero-bg"></div>
+			<div class="pf-hero-content">
+				<div class="pf-hero-badge" data-aos="fade-down" data-aos-delay="100">
+					<lord-icon
+						src="https://cdn.lordicon.com/wjyqkiew.json"
+						trigger="loop"
+						delay="1000"
+						colors="primary:#ffffff,secondary:#ffd166"
+						style="width: 28px; height: 28px"
+					></lord-icon>
+					<span>Our Work</span>
+				</div>
+				<h1 data-aos="fade-up" data-aos-delay="200">
+					Projects That <span class="pf-hero-accent">Perform</span>
+					in the Real World
+				</h1>
+				<p data-aos="fade-up" data-aos-delay="300">
+					Strategy-led, custom-built brands and websites designed to convert
+					visitors into customers.
 				</p>
+				<div class="pf-hero-stats" data-aos="fade-up" data-aos-delay="400">
+					<div class="hero-stat">
+						<span class="hero-stat-number">8+</span>
+						<span class="hero-stat-label">Brands Featured</span>
+					</div>
+					<div class="hero-stat-divider"></div>
+					<div class="hero-stat">
+						<span class="hero-stat-number">4</span>
+						<span class="hero-stat-label">Live Sites</span>
+					</div>
+					<div class="hero-stat-divider"></div>
+					<div class="hero-stat">
+						<span class="hero-stat-number">100%</span>
+						<span class="hero-stat-label">Custom Work</span>
+					</div>
+				</div>
+			</div>
+			<!-- Animated icon in hero -->
+			<div class="pf-hero-icon" data-aos="zoom-in" data-aos-delay="500">
+				<lord-icon
+					src="https://cdn.lordicon.com/wjyqkiew.json"
+					trigger="loop"
+					delay="1000"
+					colors="primary:#ffffff,secondary:#ffd166"
+					style="width: 180px; height: 180px"
+				></lord-icon>
 			</div>
 		</section>
-		<!-- ===== PORTFOLIO INTRO ===== -->
-		<section class="portfolio-intro">
+
+		<!-- ===== WHAT WE DELIVER (Value Props) ===== -->
+		<section class="pf-value-props">
 			<div class="container">
-				<div class="section-header">
-					<h2>Featured Projects</h2>
+				<div class="category-header" data-aos="fade-up">
+					<div
+						class="category-badge"
+						style="background: rgba(255, 138, 61, 0.1); color: var(--orange)"
+					>
+						<i class="bi bi-lightning-charge-fill"></i>
+						<span>What We Deliver</span>
+					</div>
+					<h2>Every Project is Built to Win</h2>
 					<p>
-						From health and wellbeing to hospitality and trades, we partner with
-						businesses at every stage to craft brands that connect and convert.
+						We don't just make things look good. Every pixel, every line of
+						code, every word is built to drive measurable results.
 					</p>
 				</div>
-			</div>
-		</section>
-
-		<!-- ===== PROJECT 1: DORA HEALTH AND WELLBEING ===== -->
-		<section class="portfolio-project" id="dora-health">
-			<div class="container">
-				<div class="project-card">
-					<div class="project-visual">
-						<div class="project-mockup dora-theme">
-							<div class="mockup-icon">
-								<lord-icon
-									src="https://cdn.lordicon.com/etwtznjn.json"
-									trigger="loop"
-									colors="primary:#fb837d,secondary:#a079cb"
-									style="width: 40px; height: 40px"
-								>
-								</lord-icon>
-							</div>
-							<span class="project-logo-text">Dora Health &amp; Wellbeing</span>
+				<div class="pf-value-grid">
+					<div
+						class="pf-value-card"
+						data-aos="fade-up"
+						data-aos-delay="100"
+					>
+						<div class="pf-value-icon" style="background: rgba(47, 158, 160, 0.12)">
+							<i class="fi fi-rr-bullseye-arrow" style="color: var(--teal)"></i>
 						</div>
-					</div>
-					<div class="project-info">
-						<div class="project-tags">
-							<span class="project-tag">Brand Identity</span>
-							<span class="project-tag">Digital Strategy</span>
-							<span class="project-tag">Social Media</span>
-						</div>
-						<h2>Dora Health &amp; Wellbeing</h2>
-						<p class="project-subtitle">Building a community around women's health</p>
-						<p class="project-description">
-							Dora Health &amp; Wellbeing is an emerging platform dedicated to building
-							an international community with the expertise and passion to solve
-							women's health challenges. We developed their brand identity from the
-							ground up, crafting a visual language that feels approachable,
-							empowering, and professional.
+						<h3>Conversion Focus</h3>
+						<p>
+							Designed customer journeys with clear CTAs, cleaner service
+							pages, and better lead flow.
 						</p>
-						<ul class="project-deliverables">
-							<li>
-								<lord-icon
-									src="https://cdn.lordicon.com/oqdmqjio.json"
-									trigger="loop"
-									colors="primary:#e3b156,secondary:#7fcbdb"
-									style="width: 24px; height: 24px"
-								></lord-icon>
-								Brand strategy and positioning
-							</li>
-							<li>
-								<lord-icon
-									src="https://cdn.lordicon.com/etwtznjn.json"
-									trigger="loop"
-									colors="primary:#ff8a3d,secondary:#2f9ea0"
-									style="width: 24px; height: 24px"
-								></lord-icon>
-								Logo design and visual identity
-							</li>
-							<li>
-								<lord-icon
-									src="https://cdn.lordicon.com/wwcjmjhn.json"
-									trigger="loop"
-									colors="primary:#fa9361,secondary:#ff8a3d"
-									style="width: 24px; height: 24px"
-								></lord-icon>
-								Social media presence and content direction
-							</li>
-							<li>
-								<lord-icon
-									src="https://cdn.lordicon.com/zpxybbhl.json"
-									trigger="loop"
-									colors="primary:#48c9b0,secondary:#0f1d2d"
-									style="width: 24px; height: 24px"
-								></lord-icon>
-								Digital brand guidelines
-							</li>
-						</ul>
-						<a
-							href="https://www.instagram.com/dora_health/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="cta-button project-link"
-						>
-							View on Instagram <i class="bi bi-arrow-right"></i>
-						</a>
+					</div>
+					<div
+						class="pf-value-card"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="pf-value-icon" style="background: rgba(160, 121, 203, 0.12)">
+							<i class="fi fi-rr-palette" style="color: var(--purple)"></i>
+						</div>
+						<h3>Brand Systems</h3>
+						<p>
+							Cohesive identities across logo, visuals, copy tone, and
+							on-site customer trust points.
+						</p>
+					</div>
+					<div
+						class="pf-value-card"
+						data-aos="fade-up"
+						data-aos-delay="300"
+					>
+						<div class="pf-value-icon" style="background: rgba(72, 201, 176, 0.12)">
+							<i class="fi fi-rr-search-alt" style="color: var(--ocean)"></i>
+						</div>
+						<h3>SEO &amp; Discovery</h3>
+						<p>
+							Local-search improvements and metadata updates so ideal
+							customers find you faster.
+						</p>
+					</div>
+					<div
+						class="pf-value-card"
+						data-aos="fade-up"
+						data-aos-delay="400"
+					>
+						<div class="pf-value-icon" style="background: rgba(255, 138, 61, 0.12)">
+							<i class="fi fi-rr-settings-sliders" style="color: var(--orange)"></i>
+						</div>
+						<h3>Automation Ready</h3>
+						<p>
+							Strong technical foundations for AI workflows, repeatable
+							campaigns, and scale.
+						</p>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- ===== PROJECT 2: PRESERVATION FRAMERS ===== -->
-		<section class="portfolio-project alt-bg" id="preservation-framers">
+		<!-- ===== FEATURED PROJECT 1: WEST COAST EXTERIOR PROS ===== -->
+		<section class="pf-showcase pf-showcase-light" id="wcep">
 			<div class="container">
-				<div class="project-card reverse">
-					<div class="project-visual">
-						<div class="project-mockup framers-theme">
-							<div class="mockup-icon">
-								<lord-icon
-									src="https://cdn.lordicon.com/wwcjmjhn.json"
-									trigger="loop"
-									colors="primary:#4c8cbc,secondary:#e3b156"
-									style="width: 40px; height: 40px"
-								>
-								</lord-icon>
+				<div class="pf-showcase-layout" data-aos="fade-up">
+					<div class="pf-showcase-visual">
+						<div class="pf-browser-frame wcep-theme">
+							<div class="pf-browser-bar">
+								<span class="pf-dot" style="background: #ff5f57"></span>
+								<span class="pf-dot" style="background: #ffbd2e"></span>
+								<span class="pf-dot" style="background: #28c840"></span>
+								<span class="pf-browser-url">wcepros.com</span>
 							</div>
-							<span class="project-logo-text">Preservation Framers</span>
-						</div>
-					</div>
-					<div class="project-info">
-						<div class="project-tags">
-							<span class="project-tag">Web Design</span>
-							<span class="project-tag">Brand Refresh</span>
-							<span class="project-tag">SEO</span>
-						</div>
-						<h2>Preservation Framers</h2>
-						<p class="project-subtitle">40+ years of craftsmanship, now online</p>
-						<p class="project-description">
-							Preservation Framers &amp; Gallery is one of Perth's leading custom
-							framing studios, operating from West Perth since 1986. Specialising in
-							museum-grade conservation framing, they needed a digital presence that
-							reflected the precision and artistry of their craft.
-						</p>
-						<ul class="project-deliverables">
-							<li>
-								<lord-icon
-									src="https://cdn.lordicon.com/tdxypxgp.json"
-									trigger="loop"
-									colors="primary:#4c8cbc,secondary:#e3b156"
-									style="width: 24px; height: 24px"
-								></lord-icon>
-								Website design and development
-							</li>
-							<li>
-								<lord-icon
-									src="https://cdn.lordicon.com/etwtznjn.json"
-									trigger="loop"
-									colors="primary:#ff8a3d,secondary:#2f9ea0"
-									style="width: 24px; height: 24px"
-								></lord-icon>
-								Brand identity refinement
-							</li>
-							<li>
-								<lord-icon
-									src="https://cdn.lordicon.com/zpxybbhl.json"
-									trigger="loop"
-									colors="primary:#48c9b0,secondary:#0f1d2d"
-									style="width: 24px; height: 24px"
-								></lord-icon>
-								Local SEO and Google presence
-							</li>
-							<li>
-								<lord-icon
-									src="https://cdn.lordicon.com/oqdmqjio.json"
-									trigger="loop"
-									colors="primary:#e3b156,secondary:#7fcbdb"
-									style="width: 24px; height: 24px"
-								></lord-icon>
-								Service page content strategy
-							</li>
-						</ul>
-						<a
-							href="https://www.preservationframers.com.au/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="cta-button project-link"
-						>
-							Visit Website <i class="bi bi-arrow-right"></i>
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- ===== PROJECT 3: WEST COAST EXTERIOR PROS ===== -->
-		<section class="portfolio-project" id="wcep">
-			<div class="container">
-				<div class="project-card">
-					<div class="project-visual">
-						<div class="project-mockup wcep-theme">
-							<div class="mockup-icon">
-								<lord-icon
-									src="https://cdn.lordicon.com/tdxypxgp.json"
-									trigger="loop"
-									colors="primary:#48c9b0,secondary:#0f1d2d"
-									style="width: 40px; height: 40px"
-								>
-								</lord-icon>
+							<div class="pf-preview-area">
+								<div class="pf-brand-icon">
+									<i class="fi fi-rr-home" style="font-size: 3rem; color: #fff"></i>
+								</div>
+								<span class="pf-brand-name">West Coast Exterior Pros</span>
+								<span class="pf-brand-tagline">Perth's Exterior Specialists</span>
 							</div>
-							<span class="project-logo-text">West Coast Exterior Pros</span>
 						</div>
 					</div>
-					<div class="project-info">
-						<div class="project-tags">
-							<span class="project-tag">Web Development</span>
-							<span class="project-tag">Brand Identity</span>
-							<span class="project-tag">Local SEO</span>
-						</div>
-						<h2>West Coast Exterior Pros</h2>
-						<p class="project-subtitle">
+					<div class="pf-showcase-info">
+						<span class="pf-showcase-category" data-aos="fade-left" data-aos-delay="100">
+							<i class="fi fi-rr-hammer" style="font-size: 0.7rem"></i>
+							Exterior Services
+						</span>
+						<h2 data-aos="fade-left" data-aos-delay="150">West Coast Exterior Pros</h2>
+						<p class="pf-showcase-subtitle" data-aos="fade-left" data-aos-delay="200">
 							Perth's trusted exterior cleaning specialists
 						</p>
-						<p class="project-description">
-							West Coast Exterior Pros is a locally owned exterior cleaning company
-							serving residential and commercial properties across Perth. With over a
-							decade of experience, they needed a brand and web presence that matched
-							their professional reputation for reliable, high-quality work.
+						<p class="pf-showcase-desc" data-aos="fade-left" data-aos-delay="250">
+							A locally owned exterior cleaning company serving residential
+							and commercial properties across Perth. We built their brand
+							and web presence to match their professional reputation.
 						</p>
-						<ul class="project-deliverables">
-							<li>
-								<lord-icon
-									src="https://cdn.lordicon.com/etwtznjn.json"
-									trigger="loop"
-									colors="primary:#ff8a3d,secondary:#2f9ea0"
-									style="width: 24px; height: 24px"
-								></lord-icon>
-								Full brand identity design
-							</li>
-							<li>
-								<lord-icon
-									src="https://cdn.lordicon.com/tdxypxgp.json"
-									trigger="loop"
-									colors="primary:#4c8cbc,secondary:#e3b156"
-									style="width: 24px; height: 24px"
-								></lord-icon>
-								Responsive website build
-							</li>
-							<li>
-								<lord-icon
-									src="https://cdn.lordicon.com/zpxybbhl.json"
-									trigger="loop"
-									colors="primary:#48c9b0,secondary:#0f1d2d"
-									style="width: 24px; height: 24px"
-								></lord-icon>
-								Service pages and lead generation
-							</li>
-							<li>
-								<lord-icon
-									src="https://cdn.lordicon.com/oqdmqjio.json"
-									trigger="loop"
-									colors="primary:#e3b156,secondary:#7fcbdb"
-									style="width: 24px; height: 24px"
-								></lord-icon>
-								Local SEO and Google Business setup
-							</li>
+						<div class="pf-showcase-tags" data-aos="fade-left" data-aos-delay="300">
+							<span class="pf-tag">Web Development</span>
+							<span class="pf-tag">Brand Identity</span>
+							<span class="pf-tag">Local SEO</span>
+							<span class="pf-tag">Lead Generation</span>
+						</div>
+						<ul class="pf-deliverables" data-aos="fade-left" data-aos-delay="350">
+							<li><i class="bi bi-check-circle-fill"></i> Responsive multi-page site with service booking</li>
+							<li><i class="bi bi-check-circle-fill"></i> Google Business optimization &amp; local citations</li>
+							<li><i class="bi bi-check-circle-fill"></i> Brand identity package with vehicle wraps</li>
 						</ul>
-						<a
-							href="https://www.wcepros.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="cta-button project-link"
-						>
-							Visit Website <i class="bi bi-arrow-right"></i>
-						</a>
+						<div class="pf-showcase-actions" data-aos="fade-left" data-aos-delay="400">
+							<a
+								href="https://www.wcepros.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="cta-button"
+							>
+								Visit Website <i class="bi bi-arrow-right"></i>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- ===== PROJECT 4: DRUMPLINGS ===== -->
-		<section class="portfolio-project alt-bg" id="drumplings">
+		<!-- ===== FEATURED PROJECT 2: DRUMPLINGS ===== -->
+		<section class="pf-showcase pf-showcase-alt" id="drumplings">
 			<div class="container">
-				<div class="project-card reverse">
-					<div class="project-visual">
-						<div class="project-mockup drumplings-theme">
-							<div class="mockup-icon">
-								<lord-icon
-									src="https://cdn.lordicon.com/wwcjmjhn.json"
-									trigger="loop"
-									colors="primary:#fa9361,secondary:#ff8a3d"
-									style="width: 40px; height: 40px"
-								>
-								</lord-icon>
+				<div class="pf-showcase-layout pf-reverse" data-aos="fade-up">
+					<div class="pf-showcase-visual">
+						<div class="pf-browser-frame drumplings-theme">
+							<div class="pf-browser-bar">
+								<span class="pf-dot" style="background: #ff5f57"></span>
+								<span class="pf-dot" style="background: #ffbd2e"></span>
+								<span class="pf-dot" style="background: #28c840"></span>
+								<span class="pf-browser-url">drumplings.com</span>
 							</div>
-							<span class="project-logo-text">Drumplings</span>
+							<div class="pf-preview-area">
+								<div class="pf-brand-icon">
+									<i class="fi fi-rr-restaurant" style="font-size: 3rem; color: #fff"></i>
+								</div>
+								<span class="pf-brand-name">Drumplings</span>
+								<span class="pf-brand-tagline">Fusion Dumplings, Melbourne</span>
+							</div>
 						</div>
 					</div>
-					<div class="project-info">
-						<div class="project-tags">
-							<span class="project-tag">Brand Strategy</span>
-							<span class="project-tag">Web Design</span>
-							<span class="project-tag">Content</span>
-						</div>
-						<h2>Drumplings</h2>
-						<p class="project-subtitle">The world's first fusion dumpling brand</p>
-						<p class="project-description">
-							Drumplings is Melbourne's premium fusion dumpling brand, founded by Deon
-							St.Mor. Blending global flavours like Cheeseburger, Mac &amp; Cheese, and
-							Beef Rendang into hand-wrapped dumplings, they needed a brand experience
-							as bold and inventive as their menu.
+					<div class="pf-showcase-info">
+						<span class="pf-showcase-category" data-aos="fade-right" data-aos-delay="100">
+							<i class="fi fi-rr-utensils" style="font-size: 0.7rem"></i>
+							Hospitality &amp; E&#8209;Commerce
+						</span>
+						<h2 data-aos="fade-right" data-aos-delay="150">Drumplings</h2>
+						<p class="pf-showcase-subtitle" data-aos="fade-right" data-aos-delay="200">
+							The world's first fusion dumpling brand
 						</p>
-						<ul class="project-deliverables">
-							<li>
-								<i class="bi bi-check2"></i> Brand strategy and creative direction
-							</li>
-							<li><i class="bi bi-check2"></i> Website design and development</li>
-							<li>
-								<i class="bi bi-check2"></i> Packaging and visual identity support
-							</li>
-							<li><i class="bi bi-check2"></i> Content strategy and copywriting</li>
+						<p class="pf-showcase-desc" data-aos="fade-right" data-aos-delay="250">
+							Melbourne's premium fusion dumpling brand, blending global
+							flavours into hand-wrapped dumplings. We crafted a brand
+							experience as bold and inventive as their menu.
+						</p>
+						<div class="pf-showcase-tags" data-aos="fade-right" data-aos-delay="300">
+							<span class="pf-tag">Brand Strategy</span>
+							<span class="pf-tag">Web Design</span>
+							<span class="pf-tag">Packaging</span>
+							<span class="pf-tag">Content</span>
+						</div>
+						<ul class="pf-deliverables" data-aos="fade-right" data-aos-delay="350">
+							<li><i class="bi bi-check-circle-fill"></i> Full e-commerce website with ordering system</li>
+							<li><i class="bi bi-check-circle-fill"></i> Brand identity, packaging design &amp; photography</li>
+							<li><i class="bi bi-check-circle-fill"></i> Social media strategy &amp; content creation</li>
 						</ul>
-						<a
-							href="https://www.drumplings.com/"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="cta-button project-link"
-						>
-							Visit Website <i class="bi bi-arrow-right"></i>
-						</a>
+						<div class="pf-showcase-actions" data-aos="fade-right" data-aos-delay="400">
+							<a
+								href="https://www.drumplings.com/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="cta-button"
+							>
+								Visit Website <i class="bi bi-arrow-right"></i>
+							</a>
+							<a
+								href="https://www.facebook.com/drumplings/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="pf-social-icon"
+								aria-label="Facebook"
+							>
+								<i class="bi bi-facebook"></i>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- ===== PORTFOLIO CTA ===== -->
-		<section class="final-cta">
-			<div class="hero-content text-center">
-				<h2 class="final-cta-title">Ready to be our next success story?</h2>
-				<p class="final-cta-text">
-					Let's build something that works as hard as you do.
+		<!-- ===== MID-PAGE INTERSTITIAL (Featured Work Banner) ===== -->
+		<section class="pf-interstitial">
+			<div class="pf-interstitial-bg"></div>
+			<div class="pf-interstitial-content">
+				<div class="pf-interstitial-badge" data-aos="fade-down">
+					<i
+						class="fi fi-rr-rectangle-vertical-history"
+						style="font-size: 0.85rem"
+					></i>
+					Featured Work
+				</div>
+				<h2 data-aos="fade-up" data-aos-delay="100">
+					Strategy-led. Custom-built.<br />Designed to convert.
+				</h2>
+				<p data-aos="fade-up" data-aos-delay="200">
+					Every brand we build is backed by research, refined through
+					collaboration, and launched with confidence. See the results below.
 				</p>
-				<a href="contact.html" class="cta-button final-cta-button">
-					Start a Project
-				</a>
+				<div class="pf-interstitial-stats" data-aos="fade-up" data-aos-delay="300">
+					<div class="pf-inter-stat">
+						<span class="pf-inter-number">5+</span>
+						<span class="pf-inter-label">Industries Served</span>
+					</div>
+					<div class="pf-inter-stat">
+						<span class="pf-inter-number">30+</span>
+						<span class="pf-inter-label">Deliverables Completed</span>
+					</div>
+					<div class="pf-inter-stat">
+						<span class="pf-inter-number">100%</span>
+						<span class="pf-inter-label">Client Satisfaction</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FEATURED PROJECT 3: PRESERVATION FRAMERS ===== -->
+		<section class="pf-showcase pf-showcase-light" id="preservation-framers">
+			<div class="container">
+				<div class="pf-showcase-layout" data-aos="fade-up">
+					<div class="pf-showcase-visual">
+						<div class="pf-browser-frame framers-theme">
+							<div class="pf-browser-bar">
+								<span class="pf-dot" style="background: #ff5f57"></span>
+								<span class="pf-dot" style="background: #ffbd2e"></span>
+								<span class="pf-dot" style="background: #28c840"></span>
+								<span class="pf-browser-url">preservationframers.com.au</span>
+							</div>
+							<div class="pf-preview-area">
+								<div class="pf-brand-icon">
+									<i class="fi fi-rr-picture" style="font-size: 3rem; color: #fff"></i>
+								</div>
+								<span class="pf-brand-name">Preservation Framers &amp; Gallery</span>
+								<span class="pf-brand-tagline">Museum-Grade Framing Since 1986</span>
+							</div>
+						</div>
+					</div>
+					<div class="pf-showcase-info">
+						<span class="pf-showcase-category" data-aos="fade-left" data-aos-delay="100">
+							<i class="fi fi-rr-brush" style="font-size: 0.7rem"></i>
+							Artisan Craft
+						</span>
+						<h2 data-aos="fade-left" data-aos-delay="150">Preservation Framers</h2>
+						<p class="pf-showcase-subtitle" data-aos="fade-left" data-aos-delay="200">
+							40+ years of craftsmanship, now online
+						</p>
+						<p class="pf-showcase-desc" data-aos="fade-left" data-aos-delay="250">
+							One of Perth's leading custom framing studios, operating from
+							West Perth since 1986. Specialising in museum-grade
+							conservation framing, we built a digital presence reflecting
+							their precision and artistry.
+						</p>
+						<div class="pf-showcase-tags" data-aos="fade-left" data-aos-delay="300">
+							<span class="pf-tag">Web Design</span>
+							<span class="pf-tag">Brand Refresh</span>
+							<span class="pf-tag">SEO</span>
+							<span class="pf-tag">Content Strategy</span>
+						</div>
+						<ul class="pf-deliverables" data-aos="fade-left" data-aos-delay="350">
+							<li><i class="bi bi-check-circle-fill"></i> Full website redesign with gallery showcase</li>
+							<li><i class="bi bi-check-circle-fill"></i> Refreshed brand visuals &amp; photography</li>
+							<li><i class="bi bi-check-circle-fill"></i> SEO strategy for local search dominance</li>
+						</ul>
+						<div class="pf-showcase-actions" data-aos="fade-left" data-aos-delay="400">
+							<a
+								href="https://www.preservationframers.com.au/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="cta-button"
+							>
+								Visit Website <i class="bi bi-arrow-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FEATURED PROJECT 4: DORA HEALTH ===== -->
+		<section class="pf-showcase pf-showcase-alt" id="dora-health">
+			<div class="container">
+				<div class="pf-showcase-layout pf-reverse" data-aos="fade-up">
+					<div class="pf-showcase-visual">
+						<div class="pf-browser-frame dora-theme">
+							<div class="pf-browser-bar">
+								<span class="pf-dot" style="background: #ff5f57"></span>
+								<span class="pf-dot" style="background: #ffbd2e"></span>
+								<span class="pf-dot" style="background: #28c840"></span>
+								<span class="pf-browser-url">instagram.com/dora_health</span>
+							</div>
+							<div class="pf-preview-area">
+								<div class="pf-brand-icon">
+									<i class="fi fi-rr-heart-rate" style="font-size: 3rem; color: #fff"></i>
+								</div>
+								<span class="pf-brand-name">Dora Health &amp; Wellbeing</span>
+								<span class="pf-brand-tagline">Women's Health Community</span>
+							</div>
+						</div>
+					</div>
+					<div class="pf-showcase-info">
+						<span class="pf-showcase-category" data-aos="fade-right" data-aos-delay="100">
+							<i class="fi fi-rr-heart" style="font-size: 0.7rem"></i>
+							Health &amp; Wellness
+						</span>
+						<h2 data-aos="fade-right" data-aos-delay="150">Dora Health &amp; Wellbeing</h2>
+						<p class="pf-showcase-subtitle" data-aos="fade-right" data-aos-delay="200">
+							Building a community around women's health
+						</p>
+						<p class="pf-showcase-desc" data-aos="fade-right" data-aos-delay="250">
+							An emerging platform dedicated to building an international
+							community with the expertise and passion to solve women's
+							health challenges. We developed their brand identity from the
+							ground up.
+						</p>
+						<div class="pf-showcase-tags" data-aos="fade-right" data-aos-delay="300">
+							<span class="pf-tag">Brand Identity</span>
+							<span class="pf-tag">Digital Strategy</span>
+							<span class="pf-tag">Social Media</span>
+							<span class="pf-tag">Brand Guidelines</span>
+						</div>
+						<ul class="pf-deliverables" data-aos="fade-right" data-aos-delay="350">
+							<li><i class="bi bi-check-circle-fill"></i> Complete brand identity from concept to execution</li>
+							<li><i class="bi bi-check-circle-fill"></i> Social media content strategy &amp; templates</li>
+							<li><i class="bi bi-check-circle-fill"></i> Brand guidelines document for scaling</li>
+						</ul>
+						<div class="pf-showcase-actions" data-aos="fade-right" data-aos-delay="400">
+							<a
+								href="https://www.instagram.com/dora_health/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="cta-button"
+							>
+								View on Instagram <i class="bi bi-arrow-right"></i>
+							</a>
+							<a
+								href="https://www.instagram.com/dora_health/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="pf-social-icon"
+								aria-label="Instagram"
+							>
+								<i class="bi bi-instagram"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== CONSULTING & ADVISORY BRANDS ===== -->
+		<section class="pf-consulting">
+			<div class="container">
+				<div class="category-header" data-aos="fade-up">
+					<div
+						class="category-badge"
+						style="background: rgba(160, 121, 203, 0.12); color: var(--purple)"
+					>
+						<i class="bi bi-people-fill"></i>
+						<span>Consulting &amp; Advisory</span>
+					</div>
+					<h2>Brands We've Partnered With</h2>
+					<p>
+						Strategy, consulting, and creative direction for brands building
+						something meaningful.
+					</p>
+				</div>
+				<div class="pf-consulting-grid">
+					<div
+						class="pf-consult-card"
+						data-aos="fade-up"
+						data-aos-delay="100"
+					>
+						<div
+							class="pf-consult-logo"
+							style="background: linear-gradient(135deg, var(--teal), var(--ocean))"
+						>
+							WCE
+						</div>
+						<h3>West Coast Events</h3>
+						<p>Event branding and digital marketing strategy</p>
+						<div class="pf-consult-tags">
+							<span>Branding</span>
+							<span>Marketing</span>
+						</div>
+					</div>
+					<div
+						class="pf-consult-card"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div
+							class="pf-consult-logo"
+							style="background: linear-gradient(135deg, var(--purple), var(--blue))"
+						>
+							BL
+						</div>
+						<h3>Bright Lux</h3>
+						<p>Brand positioning and creative direction</p>
+						<div class="pf-consult-tags">
+							<span>Positioning</span>
+							<span>Creative</span>
+						</div>
+					</div>
+					<div
+						class="pf-consult-card"
+						data-aos="fade-up"
+						data-aos-delay="300"
+					>
+						<div
+							class="pf-consult-logo"
+							style="background: linear-gradient(135deg, var(--orange), var(--peach))"
+						>
+							TNW
+						</div>
+						<h3>The Next Wave</h3>
+						<p>Digital strategy and growth consulting</p>
+						<div class="pf-consult-tags">
+							<span>Strategy</span>
+							<span>Growth</span>
+						</div>
+					</div>
+					<div
+						class="pf-consult-card"
+						data-aos="fade-up"
+						data-aos-delay="400"
+					>
+						<div
+							class="pf-consult-logo"
+							style="background: linear-gradient(135deg, var(--amber), var(--yellow))"
+						>
+							WE
+						</div>
+						<h3>Wander East</h3>
+						<p>Brand identity and content systems</p>
+						<div class="pf-consult-tags">
+							<span>Identity</span>
+							<span>Content</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== OUR PROCESS (How We Work) ===== -->
+		<section class="pf-process">
+			<div class="container">
+				<div class="category-header" data-aos="fade-up">
+					<div
+						class="category-badge"
+						style="background: rgba(72, 201, 176, 0.1); color: var(--ocean)"
+					>
+						<i class="bi bi-arrow-repeat"></i>
+						<span>Our Process</span>
+					</div>
+					<h2>From Brief to Launch</h2>
+					<p>
+						A proven, collaborative process that keeps every project on track
+						and every client in the loop.
+					</p>
+				</div>
+				<div class="pf-process-steps">
+					<div
+						class="pf-process-step"
+						data-aos="fade-up"
+						data-aos-delay="100"
+					>
+						<div class="pf-step-number">01</div>
+						<div class="pf-step-icon">
+							<lord-icon
+								src="https://cdn.lordicon.com/zpxybbhl.json"
+								trigger="loop"
+								colors="primary:#ff8a3d,secondary:#2f9ea0"
+								style="width: 44px; height: 44px"
+							></lord-icon>
+						</div>
+						<h3>Discover</h3>
+						<p>
+							We listen, research, and map your goals. A free strategy call
+							kicks everything off.
+						</p>
+					</div>
+					<div class="pf-process-connector" data-aos="fade-up" data-aos-delay="150">
+						<i class="bi bi-chevron-right"></i>
+					</div>
+					<div
+						class="pf-process-step"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div class="pf-step-number">02</div>
+						<div class="pf-step-icon">
+							<lord-icon
+								src="https://cdn.lordicon.com/etwtznjn.json"
+								trigger="loop"
+								colors="primary:#a079cb,secondary:#fb837d"
+								style="width: 44px; height: 44px"
+							></lord-icon>
+						</div>
+						<h3>Design &amp; Build</h3>
+						<p>
+							We craft your solution with checkpoints at every stage, so
+							nothing goes off-track.
+						</p>
+					</div>
+					<div class="pf-process-connector" data-aos="fade-up" data-aos-delay="250">
+						<i class="bi bi-chevron-right"></i>
+					</div>
+					<div
+						class="pf-process-step"
+						data-aos="fade-up"
+						data-aos-delay="300"
+					>
+						<div class="pf-step-number">03</div>
+						<div class="pf-step-icon">
+							<lord-icon
+								src="https://cdn.lordicon.com/puvaffet.json"
+								trigger="loop"
+								colors="primary:#48c9b0,secondary:#0f1d2d"
+								style="width: 44px; height: 44px"
+							></lord-icon>
+						</div>
+						<h3>Launch &amp; Grow</h3>
+						<p>
+							We deliver, train, and support you. Then we iterate and
+							optimize as your business evolves.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FINAL CTA ===== -->
+		<section class="final-cta pf-final-cta">
+			<div class="container text-center">
+				<div data-aos="zoom-in">
+					<lord-icon
+						src="https://cdn.lordicon.com/wjyqkiew.json"
+						trigger="loop"
+						delay="1500"
+						colors="primary:#ff8a3d,secondary:#fffaf2"
+						style="width: 64px; height: 64px"
+					></lord-icon>
+				</div>
+				<h2 class="final-cta-title" data-aos="fade-up" data-aos-delay="100">
+					Want Your Brand Featured Here?
+				</h2>
+				<p class="final-cta-text" data-aos="fade-up" data-aos-delay="200">
+					Let's build something that works as hard as you do. Book a free
+					strategy call and we'll map the right solution to your goals.
+				</p>
+				<a
+					href="contact.html"
+					class="cta-button final-cta-button"
+					data-aos="fade-up"
+					data-aos-delay="300"
+					>Book a Strategy Call <i class="bi bi-arrow-right"></i
+				></a>
 			</div>
 		</section>
 
 		<!-- ===== FOOTER SECTION ===== -->
 		<div id="footer"></div>
 
-		<!-- ===== >>> NAVBAR INCLUDE >>> ===== -->
+		<!-- ===== SCRIPTS ===== -->
+
+		<!-- AOS Init -->
+		<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 		<script>
-			fetch("-navbar.html")
-				.then((response) => response.text())
-				.then((html) => {
-					const navbar = document.getElementById("navbar");
-					if (navbar) {
-						navbar.innerHTML = html;
-					}
-				})
-				.catch((error) => {
-					console.error("Navbar load failed:", error);
-				});
+			AOS.init({
+				duration: 700,
+				easing: "ease-out-cubic",
+				once: true,
+				offset: 60,
+			});
 		</script>
 
-		<!-- ===== >>> FOOTER INCLUDE >>> ===== -->
+		<!-- ===== ANIMATED COUNTER ===== -->
 		<script>
-			fetch("-footer.html")
-				.then((response) => response.text())
-				.then((html) => {
-					const footer = document.getElementById("footer");
-					if (footer) {
-						footer.innerHTML = html;
-					}
+			(function () {
+				var counters = document.querySelectorAll(
+					".hero-stat-number, .pf-inter-number",
+				);
+				if (!counters.length) return;
+
+				var io = new IntersectionObserver(
+					function (entries) {
+						entries.forEach(function (entry) {
+							if (!entry.isIntersecting) return;
+							var el = entry.target;
+							var text = el.textContent.trim();
+							var suffix = text.replace(/[\d.]/g, "");
+							var target = parseFloat(text);
+							if (isNaN(target)) return;
+
+							var duration = 1200;
+							var startTime = performance.now();
+
+							function step(now) {
+								var elapsed = now - startTime;
+								var progress = Math.min(elapsed / duration, 1);
+								var ease = 1 - Math.pow(1 - progress, 3);
+								var current = Math.floor(ease * target);
+								el.textContent = current + suffix;
+								if (progress < 1) requestAnimationFrame(step);
+								else el.textContent = text;
+							}
+							requestAnimationFrame(step);
+							io.unobserve(el);
+						});
+					},
+					{ threshold: 0.5 },
+				);
+
+				counters.forEach(function (el) {
+					io.observe(el);
+				});
+			})();
+		</script>
+
+		<!-- ===== COMPONENT INCLUDES ===== -->
+		<script>
+			fetch("-navbar.html")
+				.then(function (response) {
+					return response.text();
 				})
-				.catch((error) => {
+				.then(function (html) {
+					var el = document.getElementById("navbar");
+					if (el) el.innerHTML = html; // trusted local component
+				})
+				.catch(function (error) {
+					console.error("Navbar load failed:", error);
+				});
+
+			fetch("-footer.html")
+				.then(function (response) {
+					return response.text();
+				})
+				.then(function (html) {
+					var el = document.getElementById("footer");
+					if (el) el.innerHTML = html; // trusted local component
+				})
+				.catch(function (error) {
 					console.error("Footer load failed:", error);
 				});
 		</script>
-
-		<!-- ===== >>> SCRIPTS >>> ===== -->
-		<script>
-			// Smooth scroll for navigation links
-			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-				anchor.addEventListener("click", function (e) {
-					e.preventDefault();
-					const target = document.querySelector(this.getAttribute("href"));
-					if (target) {
-						target.scrollIntoView({ behavior: "smooth", block: "start" });
-					}
-				});
-			});
-		</script>
-		<!-- ===== <<< SCRIPTS <<< ===== -->
 	</body>
 </html>
