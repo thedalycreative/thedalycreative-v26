@@ -18,8 +18,9 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
 		/>
-		<!-- Lordicon Script -->
-		<script src="https://cdn.lordicon.com/lordicon.js"></script>
+		<!-- Flaticon UICONS -->
+		<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+		<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css" />
 		<!--Main Stylesheet-->
 		<link rel="stylesheet" href="styles.css" />
 		<!--Tailwind CSS-->
@@ -30,19 +31,32 @@
 	</head>
 	<body class="ai-page">
 		<!-- ===== NAV BAR ===== -->
-		<div id="navbar"></div>
+		<nav>
+			<div class="nav-container">
+				<a href="index.html" class="logo">
+					<img src="images/icons/logo-1300x507.png" alt="The Daly Creative" height="48" />
+				</a>
+				<input type="checkbox" id="nav-toggle" class="nav-toggle" />
+				<label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"></label>
+				<ul class="nav-links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="ai-tools.html" class="active">AI-Tools</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="blueprint.html">Blueprint</a></li>
+					<li><a href="portfolio.html">Projects</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+				<a class="nav-cta" href="contact.html">Book a Call</a>
+			</div>
+		</nav>
 
 		<!-- ===== AI HERO SECTION ===== -->
 		<section class="ai-hero">
 			<div class="ai-hero-bg"></div>
 			<div class="ai-hero-content">
 				<div class="ai-hero-badge">
-					<lord-icon
-						src="https://cdn.lordicon.com/puvaffet.json"
-						trigger="loop"
-						colors="primary:#a079cb,secondary:#fb837d"
-						style="width: 32px; height: 32px"
-					></lord-icon>
+					<i class="fi fi-rr-brain icon-glow" style="font-size: 1.4rem; color: #a079cb;"></i>
 					<span>AI-Powered Solutions</span>
 				</div>
 				<h1>
@@ -59,12 +73,7 @@
 					</a>
 					<a href="#ai-services" class="cta-button ai-cta-secondary">
 						Explore Tools
-						<lord-icon
-							src="https://cdn.lordicon.com/zpxybbhl.json"
-							trigger="loop"
-							colors="primary:#48c9b0,secondary:#0f1d2d"
-							style="width: 20px; height: 20px"
-						></lord-icon>
+						<i class="fi fi-rr-arrow-down icon-bounce" style="font-size: 0.9rem; color: #48c9b0;"></i>
 					</a>
 				</div>
 			</div>
@@ -74,19 +83,19 @@
 		<section class="ai-stats-strip">
 			<div class="container">
 				<div class="ai-stats-grid">
-					<div class="ai-stat">
+					<div class="ai-stat reveal stagger-1">
 						<span class="ai-stat-number">24/7</span>
 						<span class="ai-stat-label">Always-On Agents</span>
 					</div>
-					<div class="ai-stat">
+					<div class="ai-stat reveal stagger-2">
 						<span class="ai-stat-number">10x</span>
 						<span class="ai-stat-label">Faster Workflows</span>
 					</div>
-					<div class="ai-stat">
+					<div class="ai-stat reveal stagger-3">
 						<span class="ai-stat-number">100%</span>
 						<span class="ai-stat-label">Custom Built</span>
 					</div>
-					<div class="ai-stat">
+					<div class="ai-stat reveal stagger-4">
 						<span class="ai-stat-number">0</span>
 						<span class="ai-stat-label">Lock-In Contracts</span>
 					</div>
@@ -97,7 +106,7 @@
 		<!-- ===== AI SERVICES GRID ===== -->
 		<section class="ai-services-section" id="ai-services">
 			<div class="container">
-				<div class="ai-section-header">
+				<div class="ai-section-header reveal">
 					<h2>What We Build</h2>
 					<p>
 						Every tool is custom-designed for your business. No cookie-cutter
@@ -107,14 +116,9 @@
 
 				<div class="ai-services-grid">
 					<!-- Card 1: Custom AI Agents -->
-					<div class="ai-service-card">
+					<div class="ai-service-card reveal stagger-1">
 						<div class="ai-card-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/wwcjmjhn.json"
-								trigger="loop"
-								colors="primary:#fa9361,secondary:#ff8a3d"
-								style="width: 32px; height: 32px"
-							></lord-icon>
+							<i class="fi fi-rr-robot icon-pulse" style="font-size: 1.4rem; color: #fa9361;"></i>
 						</div>
 						<h3>Custom AI Agents</h3>
 						<p>
@@ -130,14 +134,9 @@
 					</div>
 
 					<!-- Card 2: Workflow Automation -->
-					<div class="ai-service-card">
+					<div class="ai-service-card reveal stagger-2">
 						<div class="ai-card-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/tdxypxgp.json"
-								trigger="loop"
-								colors="primary:#4c8cbc,secondary:#334155"
-								style="width: 32px; height: 32px"
-							></lord-icon>
+							<i class="fi fi-rr-settings icon-float" style="font-size: 1.4rem; color: #4c8cbc;"></i>
 						</div>
 						<h3>Workflow Automation</h3>
 						<p>
@@ -152,14 +151,9 @@
 					</div>
 
 					<!-- Card 3: Smart Chatbots -->
-					<div class="ai-service-card">
+					<div class="ai-service-card reveal stagger-3">
 						<div class="ai-card-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/oqdmqjio.json"
-								trigger="loop"
-								colors="primary:#e3b156,secondary:#7fcbdb"
-								style="width: 32px; height: 32px"
-							></lord-icon>
+							<i class="fi fi-rr-comment-dots icon-pulse" style="font-size: 1.4rem; color: #e3b156;"></i>
 						</div>
 						<h3>Smart Chatbots</h3>
 						<p>
@@ -174,14 +168,9 @@
 					</div>
 
 					<!-- Card 4: Data & Insights -->
-					<div class="ai-service-card">
+					<div class="ai-service-card reveal stagger-1">
 						<div class="ai-card-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/zpxybbhl.json"
-								trigger="loop"
-								colors="primary:#48c9b0,secondary:#0f1d2d"
-								style="width: 32px; height: 32px"
-							></lord-icon>
+							<i class="fi fi-rr-chart-line-up icon-float" style="font-size: 1.4rem; color: #48c9b0;"></i>
 						</div>
 						<h3>Data &amp; Insights</h3>
 						<p>
@@ -197,14 +186,9 @@
 					</div>
 
 					<!-- Card 5: Content Generation -->
-					<div class="ai-service-card">
+					<div class="ai-service-card reveal stagger-2">
 						<div class="ai-card-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/wwcjmjhn.json"
-								trigger="loop"
-								colors="primary:#fa9361,secondary:#ff8a3d"
-								style="width: 32px; height: 32px"
-							></lord-icon>
+							<i class="fi fi-rr-edit icon-pulse" style="font-size: 1.4rem; color: #fa9361;"></i>
 						</div>
 						<h3>AI Content Systems</h3>
 						<p>
@@ -219,14 +203,9 @@
 					</div>
 
 					<!-- Card 6: AI Strategy -->
-					<div class="ai-service-card">
+					<div class="ai-service-card reveal stagger-3">
 						<div class="ai-card-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/puvaffet.json"
-								trigger="loop"
-								colors="primary:#a079cb,secondary:#fb837d"
-								style="width: 32px; height: 32px"
-							></lord-icon>
+							<i class="fi fi-rr-puzzle icon-glow" style="font-size: 1.4rem; color: #a079cb;"></i>
 						</div>
 						<h3>AI Strategy</h3>
 						<p>
@@ -246,7 +225,7 @@
 		<!-- ===== HOW IT WORKS ===== -->
 		<section class="ai-process-section">
 			<div class="container">
-				<div class="ai-section-header">
+				<div class="ai-section-header reveal">
 					<h2>How It Works</h2>
 					<p>
 						From discovery to deployment in weeks, not months. We keep it simple.
@@ -263,12 +242,7 @@
 						</p>
 					</div>
 					<div class="ai-process-connector">
-						<lord-icon
-							src="https://cdn.lordicon.com/zpxybbhl.json"
-							trigger="loop"
-							colors="primary:#48c9b0,secondary:#0f1d2d"
-							style="width: 20px; height: 20px"
-						></lord-icon>
+						<i class="fi fi-rr-arrow-right" style="font-size: 0.9rem; color: #48c9b0;"></i>
 					</div>
 					<div class="ai-process-step">
 						<div class="ai-step-number">02</div>
@@ -296,7 +270,7 @@
 		<!-- ===== AI USE CASES ===== -->
 		<section class="ai-usecases-section">
 			<div class="container">
-				<div class="ai-section-header">
+				<div class="ai-section-header reveal">
 					<h2>Built For Real Businesses</h2>
 					<p>
 						AI isn't just for tech companies. Here's how we help everyday businesses
@@ -305,14 +279,9 @@
 				</div>
 
 				<div class="ai-usecases-grid">
-					<div class="ai-usecase">
+					<div class="ai-usecase reveal stagger-1">
 						<div class="ai-usecase-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/wwcjmjhn.json"
-								trigger="loop"
-								colors="primary:#fa9361,secondary:#ff8a3d"
-								style="width: 32px; height: 32px"
-							></lord-icon>
+							<i class="fi fi-rr-shop icon-float" style="font-size: 1.4rem; color: #fa9361;"></i>
 						</div>
 						<h4>Retail &amp; E-Commerce</h4>
 						<p>
@@ -320,14 +289,9 @@
 							customer support chatbots.
 						</p>
 					</div>
-					<div class="ai-usecase">
+					<div class="ai-usecase reveal stagger-2">
 						<div class="ai-usecase-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/tdxypxgp.json"
-								trigger="loop"
-								colors="primary:#4c8cbc,secondary:#334155"
-								style="width: 32px; height: 32px"
-							></lord-icon>
+							<i class="fi fi-rr-wrench icon-pulse" style="font-size: 1.4rem; color: #4c8cbc;"></i>
 						</div>
 						<h4>Trades &amp; Services</h4>
 						<p>
@@ -335,14 +299,9 @@
 							collection.
 						</p>
 					</div>
-					<div class="ai-usecase">
+					<div class="ai-usecase reveal stagger-3">
 						<div class="ai-usecase-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/etwtznjn.json"
-								trigger="loop"
-								colors="primary:#fb837d,secondary:#a079cb"
-								style="width: 32px; height: 32px"
-							></lord-icon>
+							<i class="fi fi-rr-stethoscope icon-float" style="font-size: 1.4rem; color: #fb837d;"></i>
 						</div>
 						<h4>Health &amp; Wellness</h4>
 						<p>
@@ -350,14 +309,9 @@
 							scheduling.
 						</p>
 					</div>
-					<div class="ai-usecase">
+					<div class="ai-usecase reveal stagger-4">
 						<div class="ai-usecase-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/wwcjmjhn.json"
-								trigger="loop"
-								colors="primary:#fa9361,secondary:#ff8a3d"
-								style="width: 32px; height: 32px"
-							></lord-icon>
+							<i class="fi fi-rr-utensils icon-pulse" style="font-size: 1.4rem; color: #fa9361;"></i>
 						</div>
 						<h4>Hospitality &amp; Food</h4>
 						<p>
@@ -372,7 +326,7 @@
 		<!-- ===== AI CTA ===== -->
 		<section class="ai-cta-section">
 			<div class="container">
-				<div class="ai-cta-card">
+				<div class="ai-cta-card reveal-scale">
 					<div class="ai-cta-content">
 						<h2>Ready to automate?</h2>
 						<p>
@@ -393,21 +347,6 @@
 
 		<!-- ===== FOOTER SECTION ===== -->
 		<div id="footer"></div>
-
-		<!-- ===== >>> NAVBAR INCLUDE >>> ===== -->
-		<script>
-			fetch("-navbar.html")
-				.then((response) => response.text())
-				.then((html) => {
-					const navbar = document.getElementById("navbar");
-					if (navbar) {
-						navbar.innerHTML = html;
-					}
-				})
-				.catch((error) => {
-					console.error("Navbar load failed:", error);
-				});
-		</script>
 
 		<!-- ===== >>> FOOTER INCLUDE >>> ===== -->
 		<script>
@@ -450,6 +389,8 @@
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
 						entry.target.classList.add("ai-animated");
+						entry.target.classList.add("revealed");
+						observer.unobserve(entry.target);
 					}
 				});
 			}, observerOptions);
@@ -461,6 +402,17 @@
 				.forEach((el) => {
 					el.classList.add("ai-animate-on-scroll");
 					observer.observe(el);
+				});
+
+			// Also observe reveal-only elements (section headers, CTA)
+			document
+				.querySelectorAll(
+					".reveal, .reveal-left, .reveal-right, .reveal-scale",
+				)
+				.forEach((el) => {
+					if (!el.classList.contains("ai-animate-on-scroll")) {
+						observer.observe(el);
+					}
 				});
 		</script>
 		<!-- ===== <<< SCRIPTS <<< ===== -->

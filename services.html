@@ -18,8 +18,15 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
 		/>
-		<!-- Lordicon Script -->
-		<script src="https://cdn.lordicon.com/lordicon.js"></script>
+		<!-- Flaticon UICONS -->
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css"
+		/>
 		<!-- AOS Animate on Scroll -->
 		<link
 			rel="stylesheet"
@@ -30,19 +37,32 @@
 	</head>
 	<body>
 		<!-- ===== NAV BAR ===== -->
-		<div id="navbar"></div>
+		<nav>
+			<div class="nav-container">
+				<a href="index.html" class="logo">
+					<img src="images/icons/logo-1300x507.png" alt="The Daly Creative" height="48" />
+				</a>
+				<input type="checkbox" id="nav-toggle" class="nav-toggle" />
+				<label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"></label>
+				<ul class="nav-links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="ai-tools.html">AI-Tools</a></li>
+					<li><a href="services.html" class="active">Services</a></li>
+					<li><a href="blueprint.html">Blueprint</a></li>
+					<li><a href="portfolio.html">Projects</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+				<a class="nav-cta" href="contact.html">Book a Call</a>
+			</div>
+		</nav>
 
 		<!-- ===== SERVICES HERO SECTION ===== -->
 		<section id="services" class="services-hero">
 			<div class="services-hero-bg"></div>
 			<div class="services-hero-content">
 				<div class="services-hero-badge" data-aos="fade-down" data-aos-delay="100">
-					<lord-icon
-						src="https://cdn.lordicon.com/etwtznjn.json"
-						trigger="loop"
-						colors="primary:#ff8a3d,secondary:#2f9ea0"
-						style="width: 28px; height: 28px"
-					></lord-icon>
+					<i class="fi fi-rr-sparkles icon-pulse" style="color: #ff8a3d; font-size: 1.3rem;"></i>
 					<span>What We Do</span>
 				</div>
 				<h1 data-aos="fade-up" data-aos-delay="200">
@@ -79,30 +99,15 @@
 					class="category-nav-link active"
 					data-category="cat-brand"
 				>
-					<lord-icon
-						src="https://cdn.lordicon.com/etwtznjn.json"
-						trigger="loop"
-						colors="primary:#ff8a3d,secondary:#2f9ea0"
-						style="width: 32px; height: 32px"
-					></lord-icon>
+					<i class="fi fi-rr-paint-brush" style="font-size: 1.4rem;"></i>
 					<span>Brand & Digital</span>
 				</a>
 				<a href="#cat-ai" class="category-nav-link" data-category="cat-ai">
-					<lord-icon
-						src="https://cdn.lordicon.com/puvaffet.json"
-						trigger="loop"
-						colors="primary:#a079cb,secondary:#fb837d"
-						style="width: 32px; height: 32px"
-					></lord-icon>
+					<i class="fi fi-rr-brain" style="font-size: 1.4rem;"></i>
 					<span>AI & Automation</span>
 				</a>
 				<a href="#cat-growth" class="category-nav-link" data-category="cat-growth">
-					<lord-icon
-						src="https://cdn.lordicon.com/zpxybbhl.json"
-						trigger="loop"
-						colors="primary:#48c9b0,secondary:#0f1d2d"
-						style="width: 32px; height: 32px"
-					></lord-icon>
+					<i class="fi fi-rr-chart-line-up" style="font-size: 1.4rem;"></i>
 					<span>Growth & Strategy</span>
 				</a>
 			</div>
@@ -112,17 +117,12 @@
 		<section id="cat-brand" class="service-category">
 			<div class="container">
 				<!-- Category Header -->
-				<div class="category-header" data-aos="fade-up">
+				<div class="category-header reveal" data-aos="fade-up">
 					<div
 						class="category-badge"
 						style="background: rgba(255, 133, 27, 0.1); color: #ff851b"
 					>
-						<lord-icon
-							src="https://cdn.lordicon.com/etwtznjn.json"
-							trigger="loop"
-							colors="primary:#ff8a3d,secondary:#2f9ea0"
-							style="width: 24px; height: 24px"
-						></lord-icon>
+						<i class="fi fi-rr-paint-brush icon-float" style="font-size: 1.1rem;"></i>
 						<span>Brand & Digital Presence</span>
 					</div>
 					<h2>Build Your Foundation</h2>
@@ -132,22 +132,16 @@
 					</p>
 				</div>
 
-				<!-- Service Summary Cards -->
+				<!-- Service Summary Cards (Background Image Tiles) -->
 				<div class="service-cards-grid">
 					<a
 						href="#service-web-dev"
-						class="service-summary-card"
-						style="--card-accent: #48c9b0"
+						class="service-summary-card reveal stagger-1"
+						style="--card-accent: #48c9b0; background-image: url('images/services-page/web-design.png')"
 						data-aos="fade-up"
 						data-aos-delay="100"
 					>
-						<div class="card-image-thumb">
-							<img
-								src="images/services-page/web-design.png"
-								alt="Custom Website Development"
-								loading="lazy"
-							/>
-						</div>
+						<div class="card-overlay"></div>
 						<div class="summary-text">
 							<h3>Custom Website Development</h3>
 							<p>High-performance, mobile-responsive sites built to convert.</p>
@@ -157,18 +151,12 @@
 
 					<a
 						href="#service-branding"
-						class="service-summary-card"
-						style="--card-accent: #ff851b"
+						class="service-summary-card reveal stagger-2"
+						style="--card-accent: #ff851b; background-image: url('images/services-page/strategic-branding-and-identity.png')"
 						data-aos="fade-up"
 						data-aos-delay="200"
 					>
-						<div class="card-image-thumb">
-							<img
-								src="images/services-page/strategic-branding-and-identity.png"
-								alt="Strategic Branding & Identity"
-								loading="lazy"
-							/>
-						</div>
+						<div class="card-overlay"></div>
 						<div class="summary-text">
 							<h3>Strategic Branding & Identity</h3>
 							<p>Cohesive visual identities that communicate your values.</p>
@@ -178,18 +166,12 @@
 
 					<a
 						href="#service-seo"
-						class="service-summary-card"
-						style="--card-accent: #48c9b0"
+						class="service-summary-card reveal stagger-3"
+						style="--card-accent: #48c9b0; background-image: url('images/services-page/localized-seo-visibility.png')"
 						data-aos="fade-up"
 						data-aos-delay="100"
 					>
-						<div class="card-image-thumb">
-							<img
-								src="images/services-page/localized-seo-visibility.png"
-								alt="Localized SEO Visibility"
-								loading="lazy"
-							/>
-						</div>
+						<div class="card-overlay"></div>
 						<div class="summary-text">
 							<h3>Localized SEO Visibility</h3>
 							<p>Get found by customers searching for your services.</p>
@@ -199,18 +181,12 @@
 
 					<a
 						href="#service-ads"
-						class="service-summary-card"
-						style="--card-accent: #ff851b"
+						class="service-summary-card reveal stagger-4"
+						style="--card-accent: #ff851b; background-image: url('images/services-page/managed-ad-campaigns.png')"
 						data-aos="fade-up"
 						data-aos-delay="200"
 					>
-						<div class="card-image-thumb">
-							<img
-								src="images/services-page/managed-ad-campaigns.png"
-								alt="Managed Ad Campaigns"
-								loading="lazy"
-							/>
-						</div>
+						<div class="card-overlay"></div>
 						<div class="summary-text">
 							<h3>Managed Ad Campaigns</h3>
 							<p>Expert campaign management that makes your budget work harder.</p>
@@ -353,17 +329,12 @@
 		<section id="cat-ai" class="service-category service-category-alt">
 			<div class="container">
 				<!-- Category Header -->
-				<div class="category-header" data-aos="fade-up">
+				<div class="category-header reveal" data-aos="fade-up">
 					<div
 						class="category-badge"
 						style="background: rgba(160, 121, 203, 0.12); color: #a079cb"
 					>
-						<lord-icon
-							src="https://cdn.lordicon.com/puvaffet.json"
-							trigger="loop"
-							colors="primary:#a079cb,secondary:#fb837d"
-							style="width: 24px; height: 24px"
-						></lord-icon>
+						<i class="fi fi-rr-brain icon-pulse" style="font-size: 1.1rem;"></i>
 						<span>AI & Automation</span>
 					</div>
 					<h2>Work Smarter, Not Harder</h2>
@@ -377,18 +348,12 @@
 				<div class="service-cards-grid">
 					<a
 						href="#service-ai-strategy"
-						class="service-summary-card"
-						style="--card-accent: #0d1b2a"
+						class="service-summary-card reveal stagger-1"
+						style="--card-accent: #0d1b2a; background-image: url('images/services-page/ai-strategy-and-navication.png')"
 						data-aos="fade-up"
 						data-aos-delay="100"
 					>
-						<div class="card-image-thumb">
-							<img
-								src="images/services-page/ai-strategy-and-navication.png"
-								alt="AI Strategy & Navigation"
-								loading="lazy"
-							/>
-						</div>
+						<div class="card-overlay"></div>
 						<div class="summary-text">
 							<h3>AI Strategy & Navigation</h3>
 							<p>Identify which AI tools actually work for your business.</p>
@@ -398,18 +363,12 @@
 
 					<a
 						href="#service-automation"
-						class="service-summary-card"
-						style="--card-accent: #a079cb"
+						class="service-summary-card reveal stagger-2"
+						style="--card-accent: #a079cb; background-image: url('images/services-page/workflow-automation.png')"
 						data-aos="fade-up"
 						data-aos-delay="200"
 					>
-						<div class="card-image-thumb">
-							<img
-								src="images/services-page/workflow-automation.png"
-								alt="Workflow Automation"
-								loading="lazy"
-							/>
-						</div>
+						<div class="card-overlay"></div>
 						<div class="summary-text">
 							<h3>Workflow Automation</h3>
 							<p>Eliminate repetitive tasks with intelligent automation.</p>
@@ -419,18 +378,12 @@
 
 					<a
 						href="#service-content"
-						class="service-summary-card"
-						style="--card-accent: #f1948a"
+						class="service-summary-card reveal stagger-3"
+						style="--card-accent: #f1948a; background-image: url('images/services-page/grow-and-support.png')"
 						data-aos="fade-up"
 						data-aos-delay="100"
 					>
-						<div class="card-image-thumb">
-							<img
-								src="images/services-page/grow-and-support.png"
-								alt="AI Content Support"
-								loading="lazy"
-							/>
-						</div>
+						<div class="card-overlay"></div>
 						<div class="summary-text">
 							<h3>AI Content Support</h3>
 							<p>Brand-aligned content powered by AI across every channel.</p>
@@ -440,18 +393,12 @@
 
 					<a
 						href="#service-chatbots"
-						class="service-summary-card"
-						style="--card-accent: #0d1b2a"
+						class="service-summary-card reveal stagger-4"
+						style="--card-accent: #0d1b2a; background-image: url('images/services-page/smart-chatbots.png')"
 						data-aos="fade-up"
 						data-aos-delay="200"
 					>
-						<div class="card-image-thumb">
-							<img
-								src="images/services-page/smart-chatbots.png"
-								alt="Smart Chatbots"
-								loading="lazy"
-							/>
-						</div>
+						<div class="card-overlay"></div>
 						<div class="summary-text">
 							<h3>Smart Chatbots</h3>
 							<p>24/7 customer support that sounds like your brand.</p>
@@ -593,17 +540,12 @@
 		<section id="cat-growth" class="service-category">
 			<div class="container">
 				<!-- Category Header -->
-				<div class="category-header" data-aos="fade-up">
+				<div class="category-header reveal" data-aos="fade-up">
 					<div
 						class="category-badge"
 						style="background: rgba(72, 201, 176, 0.1); color: #48c9b0"
 					>
-						<lord-icon
-							src="https://cdn.lordicon.com/zpxybbhl.json"
-							trigger="loop"
-							colors="primary:#48c9b0,secondary:#0f1d2d"
-							style="width: 24px; height: 24px"
-						></lord-icon>
+						<i class="fi fi-rr-chart-line-up icon-float" style="font-size: 1.1rem;"></i>
 						<span>Growth & Strategy</span>
 					</div>
 					<h2>Grow with Confidence</h2>
@@ -617,18 +559,12 @@
 				<div class="service-cards-grid">
 					<a
 						href="#service-data"
-						class="service-summary-card"
-						style="--card-accent: #ff851b"
+						class="service-summary-card reveal stagger-1"
+						style="--card-accent: #ff851b; background-image: url('images/services-page/data-insights.png')"
 						data-aos="fade-up"
 						data-aos-delay="100"
 					>
-						<div class="card-image-thumb">
-							<img
-								src="images/services-page/data-insights.png"
-								alt="Data Insights"
-								loading="lazy"
-							/>
-						</div>
+						<div class="card-overlay"></div>
 						<div class="summary-text">
 							<h3>Data Insights</h3>
 							<p>Turn messy data into clear decisions with custom dashboards.</p>
@@ -638,18 +574,12 @@
 
 					<a
 						href="#service-support"
-						class="service-summary-card"
-						style="--card-accent: #0d1b2a"
+						class="service-summary-card reveal stagger-2"
+						style="--card-accent: #0d1b2a; background-image: url('images/services-page/grow-and-support-plan.png')"
 						data-aos="fade-up"
 						data-aos-delay="200"
 					>
-						<div class="card-image-thumb">
-							<img
-								src="images/services-page/grow-and-support-plan.png"
-								alt="Grow & Support Plan"
-								loading="lazy"
-							/>
-						</div>
+						<div class="card-overlay"></div>
 						<div class="summary-text">
 							<h3>Grow & Support Plan</h3>
 							<p>Ongoing support that keeps your site secure and optimized.</p>
@@ -659,18 +589,12 @@
 
 					<a
 						href="#service-training"
-						class="service-summary-card"
-						style="--card-accent: #f1948a"
+						class="service-summary-card reveal stagger-3"
+						style="--card-accent: #f1948a; background-image: url('images/services-page/training-and-empowerment.png')"
 						data-aos="fade-up"
 						data-aos-delay="100"
 					>
-						<div class="card-image-thumb">
-							<img
-								src="images/services-page/training-and-empowerment.png"
-								alt="Training & Empowerment"
-								loading="lazy"
-							/>
-						</div>
+						<div class="card-overlay"></div>
 						<div class="summary-text">
 							<h3>Training & Empowerment</h3>
 							<p>Step-by-step training so you can manage your own tools.</p>
@@ -680,18 +604,12 @@
 
 					<a
 						href="#service-future"
-						class="service-summary-card"
-						style="--card-accent: #48c9b0"
+						class="service-summary-card reveal stagger-4"
+						style="--card-accent: #48c9b0; background-image: url('images/services-page/future-proofing.png')"
 						data-aos="fade-up"
 						data-aos-delay="200"
 					>
-						<div class="card-image-thumb">
-							<img
-								src="images/services-page/future-proofing.png"
-								alt="Future-Proofing"
-								loading="lazy"
-							/>
-						</div>
+						<div class="card-overlay"></div>
 						<div class="summary-text">
 							<h3>Future-Proofing</h3>
 							<p>Big-picture strategy to keep your business competitive.</p>
@@ -832,12 +750,12 @@
 		<!-- ===== HOW WE WORK PROCESS SECTION ===== -->
 		<section class="services-process">
 			<div class="container">
-				<div class="category-header" data-aos="fade-up">
+				<div class="category-header reveal" data-aos="fade-up">
 					<div
 						class="category-badge"
 						style="background: rgba(255, 138, 61, 0.1); color: var(--orange)"
 					>
-						<i class="bi bi-arrow-repeat"></i>
+						<i class="fi fi-rr-refresh icon-pulse" style="font-size: 1rem;"></i>
 						<span>Our Process</span>
 					</div>
 					<h2>How We Work</h2>
@@ -845,15 +763,10 @@
 				</div>
 
 				<div class="process-steps">
-					<div class="process-step" data-aos="fade-up" data-aos-delay="100">
+					<div class="process-step reveal stagger-1" data-aos="fade-up" data-aos-delay="100">
 						<div class="process-step-number">01</div>
 						<div class="process-step-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/zpxybbhl.json"
-								trigger="loop"
-								colors="primary:#ff8a3d,secondary:#2f9ea0"
-								style="width: 48px; height: 48px"
-							></lord-icon>
+							<i class="fi fi-rr-search fi-icon-xl icon-float" style="color: #ff8a3d;"></i>
 						</div>
 						<h3>Discover</h3>
 						<p>
@@ -866,15 +779,10 @@
 						<i class="bi bi-arrow-right"></i>
 					</div>
 
-					<div class="process-step" data-aos="fade-up" data-aos-delay="200">
+					<div class="process-step reveal stagger-2" data-aos="fade-up" data-aos-delay="200">
 						<div class="process-step-number">02</div>
 						<div class="process-step-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/etwtznjn.json"
-								trigger="loop"
-								colors="primary:#a079cb,secondary:#fb837d"
-								style="width: 48px; height: 48px"
-							></lord-icon>
+							<i class="fi fi-rr-layers fi-icon-xl icon-pulse" style="color: #a079cb;"></i>
 						</div>
 						<h3>Design & Build</h3>
 						<p>
@@ -887,15 +795,10 @@
 						<i class="bi bi-arrow-right"></i>
 					</div>
 
-					<div class="process-step" data-aos="fade-up" data-aos-delay="300">
+					<div class="process-step reveal stagger-3" data-aos="fade-up" data-aos-delay="300">
 						<div class="process-step-number">03</div>
 						<div class="process-step-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/puvaffet.json"
-								trigger="loop"
-								colors="primary:#48c9b0,secondary:#0f1d2d"
-								style="width: 48px; height: 48px"
-							></lord-icon>
+							<i class="fi fi-rr-rocket fi-icon-xl icon-bounce" style="color: #48c9b0;"></i>
 						</div>
 						<h3>Launch & Grow</h3>
 						<p>
@@ -909,14 +812,9 @@
 
 		<!-- ===== FINAL CTA SECTION ===== -->
 		<section class="final-cta services-final-cta">
-			<div class="container text-center">
+			<div class="container text-center reveal-scale">
 				<div data-aos="zoom-in">
-					<lord-icon
-						src="https://cdn.lordicon.com/zpxybbhl.json"
-						trigger="loop"
-						colors="primary:#ff8a3d,secondary:#fffaf2"
-						style="width: 64px; height: 64px"
-					></lord-icon>
+					<i class="fi fi-rr-rocket icon-bounce" style="font-size: 3rem; color: var(--orange);"></i>
 				</div>
 				<h2 class="final-cta-title" data-aos="fade-up" data-aos-delay="100">
 					Not Sure Where to Start?
@@ -1087,19 +985,32 @@
 				});
 		</script>
 
-		<!-- ===== COMPONENT INCLUDES ===== -->
+		<!-- ===== SCROLL REVEAL ===== -->
 		<script>
-			// Load navbar component
-			fetch("-navbar.html")
-				.then(function (response) { return response.text(); })
-				.then(function (html) {
-					var navbar = document.getElementById("navbar");
-					if (navbar) navbar.innerHTML = html;
-				})
-				.catch(function (error) {
-					console.error("Navbar load failed:", error);
-				});
+			(function () {
+				const revealEls = document.querySelectorAll(
+					".reveal, .reveal-left, .reveal-right, .reveal-scale"
+				);
+				if (!revealEls.length) return;
 
+				const io = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								entry.target.classList.add("revealed");
+								io.unobserve(entry.target);
+							}
+						});
+					},
+					{ threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+				);
+
+				revealEls.forEach((el) => io.observe(el));
+			})();
+		</script>
+
+		<!-- ===== FOOTER INCLUDE ===== -->
+		<script>
 			// Load footer component
 			fetch("-footer.html")
 				.then(function (response) { return response.text(); })

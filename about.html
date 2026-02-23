@@ -18,8 +18,15 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
 		/>
-		<!-- Lordicon Script -->
-		<script src="https://cdn.lordicon.com/lordicon.js"></script>
+		<!-- Flaticon CDN -->
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css"
+		/>
 		<!-- AOS Animate on Scroll -->
 		<link
 			rel="stylesheet"
@@ -27,15 +34,764 @@
 		/>
 		<!--Main Stylesheet-->
 		<link rel="stylesheet" href="styles.css" />
+
+		<style>
+			/* ==========================================================
+			   ABOUT PAGE — REDESIGNED HERO (matches projects-hero pattern)
+			   ========================================================== */
+			.about-hero {
+				position: relative;
+				padding: 10rem 2rem 5rem;
+				background:
+					radial-gradient(ellipse at 25% 20%, rgba(160, 121, 203, 0.35), transparent 55%),
+					radial-gradient(ellipse at 75% 75%, rgba(47, 158, 160, 0.3), transparent 55%),
+					radial-gradient(ellipse at 50% 50%, rgba(255, 138, 61, 0.12), transparent 60%),
+					var(--ink);
+				color: #ffffff;
+				text-align: center;
+				overflow: hidden;
+				min-height: auto;
+				height: auto;
+			}
+
+			.about-hero::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='g' patternUnits='userSpaceOnUse' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='1' fill='rgba(255,255,255,0.04)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+				pointer-events: none;
+			}
+
+			.about-hero-bg { display: none; }
+
+			.about-hero-content {
+				position: relative;
+				z-index: 1;
+				max-width: 780px;
+				margin: 0 auto;
+				padding: 0 1rem;
+				animation: none;
+			}
+
+			.about-hero-content > p {
+				font-size: 1.15rem;
+				color: rgba(255, 255, 255, 0.7);
+				max-width: 540px;
+				margin: 0 auto 2rem;
+				line-height: 1.7;
+			}
+
+			.about-hero .hero-chip {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.5rem;
+				background: rgba(255, 255, 255, 0.08);
+				border: 1px solid rgba(255, 255, 255, 0.12);
+				backdrop-filter: blur(10px);
+				padding: 0.45rem 1.2rem;
+				border-radius: 999px;
+				font-size: 0.85rem;
+				font-weight: 600;
+				color: rgba(255, 255, 255, 0.85);
+				margin-bottom: 1.5rem;
+				letter-spacing: 0.02em;
+			}
+
+			.about-hero .hero-chip i { color: var(--orange); }
+
+			.about-hero .hero-stats {
+				display: flex;
+				justify-content: center;
+				gap: 2.5rem;
+				margin-top: 2.5rem;
+				flex-wrap: wrap;
+			}
+
+			.about-hero .hero-stat { text-align: center; }
+
+			.about-hero .hero-stat .stat-number {
+				display: block;
+				font-family: "Fraunces", serif;
+				font-size: 1.8rem;
+				font-weight: 700;
+				color: var(--orange);
+			}
+
+			.about-hero .hero-stat .stat-label {
+				font-size: 0.82rem;
+				color: rgba(255, 255, 255, 0.55);
+				text-transform: uppercase;
+				letter-spacing: 0.06em;
+			}
+
+			/* ==========================================================
+			   ABOUT PAGE — ENHANCED ICON STYLES
+			   ========================================================== */
+			.fi-icon-wrap {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+			}
+			.fi-icon-wrap:hover { transform: scale(1.18) rotate(-4deg); }
+			.fi-icon-wrap i { line-height: 1; }
+			.category-badge .fi-icon-wrap i { font-size: 1rem; }
+			.about-value-icon .fi-icon-wrap i { font-size: 1.65rem; }
+			.about-edu-icon .fi-icon-wrap i { font-size: 1.4rem; }
+			.final-cta-icon .fi-icon-wrap i { font-size: 2.6rem; }
+
+			/* ===== ICON ANIMATIONS ===== */
+			@keyframes iconFloat {
+				0%, 100% { transform: translateY(0px); }
+				50% { transform: translateY(-5px); }
+			}
+			@keyframes iconSpin {
+				0% { transform: rotate(0deg); }
+				100% { transform: rotate(360deg); }
+			}
+			@keyframes iconBounce {
+				0%, 100% { transform: scale(1); }
+				50% { transform: scale(1.12); }
+			}
+			@keyframes iconShake {
+				0%, 100% { transform: rotate(0deg); }
+				20% { transform: rotate(-8deg); }
+				40% { transform: rotate(8deg); }
+				60% { transform: rotate(-4deg); }
+				80% { transform: rotate(4deg); }
+			}
+			.fi-animate-float { animation: iconFloat 2.8s ease-in-out infinite; }
+			.fi-animate-bounce { animation: iconBounce 2s ease-in-out infinite; }
+			.fi-animate-shake { animation: iconShake 3s ease-in-out infinite; }
+			.fi-animate-spin { animation: iconSpin 6s linear infinite; }
+
+			/* ==========================================================
+			   ABOUT PAGE — MEET TIM — STICKY PHOTO LEFT
+			   ========================================================== */
+			.about-meet-section {
+				margin-bottom: 0 !important;
+				padding-bottom: 0 !important;
+				background: var(--cream);
+			}
+
+			.about-meet-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				align-items: start;
+				gap: 0 4rem;
+			}
+
+			.about-meet-visual {
+				position: sticky;
+				top: 0;
+				align-self: start;
+				height: 100vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+			}
+
+			.about-photo-frame {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				display: flex;
+				align-items: flex-end;
+			}
+
+			.about-photo-frame img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: top center;
+				display: block;
+			}
+
+			.about-photo-accent { display: none; }
+
+			.about-meet-text {
+				padding-top: 3rem;
+				padding-bottom: 3rem;
+			}
+
+			/* ===== Shimmer badge ===== */
+			.category-badge {
+				position: relative;
+				overflow: hidden;
+			}
+			.category-badge::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: -100%;
+				width: 60%;
+				height: 100%;
+				background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+				animation: badgeShimmer 3.5s ease-in-out infinite;
+			}
+			@keyframes badgeShimmer {
+				0% { left: -100%; }
+				50%, 100% { left: 150%; }
+			}
+
+			/* ===== Skill tags pop ===== */
+			.skill-tag,
+			.about-skill-pill {
+				transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.28s ease;
+			}
+			.skill-tag:hover,
+			.about-skill-pill:hover {
+				transform: translateY(-3px) scale(1.06);
+				box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+			}
+
+			/* ==========================================================
+			   ABOUT PAGE — VALUES — STICKY IMAGES RIGHT + CARDS LEFT
+			   ========================================================== */
+			.about-values-section {
+				margin-top: 0 !important;
+				padding: 0;
+				background: var(--sand);
+				position: relative;
+			}
+
+			.values-layout-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				align-items: start;
+				gap: 0;
+			}
+
+			/* Left column: scrolling value cards */
+			.values-scroll-col {
+				padding: 5rem 3rem 5rem 2rem;
+			}
+
+			/* Right column: sticky flavicon images */
+			.values-sticky-col {
+				position: sticky;
+				top: 0;
+				align-self: start;
+				height: 100vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				gap: 1.5rem;
+				padding: 2rem;
+				background:
+					radial-gradient(ellipse at 30% 30%, rgba(255, 138, 61, 0.08), transparent 60%),
+					radial-gradient(ellipse at 70% 70%, rgba(47, 158, 160, 0.06), transparent 60%),
+					var(--cream);
+			}
+
+			.values-sticky-col .sticky-flavicon {
+				width: 100%;
+				max-width: 360px;
+				border-radius: 24px;
+				overflow: hidden;
+				box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+				transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+			}
+
+			.values-sticky-col .sticky-flavicon:hover {
+				transform: scale(1.03) rotate(-1deg);
+			}
+
+			.values-sticky-col .sticky-flavicon img {
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+
+			.about-values-grid {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5rem;
+			}
+
+			.about-value-card {
+				background: #ffffff;
+				border-radius: 20px;
+				padding: 2rem 1.5rem;
+				box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+				border: 1px solid rgba(226, 217, 204, 0.4);
+				display: flex;
+				align-items: flex-start;
+				gap: 1.2rem;
+				transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.38s ease;
+			}
+
+			.about-value-card:hover {
+				transform: translateY(-6px) scale(1.01);
+				box-shadow: 0 24px 48px rgba(0, 0, 0, 0.1);
+			}
+
+			.about-value-icon {
+				width: 64px;
+				height: 64px;
+				border-radius: 16px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-shrink: 0;
+			}
+
+			.about-value-card .value-text h3 {
+				font-family: "Fraunces", "Times New Roman", serif;
+				font-size: 1.15rem;
+				color: var(--ink);
+				margin-bottom: 0.4rem;
+			}
+
+			.about-value-card .value-text p {
+				font-size: 0.92rem;
+				color: var(--slate);
+				line-height: 1.6;
+				margin: 0;
+			}
+
+			/* ==========================================================
+			   ABOUT PAGE — JOURNEY TIMELINE — DRAW-REVEAL ANIMATION
+			   ========================================================== */
+			.cv-section {
+				padding: 6rem 0;
+				background: var(--cream);
+				overflow: hidden;
+			}
+
+			.timeline-wrapper {
+				max-width: 800px;
+				margin: 0 auto;
+				position: relative;
+				padding-left: 40px;
+			}
+
+			/* Central line that draws as you scroll */
+			.timeline-line {
+				position: absolute;
+				left: 18px;
+				top: 0;
+				width: 3px;
+				height: 100%;
+				background: rgba(47, 158, 160, 0.12);
+				border-radius: 3px;
+			}
+
+			.timeline-line-fill {
+				position: absolute;
+				left: 18px;
+				top: 0;
+				width: 3px;
+				height: 0;
+				background: linear-gradient(180deg, var(--teal), var(--orange));
+				border-radius: 3px;
+				transition: height 0.1s linear;
+				z-index: 1;
+			}
+
+			/* Timeline items */
+			.tl-item {
+				position: relative;
+				padding: 0 0 3rem 2.5rem;
+				opacity: 0;
+				transform: translateY(30px);
+				transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+			}
+
+			.tl-item.tl-visible {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			/* Timeline dot */
+			.tl-dot {
+				position: absolute;
+				left: -31px;
+				top: 6px;
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				background: var(--cream);
+				border: 3px solid rgba(47, 158, 160, 0.25);
+				z-index: 2;
+				transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+			}
+
+			.tl-item.tl-visible .tl-dot {
+				border-color: var(--teal);
+				box-shadow: 0 0 0 4px rgba(47, 158, 160, 0.15), 0 0 20px rgba(47, 158, 160, 0.1);
+				transform: scale(1.1);
+			}
+
+			/* Pulse on the first (current) item */
+			.tl-item:first-child.tl-visible .tl-dot {
+				background: var(--orange);
+				border-color: var(--orange);
+				box-shadow: 0 0 0 4px rgba(255, 138, 61, 0.2), 0 0 20px rgba(255, 138, 61, 0.15);
+				animation: dotPulse 2s ease-in-out infinite;
+			}
+
+			@keyframes dotPulse {
+				0%, 100% { box-shadow: 0 0 0 4px rgba(255, 138, 61, 0.2), 0 0 20px rgba(255, 138, 61, 0.1); }
+				50% { box-shadow: 0 0 0 8px rgba(255, 138, 61, 0.1), 0 0 30px rgba(255, 138, 61, 0.15); }
+			}
+
+			/* Card styling */
+			.tl-card {
+				background: #ffffff;
+				border-radius: 18px;
+				padding: 1.8rem 2rem;
+				box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+				border: 1px solid rgba(226, 217, 204, 0.4);
+				transition: box-shadow 0.35s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+			}
+
+			.tl-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 16px 40px rgba(15, 23, 42, 0.1);
+			}
+
+			.tl-header {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 1rem;
+				margin-bottom: 0.6rem;
+				flex-wrap: wrap;
+			}
+
+			.tl-card h3 {
+				font-family: "Fraunces", "Times New Roman", serif;
+				font-size: 1.25rem;
+				color: var(--ink);
+				margin: 0;
+				line-height: 1.3;
+			}
+
+			.tl-date {
+				font-size: 0.78rem;
+				color: var(--cream);
+				background: var(--teal);
+				padding: 0.25rem 0.8rem;
+				border-radius: 999px;
+				font-weight: 600;
+				white-space: nowrap;
+				letter-spacing: 0.02em;
+			}
+
+			.tl-item:first-child .tl-date {
+				background: var(--orange);
+			}
+
+			.tl-company {
+				font-size: 0.95rem;
+				color: var(--purple);
+				font-weight: 600;
+				margin-bottom: 0.5rem;
+			}
+
+			.tl-desc {
+				font-size: 0.95rem;
+				color: var(--slate);
+				line-height: 1.7;
+				margin: 0;
+			}
+
+			/* ==========================================================
+			   ABOUT PAGE — EDUCATION & CREDENTIALS — REDESIGNED
+			   ========================================================== */
+			.about-edu-section {
+				padding: 5rem 0;
+				background:
+					radial-gradient(ellipse at 20% 30%, rgba(160, 121, 203, 0.06), transparent 50%),
+					radial-gradient(ellipse at 80% 70%, rgba(47, 158, 160, 0.05), transparent 50%),
+					var(--cream);
+				position: relative;
+				overflow: hidden;
+			}
+
+			.edu-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 2rem;
+				max-width: 900px;
+				margin: 0 auto 4rem;
+			}
+
+			.edu-card-v2 {
+				position: relative;
+				background: #ffffff;
+				border-radius: 20px;
+				padding: 2.2rem 2rem;
+				box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
+				border: 1px solid rgba(226, 217, 204, 0.4);
+				overflow: hidden;
+				transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
+			}
+
+			.edu-card-v2:hover {
+				transform: translateY(-6px);
+				box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
+			}
+
+			.edu-card-v2::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 4px;
+				border-radius: 20px 20px 0 0;
+			}
+
+			.edu-card-v2:nth-child(1)::before {
+				background: linear-gradient(90deg, var(--purple), var(--sky));
+			}
+
+			.edu-card-v2:nth-child(2)::before {
+				background: linear-gradient(90deg, var(--orange), var(--coral));
+			}
+
+			.edu-icon-circle {
+				width: 56px;
+				height: 56px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: 1.2rem;
+			}
+
+			.edu-card-v2 h3 {
+				font-family: "Fraunces", "Times New Roman", serif;
+				font-size: 1.2rem;
+				color: var(--ink);
+				margin-bottom: 0.4rem;
+				line-height: 1.3;
+			}
+
+			.edu-focus {
+				font-size: 0.92rem;
+				color: var(--purple);
+				font-weight: 600;
+				margin: 0 0 0.3rem;
+			}
+
+			.edu-school {
+				font-size: 0.88rem;
+				color: var(--slate);
+				margin: 0 0 0.2rem;
+			}
+
+			.edu-date {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.35rem;
+				font-size: 0.82rem;
+				color: var(--peach);
+				font-weight: 500;
+				margin-top: 0.4rem;
+			}
+
+			.edu-status {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.3rem;
+				padding: 0.2rem 0.7rem;
+				border-radius: 999px;
+				font-size: 0.75rem;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.04em;
+				margin-top: 0.6rem;
+			}
+
+			.edu-status.completed {
+				background: rgba(47, 158, 160, 0.1);
+				color: var(--teal);
+			}
+
+			.edu-status.in-progress {
+				background: rgba(255, 138, 61, 0.1);
+				color: var(--orange);
+			}
+
+			/* ===== Skills Redesign ===== */
+			.skills-showcase {
+				max-width: 900px;
+				margin: 0 auto;
+			}
+
+			.skills-grid-v2 {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 2rem;
+			}
+
+			.skills-column {
+				background: #ffffff;
+				border-radius: 20px;
+				padding: 2rem;
+				box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+				border: 1px solid rgba(226, 217, 204, 0.4);
+			}
+
+			.skills-column h4 {
+				font-family: "Space Grotesk", sans-serif;
+				font-size: 0.8rem;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				color: var(--slate);
+				margin-bottom: 1.2rem;
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+			}
+
+			.skills-column h4 i {
+				font-size: 1rem;
+				color: var(--teal);
+			}
+
+			.skill-bar-item {
+				margin-bottom: 1rem;
+			}
+
+			.skill-bar-label {
+				display: flex;
+				justify-content: space-between;
+				font-size: 0.88rem;
+				font-weight: 500;
+				color: var(--ink);
+				margin-bottom: 0.4rem;
+			}
+
+			.skill-bar-track {
+				height: 6px;
+				background: rgba(226, 217, 204, 0.5);
+				border-radius: 999px;
+				overflow: hidden;
+			}
+
+			.skill-bar-fill {
+				height: 100%;
+				border-radius: 999px;
+				width: 0;
+				transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+			}
+
+			.skill-bar-fill.animated { width: var(--fill); }
+
+			/* ===== CTA button pulse ===== */
+			.final-cta-button {
+				position: relative;
+				overflow: hidden;
+			}
+			.final-cta-button::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: rgba(255, 255, 255, 0.15);
+				transform: scaleX(0);
+				transform-origin: left;
+				transition: transform 0.4s ease;
+			}
+			.final-cta-button:hover::before { transform: scaleX(1); }
+
+			/* ==========================================================
+			   ABOUT PAGE — RESPONSIVE OVERRIDES
+			   ========================================================== */
+			@media (max-width: 768px) {
+				.about-hero { padding: 8rem 1.5rem 3.5rem; }
+				.typing-hero { font-size: 2.2rem !important; }
+
+				.about-meet-grid {
+					grid-template-columns: 1fr;
+				}
+				.about-meet-visual {
+					position: relative;
+					height: 70vw;
+					max-height: 520px;
+				}
+
+				.values-layout-grid {
+					grid-template-columns: 1fr;
+				}
+				.values-sticky-col {
+					position: relative;
+					height: auto;
+					flex-direction: row;
+					padding: 2rem;
+				}
+				.values-sticky-col .sticky-flavicon {
+					max-width: 45%;
+				}
+				.values-scroll-col {
+					padding: 2rem 1.5rem;
+				}
+
+				.timeline-wrapper {
+					padding-left: 30px;
+				}
+				.tl-dot { left: -21px; width: 14px; height: 14px; }
+				.timeline-line { left: 13px; }
+				.timeline-line-fill { left: 13px; }
+				.tl-card { padding: 1.4rem 1.2rem; }
+				.tl-header { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+
+				.edu-grid {
+					grid-template-columns: 1fr;
+				}
+				.skills-grid-v2 {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			@media (max-width: 480px) {
+				.about-hero { padding: 7rem 1rem 3rem; }
+				.typing-hero { font-size: 1.7rem !important; }
+				.about-hero .hero-stats { gap: 1.5rem; }
+
+				.values-sticky-col {
+					flex-direction: column;
+				}
+				.values-sticky-col .sticky-flavicon {
+					max-width: 70%;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<!-- ===== NAV BAR ===== -->
-		<div id="navbar"></div>
+		<nav>
+			<div class="nav-container">
+				<a href="index.html" class="logo">
+					<img src="images/icons/logo-1300x507.png" alt="The Daly Creative" height="48" />
+				</a>
+				<input type="checkbox" id="nav-toggle" class="nav-toggle" />
+				<label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"></label>
+				<ul class="nav-links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html" class="active">About</a></li>
+					<li><a href="ai-tools.html">AI-Tools</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="blueprint.html">Blueprint</a></li>
+					<li><a href="portfolio.html">Projects</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+				<a class="nav-cta" href="contact.html">Book a Call</a>
+			</div>
+		</nav>
 
 		<!-- ===== ABOUT HERO SECTION ===== -->
 		<section id="about" class="about-hero">
-			<div class="about-hero-bg"></div>
 			<div class="about-hero-content">
+				<span class="hero-chip" data-aos="fade-down" data-aos-delay="100">
+					<i class="fi fi-br-user-crown" style="font-size: 0.85rem;"></i>
+					The Story
+				</span>
 				<h1 class="typing-hero" aria-label="Meet the Tim">
 					<span class="typing-text"></span>
 					<span class="typing-cursor">|</span>
@@ -43,378 +799,388 @@
 				<p data-aos="fade-up" data-aos-delay="800">
 					One creative studio. Big ideas. Smart systems.
 				</p>
+				<a href="contact.html" class="cta-button" data-aos="fade-up" data-aos-delay="1000">
+					Let's Work Together <i class="bi bi-arrow-right"></i>
+				</a>
+				<div class="hero-stats" data-aos="fade-up" data-aos-delay="1200">
+					<div class="hero-stat">
+						<span class="stat-number">7+</span>
+						<span class="stat-label">Years experience</span>
+					</div>
+					<div class="hero-stat">
+						<span class="stat-number">8+</span>
+						<span class="stat-label">Brands built</span>
+					</div>
+					<div class="hero-stat">
+						<span class="stat-number">100%</span>
+						<span class="stat-label">Human-first</span>
+					</div>
+				</div>
 			</div>
 		</section>
 
-		<!-- ===== MEET TIM SECTION ===== -->
+		<!-- ===== MEET TIM SECTION — sticky photo left ===== -->
 		<section class="about-meet-section">
-			<div class="container">
-				<div class="about-meet-grid">
-					<!-- Photo column -->
-					<div class="about-meet-visual" data-aos="fade-right" data-aos-delay="100">
-						<div class="about-photo-frame">
-							<img
-								src="images/about-page/meet-tim-yellow-x886.png"
-								alt="Tim Daly - Founder of The Daly Creative"
-								loading="lazy"
-							/>
-						</div>
-						<div class="about-photo-accent"></div>
-					</div>
-
-					<!-- Text column -->
-					<div class="about-meet-text" data-aos="fade-left" data-aos-delay="200">
-						<div class="category-badge" style="background: rgba(255, 138, 61, 0.1); color: var(--orange);">
-							<lord-icon
-								src="https://cdn.lordicon.com/etwtznjn.json"
-								trigger="loop"
-								colors="primary:#ff8a3d,secondary:#2f9ea0"
-								style="width: 22px; height: 22px"
-							></lord-icon>
-							<span>The Founder</span>
-						</div>
-						<h2>Tim Daly</h2>
-						<p class="about-meet-role">Founder & Creative Strategist</p>
-
-						<p class="team-bio">
-							Tim is a multi-disciplinary creative who lives at the intersection of
-							design, technology, and strategy. With a background in brand development,
-							web design, and AI automation, he founded The Daly Creative to help
-							businesses cut through the noise and build systems that actually work.
-						</p>
-						<p class="team-bio">
-							What sets Tim apart? He doesn't just build websites or design logos — he
-							creates intelligent systems that grow with your business. From custom AI
-							agents to full-stack brand identities, Tim believes in empowering clients
-							with tools and knowledge, not just deliverables.
-						</p>
-						<p class="team-bio">
-							As a neurodivergent creative, Tim understands the importance of clear
-							communication, structured workflows, and accessible design. His approach
-							is collaborative, transparent, and focused on long-term success rather
-							than quick wins.
-						</p>
-						<p class="team-bio">
-							When he's not building brands or training AI models, you'll find Tim
-							exploring Perth's coffee scene, tinkering with new tech, or advocating
-							for more human-centered digital experiences.
-						</p>
-
-						<div class="about-meet-skills">
-							<span class="skill-tag">Brand Strategy</span>
-							<span class="skill-tag">Web Development</span>
-							<span class="skill-tag">AI Automation</span>
-							<span class="skill-tag">UX Design</span>
-							<span class="skill-tag">Market Research</span>
-							<span class="skill-tag">Content Systems</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- ===== WHAT DRIVES US / VALUES SECTION ===== -->
-		<section class="about-values-section">
-			<div class="container">
-				<div class="category-header" data-aos="fade-up">
-					<div class="category-badge" style="background: rgba(47, 158, 160, 0.1); color: var(--teal);">
-						<lord-icon
-							src="https://cdn.lordicon.com/zpxybbhl.json"
-							trigger="loop"
-							colors="primary:#2f9ea0,secondary:#0f1d2d"
-							style="width: 22px; height: 22px"
-						></lord-icon>
-						<span>Our Approach</span>
-					</div>
-					<h2>What Drives Us</h2>
-					<p>The principles behind every project we take on.</p>
-				</div>
-
-				<div class="about-values-grid">
-					<div class="about-value-card" data-aos="fade-up" data-aos-delay="100">
-						<div class="about-value-icon" style="background: rgba(255, 138, 61, 0.1);">
-							<lord-icon
-								src="https://cdn.lordicon.com/etwtznjn.json"
-								trigger="loop"
-								colors="primary:#ff8a3d,secondary:#2f9ea0"
-								style="width: 40px; height: 40px"
-							></lord-icon>
-						</div>
-						<h3>Creative Strategy</h3>
-						<p>
-							We don't just make things look good — we make sure they work.
-							Every design decision is backed by strategy and purpose.
-						</p>
-					</div>
-
-					<div class="about-value-card" data-aos="fade-up" data-aos-delay="200">
-						<div class="about-value-icon" style="background: rgba(160, 121, 203, 0.1);">
-							<lord-icon
-								src="https://cdn.lordicon.com/puvaffet.json"
-								trigger="loop"
-								colors="primary:#a079cb,secondary:#fb837d"
-								style="width: 40px; height: 40px"
-							></lord-icon>
-						</div>
-						<h3>Smart Automation</h3>
-						<p>
-							We use AI and automation to amplify your effort, not replace the human
-							touch. Technology should serve you, not complicate things.
-						</p>
-					</div>
-
-					<div class="about-value-card" data-aos="fade-up" data-aos-delay="300">
-						<div class="about-value-icon" style="background: rgba(72, 201, 176, 0.1);">
-							<lord-icon
-								src="https://cdn.lordicon.com/zpxybbhl.json"
-								trigger="loop"
-								colors="primary:#48c9b0,secondary:#0f1d2d"
-								style="width: 40px; height: 40px"
-							></lord-icon>
-						</div>
-						<h3>Human-First Design</h3>
-						<p>
-							Accessibility, clarity, and empathy are baked into everything we
-							create. Great design should feel effortless for everyone.
-						</p>
-					</div>
-
-					<div class="about-value-card" data-aos="fade-up" data-aos-delay="400">
-						<div class="about-value-icon" style="background: rgba(251, 131, 125, 0.1);">
-							<lord-icon
-								src="https://cdn.lordicon.com/tdxypxgp.json"
-								trigger="loop"
-								colors="primary:#fb837d,secondary:#334155"
-								style="width: 40px; height: 40px"
-							></lord-icon>
-						</div>
-						<h3>Long-Term Partnership</h3>
-						<p>
-							We don't build and disappear. We stick around to support, optimise,
-							and grow alongside your business for the long haul.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- ===== REAL PHOTO + VIDEO BREAK ===== -->
-		<section class="about-visual-break">
-			<div class="container">
-				<div class="about-visual-break-grid" data-aos="fade-up">
-					<div class="about-visual-photo">
+			<div class="about-meet-grid">
+				<!-- Photo column — sticky, full viewport height -->
+				<div class="about-meet-visual">
+					<div class="about-photo-frame" style="box-shadow: none; background-color: inherit;">
 						<img
-							src="images/about-page/tim-real-960x960.png"
-							alt="Tim Daly"
+							src="images/about-page/meet-tim-560x835.png"
+							alt="Tim Daly - Founder of The Daly Creative"
 							loading="lazy"
 						/>
 					</div>
-					<div class="about-visual-video">
-						<video
-							autoplay
-							muted
-							loop
-							playsinline
-							poster="images/about-page/meet-tim-x886.png"
-						>
-							<source src="images/about-page/vid-tim-x960.mp4" type="video/mp4" />
-						</video>
+				</div>
+
+				<!-- Text column — scrolls naturally -->
+				<div class="about-meet-text" data-aos="fade-left" data-aos-delay="200">
+					<div
+						class="category-badge"
+						style="background: rgba(255, 138, 61, 0.1); color: var(--orange)"
+					>
+						<span class="fi-icon-wrap fi-animate-bounce">
+							<i class="fi fi-br-user-crown" style="color: var(--orange)"></i>
+						</span>
+						<span>The Founder</span>
+					</div>
+					<h2>Tim Daly</h2>
+					<p class="about-meet-role">Founder & Creative Strategist</p>
+
+					<p class="team-bio">
+						Tim is a multi-disciplinary creative who lives at the intersection of
+						design, technology, and strategy. With a background in brand development,
+						web design, and AI automation, he founded The Daly Creative to help
+						businesses cut through the noise and build systems that actually work.
+					</p>
+					<p class="team-bio">
+						What sets Tim apart? He doesn't just build websites or design logos — he
+						creates intelligent systems that grow with your business. From custom AI
+						agents to full-stack brand identities, Tim believes in empowering clients
+						with tools and knowledge, not just deliverables.
+					</p>
+					<p class="team-bio">
+						As a neurodivergent creative, Tim understands the importance of clear
+						communication, structured workflows, and accessible design. His approach
+						is collaborative, transparent, and focused on long-term success rather
+						than quick wins.
+					</p>
+					<p class="team-bio">
+						When he's not building brands or training AI models, you'll find Tim
+						exploring Perth's coffee scene, tinkering with new tech, or advocating
+						for more human-centered digital experiences.
+					</p>
+
+					<div class="about-meet-skills">
+						<span class="skill-tag">Brand Strategy</span>
+						<span class="skill-tag">Web Development</span>
+						<span class="skill-tag">AI Automation</span>
+						<span class="skill-tag">UX Design</span>
+						<span class="skill-tag">Market Research</span>
+						<span class="skill-tag">Content Systems</span>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- ===== EXPERIENCE & CREDENTIALS SECTION ===== -->
-		<section class="cv-section">
+		<!-- ===== WHAT DRIVES US — sticky flavicon RIGHT, scrolling cards LEFT ===== -->
+		<section class="about-values-section" style="border-top: 4px solid var(--orange);">
+			<div class="values-layout-grid">
+				<!-- LEFT: scrolling value cards -->
+				<div class="values-scroll-col">
+					<div class="category-header" data-aos="fade-up">
+						<div
+							class="category-badge"
+							style="background: rgba(47, 158, 160, 0.1); color: var(--teal)"
+						>
+							<span class="fi-icon-wrap fi-animate-float">
+								<i class="fi fi-br-rocket-lunch" style="color: var(--teal)"></i>
+							</span>
+							<span>Our Approach</span>
+						</div>
+						<h2>What Drives Us</h2>
+						<p>The principles behind every project we take on.</p>
+					</div>
+
+					<div class="about-values-grid">
+						<div class="about-value-card" data-aos="fade-up" data-aos-delay="100">
+							<div class="about-value-icon" style="background: rgba(255, 138, 61, 0.1)">
+								<span class="fi-icon-wrap fi-animate-bounce">
+									<i class="fi fi-br-lightbulb-on" style="color: #ff8a3d; font-size: 1.65rem"></i>
+								</span>
+							</div>
+							<div class="value-text">
+								<h3>Creative Strategy</h3>
+								<p>We don't just make things look good — we make sure they work. Every design decision is backed by strategy and purpose.</p>
+							</div>
+						</div>
+
+						<div class="about-value-card" data-aos="fade-up" data-aos-delay="200">
+							<div class="about-value-icon" style="background: rgba(160, 121, 203, 0.1)">
+								<span class="fi-icon-wrap fi-animate-spin">
+									<i class="fi fi-br-settings" style="color: #a079cb; font-size: 1.65rem"></i>
+								</span>
+							</div>
+							<div class="value-text">
+								<h3>Smart Automation</h3>
+								<p>We use AI and automation to amplify your effort, not replace the human touch. Technology should serve you, not complicate things.</p>
+							</div>
+						</div>
+
+						<div class="about-value-card" data-aos="fade-up" data-aos-delay="300">
+							<div class="about-value-icon" style="background: rgba(72, 201, 176, 0.1)">
+								<span class="fi-icon-wrap fi-animate-float">
+									<i class="fi fi-br-heart" style="color: #48c9b0; font-size: 1.65rem"></i>
+								</span>
+							</div>
+							<div class="value-text">
+								<h3>Human-First Design</h3>
+								<p>Accessibility, clarity, and empathy are baked into everything we create. Great design should feel effortless for everyone.</p>
+							</div>
+						</div>
+
+						<div class="about-value-card" data-aos="fade-up" data-aos-delay="400">
+							<div class="about-value-icon" style="background: rgba(251, 131, 125, 0.1)">
+								<span class="fi-icon-wrap fi-animate-shake">
+									<i class="fi fi-br-handshake" style="color: #fb837d; font-size: 1.65rem"></i>
+								</span>
+							</div>
+							<div class="value-text">
+								<h3>Long-Term Partnership</h3>
+								<p>We don't build and disappear. We stick around to support, optimise, and grow alongside your business for the long haul.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- RIGHT: sticky flavicon images stacked vertically -->
+				<div class="values-sticky-col">
+					<div class="sticky-flavicon" data-aos="fade-left" data-aos-delay="200">
+						<img src="images/icons/flavicon1-x1563.png" alt="The Daly Creative Brand Mark" loading="lazy" />
+					</div>
+					<div class="sticky-flavicon" data-aos="fade-left" data-aos-delay="400">
+						<img src="images/icons/flavicon2-x1563.png" alt="The Daly Creative Brand Mark" loading="lazy" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== THE JOURNEY SO FAR — ANIMATED DRAW-REVEAL TIMELINE ===== -->
+		<section class="cv-section" style="padding-bottom: 3rem;">
 			<div class="container">
 				<div class="category-header" data-aos="fade-up">
-					<div class="category-badge" style="background: rgba(255, 138, 61, 0.1); color: var(--orange);">
-						<i class="bi bi-briefcase"></i>
+					<div
+						class="category-badge"
+						style="background: rgba(255, 138, 61, 0.1); color: var(--orange)"
+					>
+						<span class="fi-icon-wrap fi-animate-float">
+							<i class="fi fi-br-briefcase" style="color: var(--orange)"></i>
+						</span>
 						<span>Experience</span>
 					</div>
 					<h2>The Journey So Far</h2>
 					<p>A track record of creative solutions and strategic thinking.</p>
 				</div>
 
-				<div class="cv-timeline">
-					<div class="cv-item" data-aos="fade-up" data-aos-delay="100">
-						<div class="cv-line-connector"></div>
-						<div class="cv-content">
-							<h3>Chief of Everything</h3>
-							<p class="cv-company">The Daly Creative</p>
-							<p class="cv-date">February 2025 - Present</p>
-							<p class="cv-description">
-								Freelance studio focused on helping Perth businesses grow smarter
-								through web development, digital marketing and AI-informed strategy.
-								Design and build responsive websites and landing pages, develop content
-								and brand assets aligned with client goals, and advise on data-informed
-								marketing and practical AI use in small business workflows.
-							</p>
+				<div class="timeline-wrapper">
+					<div class="timeline-line"></div>
+					<div class="timeline-line-fill" id="timelineFill"></div>
+
+					<div class="tl-item">
+						<div class="tl-dot"></div>
+						<div class="tl-card">
+							<div class="tl-header">
+								<h3>Chief of Everything</h3>
+								<span class="tl-date">2025 — Present</span>
+							</div>
+							<p class="tl-company">The Daly Creative</p>
+							<p class="tl-desc">Freelance studio focused on helping Perth businesses grow smarter through web development, digital marketing and AI-informed strategy. Design and build responsive websites, develop brand assets, and advise on practical AI use in small business workflows.</p>
 						</div>
 					</div>
 
-					<div class="cv-item" data-aos="fade-up" data-aos-delay="150">
-						<div class="cv-line-connector"></div>
-						<div class="cv-content">
-							<h3>Technology Administrator</h3>
-							<p class="cv-company">Department of Transport, Western Australia</p>
-							<p class="cv-date">June 2024 - January 2025</p>
-							<p class="cv-description">
-								Supported People and Culture technology systems, including payroll and
-								online training platforms, with a focus on process improvement and
-								automation. Streamlined online training update processes, reducing
-								processing time by approximately 20%.
-							</p>
+					<div class="tl-item">
+						<div class="tl-dot"></div>
+						<div class="tl-card">
+							<div class="tl-header">
+								<h3>Technology Administrator</h3>
+								<span class="tl-date">2024 — 2025</span>
+							</div>
+							<p class="tl-company">Department of Transport, Western Australia</p>
+							<p class="tl-desc">Supported People and Culture technology systems, including payroll and online training platforms. Streamlined online training update processes, reducing processing time by approximately 20%.</p>
 						</div>
 					</div>
 
-					<div class="cv-item" data-aos="fade-up" data-aos-delay="100">
-						<div class="cv-line-connector"></div>
-						<div class="cv-content">
-							<h3>Court Technology and Resource Officer</h3>
-							<p class="cv-company">Supreme Court of Western Australia</p>
-							<p class="cv-date">July 2023 - May 2024</p>
-							<p class="cv-description">
-								Delivered and supported technology that underpins the operations of the
-								Supreme Court. Led the development and launch of the Court's intranet
-								and modernised courtroom booking with an integrated digital calendar.
-							</p>
+					<div class="tl-item">
+						<div class="tl-dot"></div>
+						<div class="tl-card">
+							<div class="tl-header">
+								<h3>Court Technology & Resource Officer</h3>
+								<span class="tl-date">2023 — 2024</span>
+							</div>
+							<p class="tl-company">Supreme Court of Western Australia</p>
+							<p class="tl-desc">Delivered and supported technology that underpins the operations of the Supreme Court. Led the development and launch of the Court's intranet and modernised courtroom booking with an integrated digital calendar.</p>
 						</div>
 					</div>
 
-					<div class="cv-item" data-aos="fade-up" data-aos-delay="150">
-						<div class="cv-line-connector"></div>
-						<div class="cv-content">
-							<h3>Court Support Officer</h3>
-							<p class="cv-company">District Court of Western Australia</p>
-							<p class="cv-date">November 2022 - July 2023</p>
-							<p class="cv-description">
-								Managed civil subpoena processing and storage, providing client-facing
-								support while maintaining high standards of confidentiality and accuracy.
-							</p>
+					<div class="tl-item">
+						<div class="tl-dot"></div>
+						<div class="tl-card">
+							<div class="tl-header">
+								<h3>Court Support Officer</h3>
+								<span class="tl-date">2022 — 2023</span>
+							</div>
+							<p class="tl-company">District Court of Western Australia</p>
+							<p class="tl-desc">Managed civil subpoena processing and storage, providing client-facing support while maintaining high standards of confidentiality and accuracy.</p>
 						</div>
 					</div>
 
-					<div class="cv-item" data-aos="fade-up" data-aos-delay="100">
-						<div class="cv-line-connector"></div>
-						<div class="cv-content">
-							<h3>Resident Support Officer / Team Leader</h3>
-							<p class="cv-company">COVID-19 Quarantine Victoria</p>
-							<p class="cv-date">December 2020 - April 2022</p>
-							<p class="cv-description">
-								Led a large team of resident support officers in hotel quarantine,
-								ensuring safe and consistent operations during the pandemic.
-							</p>
+					<div class="tl-item">
+						<div class="tl-dot"></div>
+						<div class="tl-card">
+							<div class="tl-header">
+								<h3>Resident Support Officer / Team Leader</h3>
+								<span class="tl-date">2020 — 2022</span>
+							</div>
+							<p class="tl-company">COVID-19 Quarantine Victoria</p>
+							<p class="tl-desc">Led a large team of resident support officers in hotel quarantine, ensuring safe and consistent operations during the pandemic.</p>
 						</div>
 					</div>
 
-					<div class="cv-item" data-aos="fade-up" data-aos-delay="150">
-						<div class="cv-line-connector"></div>
-						<div class="cv-content">
-							<h3>Digital Solutions Specialist</h3>
-							<p class="cv-company">White Pages Australia / Sensis</p>
-							<p class="cv-date">November 2018 - October 2020</p>
-							<p class="cv-description">
-								Exceeded sales and customer satisfaction targets while improving call
-								centre efficiency and digital product adoption for small businesses.
-							</p>
+					<div class="tl-item">
+						<div class="tl-dot"></div>
+						<div class="tl-card">
+							<div class="tl-header">
+								<h3>Digital Solutions Specialist</h3>
+								<span class="tl-date">2018 — 2020</span>
+							</div>
+							<p class="tl-company">White Pages Australia / Sensis</p>
+							<p class="tl-desc">Exceeded sales and customer satisfaction targets while improving call centre efficiency and digital product adoption for small businesses.</p>
 						</div>
 					</div>
 
-					<div class="cv-item" data-aos="fade-up" data-aos-delay="100">
-						<div class="cv-line-connector"></div>
-						<div class="cv-content">
-							<h3>Flight Attendant (Cabin Crew)</h3>
-							<p class="cv-company">Jetstar Airways</p>
-							<p class="cv-date">March 2013 - February 2018</p>
-							<p class="cv-description">
-								Provided high-quality service and safety in a fast-paced, highly
-								regulated environment. Built resilience and people skills that underpin
-								current work in technology and projects.
-							</p>
+					<div class="tl-item">
+						<div class="tl-dot"></div>
+						<div class="tl-card">
+							<div class="tl-header">
+								<h3>Flight Attendant (Cabin Crew)</h3>
+								<span class="tl-date">2013 — 2018</span>
+							</div>
+							<p class="tl-company">Jetstar Airways</p>
+							<p class="tl-desc">Provided high-quality service and safety in a fast-paced, highly regulated environment. Built resilience and people skills that underpin current work in technology and projects.</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- ===== EDUCATION & SKILLS SECTION ===== -->
+		<!-- ===== EDUCATION & CREDENTIALS — REDESIGNED ===== -->
 		<section class="about-edu-section">
 			<div class="container">
 				<!-- Education -->
 				<div class="category-header" data-aos="fade-up">
-					<div class="category-badge" style="background: rgba(160, 121, 203, 0.1); color: var(--purple);">
-						<i class="bi bi-mortarboard"></i>
+					<div
+						class="category-badge"
+						style="background: rgba(160, 121, 203, 0.1); color: var(--purple)"
+					>
+						<span class="fi-icon-wrap fi-animate-bounce">
+							<i class="fi fi-br-graduation-cap" style="color: var(--purple)"></i>
+						</span>
 						<span>Education</span>
 					</div>
 					<h2>Academic Background</h2>
+					<p>Formal foundations that power creative execution.</p>
 				</div>
 
-				<div class="about-edu-cards">
-					<div class="about-edu-card" data-aos="fade-up" data-aos-delay="100">
-						<div class="about-edu-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/zpxybbhl.json"
-								trigger="loop"
-								colors="primary:#a079cb,secondary:#fb837d"
-								style="width: 36px; height: 36px"
-							></lord-icon>
+				<div class="edu-grid">
+					<div class="edu-card-v2" data-aos="fade-up" data-aos-delay="100">
+						<div class="edu-icon-circle" style="background: rgba(160, 121, 203, 0.1);">
+							<span class="fi-icon-wrap fi-animate-float">
+								<i class="fi fi-br-laptop" style="color: var(--purple); font-size: 1.5rem;"></i>
+							</span>
 						</div>
-						<div class="about-edu-details">
-							<h3>Diploma of IT</h3>
-							<p class="about-edu-focus">Back End Web Development & Cyber Security</p>
-							<p class="about-edu-school">Equinim College</p>
-							<p class="about-edu-date">2024 - 2025</p>
-						</div>
+						<h3>Diploma of IT</h3>
+						<p class="edu-focus">Back End Web Development & Cyber Security</p>
+						<p class="edu-school">Equinim College</p>
+						<p class="edu-date"><i class="fi fi-br-calendar" style="font-size: 0.75rem;"></i> 2024 — 2025</p>
+						<span class="edu-status completed"><i class="fi fi-br-check" style="font-size: 0.65rem;"></i> Completed</span>
 					</div>
 
-					<div class="about-edu-card" data-aos="fade-up" data-aos-delay="200">
-						<div class="about-edu-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/etwtznjn.json"
-								trigger="loop"
-								colors="primary:#ff8a3d,secondary:#2f9ea0"
-								style="width: 36px; height: 36px"
-							></lord-icon>
+					<div class="edu-card-v2" data-aos="fade-up" data-aos-delay="200">
+						<div class="edu-icon-circle" style="background: rgba(255, 138, 61, 0.1);">
+							<span class="fi-icon-wrap fi-animate-bounce">
+								<i class="fi fi-br-chart-line-up" style="color: var(--orange); font-size: 1.5rem;"></i>
+							</span>
 						</div>
-						<div class="about-edu-details">
-							<h3>Bachelor of Business Administration</h3>
-							<p class="about-edu-focus">Marketing</p>
-							<p class="about-edu-school">Torrens University Australia</p>
-							<p class="about-edu-date">Currently completing</p>
-						</div>
+						<h3>Bachelor of Business Administration</h3>
+						<p class="edu-focus">Marketing</p>
+						<p class="edu-school">Torrens University Australia</p>
+						<p class="edu-date"><i class="fi fi-br-calendar" style="font-size: 0.75rem;"></i> Currently completing</p>
+						<span class="edu-status in-progress"><i class="fi fi-br-refresh" style="font-size: 0.65rem;"></i> In Progress</span>
 					</div>
 				</div>
 
 				<!-- Technical Skills -->
-				<div class="category-header" data-aos="fade-up" style="margin-top: 4rem;">
-					<div class="category-badge" style="background: rgba(72, 201, 176, 0.1); color: var(--ocean);">
-						<i class="bi bi-code-slash"></i>
+				<div class="category-header" data-aos="fade-up" style="margin-top: 1rem;">
+					<div
+						class="category-badge"
+						style="background: rgba(72, 201, 176, 0.1); color: var(--ocean)"
+					>
+						<span class="fi-icon-wrap fi-animate-spin">
+							<i class="fi fi-br-code" style="color: var(--ocean)"></i>
+						</span>
 						<span>Tech Stack</span>
 					</div>
 					<h2>Technical Skills</h2>
 				</div>
 
-				<div class="about-skills-groups" data-aos="fade-up" data-aos-delay="100">
-					<div class="about-skills-group">
-						<h4>Web Development</h4>
-						<div class="about-skills-tags">
-							<span class="about-skill-pill" style="--pill-color: #7fcbdb;">HTML & CSS</span>
-							<span class="about-skill-pill" style="--pill-color: #e3b156;">JavaScript</span>
-							<span class="about-skill-pill" style="--pill-color: #4c8cbc;">Node.js & Express</span>
-							<span class="about-skill-pill" style="--pill-color: #a079cb;">REST APIs</span>
-							<span class="about-skill-pill" style="--pill-color: #fb837d;">Bootstrap</span>
-							<span class="about-skill-pill" style="--pill-color: #fa9361;">Responsive Design</span>
+				<div class="skills-showcase">
+					<div class="skills-grid-v2">
+						<div class="skills-column" data-aos="fade-up" data-aos-delay="100">
+							<h4><i class="fi fi-br-browser"></i> Web Development</h4>
+							<div class="skill-bar-item">
+								<div class="skill-bar-label"><span>HTML & CSS</span><span>95%</span></div>
+								<div class="skill-bar-track"><div class="skill-bar-fill" style="--fill: 95%; background: linear-gradient(90deg, var(--sky), var(--teal));"></div></div>
+							</div>
+							<div class="skill-bar-item">
+								<div class="skill-bar-label"><span>JavaScript</span><span>85%</span></div>
+								<div class="skill-bar-track"><div class="skill-bar-fill" style="--fill: 85%; background: linear-gradient(90deg, var(--amber), var(--orange));"></div></div>
+							</div>
+							<div class="skill-bar-item">
+								<div class="skill-bar-label"><span>Node.js & Express</span><span>75%</span></div>
+								<div class="skill-bar-track"><div class="skill-bar-fill" style="--fill: 75%; background: linear-gradient(90deg, var(--blue), var(--purple));"></div></div>
+							</div>
+							<div class="skill-bar-item">
+								<div class="skill-bar-label"><span>REST APIs</span><span>80%</span></div>
+								<div class="skill-bar-track"><div class="skill-bar-fill" style="--fill: 80%; background: linear-gradient(90deg, var(--purple), var(--coral));"></div></div>
+							</div>
+							<div class="skill-bar-item">
+								<div class="skill-bar-label"><span>Responsive Design</span><span>95%</span></div>
+								<div class="skill-bar-track"><div class="skill-bar-fill" style="--fill: 95%; background: linear-gradient(90deg, var(--peach), var(--orange));"></div></div>
+							</div>
 						</div>
-					</div>
-					<div class="about-skills-group">
-						<h4>Tools & Platforms</h4>
-						<div class="about-skills-tags">
-							<span class="about-skill-pill" style="--pill-color: #7fcbdb;">Git & GitHub</span>
-							<span class="about-skill-pill" style="--pill-color: #e3b156;">VS Code</span>
-							<span class="about-skill-pill" style="--pill-color: #4c8cbc;">MongoDB</span>
-							<span class="about-skill-pill" style="--pill-color: #a079cb;">Microsoft 365</span>
-							<span class="about-skill-pill" style="--pill-color: #fb837d;">Azure AD</span>
+
+						<div class="skills-column" data-aos="fade-up" data-aos-delay="200">
+							<h4><i class="fi fi-br-settings"></i> Tools & Platforms</h4>
+							<div class="skill-bar-item">
+								<div class="skill-bar-label"><span>Git & GitHub</span><span>85%</span></div>
+								<div class="skill-bar-track"><div class="skill-bar-fill" style="--fill: 85%; background: linear-gradient(90deg, var(--sky), var(--ocean));"></div></div>
+							</div>
+							<div class="skill-bar-item">
+								<div class="skill-bar-label"><span>VS Code</span><span>95%</span></div>
+								<div class="skill-bar-track"><div class="skill-bar-fill" style="--fill: 95%; background: linear-gradient(90deg, var(--amber), var(--orange));"></div></div>
+							</div>
+							<div class="skill-bar-item">
+								<div class="skill-bar-label"><span>MongoDB</span><span>70%</span></div>
+								<div class="skill-bar-track"><div class="skill-bar-fill" style="--fill: 70%; background: linear-gradient(90deg, var(--blue), var(--teal));"></div></div>
+							</div>
+							<div class="skill-bar-item">
+								<div class="skill-bar-label"><span>Microsoft 365</span><span>90%</span></div>
+								<div class="skill-bar-track"><div class="skill-bar-fill" style="--fill: 90%; background: linear-gradient(90deg, var(--purple), var(--blue));"></div></div>
+							</div>
+							<div class="skill-bar-item">
+								<div class="skill-bar-label"><span>AI & Automation</span><span>85%</span></div>
+								<div class="skill-bar-track"><div class="skill-bar-fill" style="--fill: 85%; background: linear-gradient(90deg, var(--coral), var(--orange));"></div></div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -424,23 +1190,18 @@
 		<!-- ===== FINAL CTA SECTION ===== -->
 		<section class="final-cta about-cta">
 			<div class="container text-center">
-				<div data-aos="zoom-in">
-					<lord-icon
-						src="https://cdn.lordicon.com/etwtznjn.json"
-						trigger="loop"
-						colors="primary:#ff8a3d,secondary:#fffaf2"
-						style="width: 64px; height: 64px"
-					></lord-icon>
+				<div class="final-cta-icon" data-aos="zoom-in">
+					<span class="fi-icon-wrap fi-animate-bounce">
+						<i class="fi fi-br-rocket-lunch" style="color: #ff8a3d; font-size: 2.6rem"></i>
+					</span>
 				</div>
 				<h2 class="final-cta-title" data-aos="fade-up" data-aos-delay="100">Ready to Grow?</h2>
-				<p class="final-cta-text" data-aos="fade-up" data-aos-delay="200">Let's build something extraordinary together.</p>
-				<a
-					href="contact.html"
-					class="cta-button final-cta-button"
-					data-aos="fade-up"
-					data-aos-delay="300"
-					>Start Your Project</a
-				>
+				<p class="final-cta-text" data-aos="fade-up" data-aos-delay="200">
+					Let's build something extraordinary together.
+				</p>
+				<a href="contact.html" class="cta-button final-cta-button" data-aos="fade-up" data-aos-delay="300">
+					Start Your Project
+				</a>
 			</div>
 		</section>
 
@@ -448,34 +1209,18 @@
 		<div id="footer"></div>
 
 		<!-- ===== SCRIPTS ===== -->
-
 		<!-- AOS Init -->
 		<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 		<script>
-			AOS.init({
-				duration: 700,
-				easing: "ease-out-cubic",
-				once: true,
-				offset: 60,
-			});
+			AOS.init({ duration: 700, easing: "ease-out-cubic", once: true, offset: 60 });
 		</script>
 
 		<!-- Component Includes & Page Scripts -->
 		<script>
-			/* Load navbar */
-			fetch("-navbar.html")
-				.then(function (r) { return r.text(); })
-				.then(function (t) {
-					document.getElementById("navbar").innerHTML = t; /* internal component */
-				})
-				.catch(function (e) { console.error("Navbar load failed:", e); });
-
 			/* Load footer */
 			fetch("-footer.html")
 				.then(function (r) { return r.text(); })
-				.then(function (t) {
-					document.getElementById("footer").innerHTML = t; /* internal component */
-				})
+				.then(function (t) { document.getElementById("footer").innerHTML = t; })
 				.catch(function (e) { console.error("Footer load failed:", e); });
 
 			/* Smooth scroll */
@@ -490,7 +1235,7 @@
 				});
 			});
 
-			/* Navbar scroll effect */
+			/* Navbar scroll shadow */
 			window.addEventListener("scroll", function () {
 				var nav = document.querySelector("nav");
 				if (!nav) return;
@@ -500,9 +1245,62 @@
 			});
 		</script>
 
-		<!-- Typing Hero Animation -->
+		<!-- ===== TIMELINE DRAW-REVEAL ANIMATION ===== -->
 		<script>
-			(function() {
+			(function () {
+				var items = document.querySelectorAll(".tl-item");
+				var fill = document.getElementById("timelineFill");
+				var wrapper = document.querySelector(".timeline-wrapper");
+				if (!items.length || !fill || !wrapper) return;
+
+				/* Reveal items as they enter viewport */
+				var itemObs = new IntersectionObserver(function (entries) {
+					entries.forEach(function (entry) {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("tl-visible");
+						}
+					});
+				}, { threshold: 0.2, rootMargin: "0px 0px -40px 0px" });
+
+				items.forEach(function (item) { itemObs.observe(item); });
+
+				/* Draw the line as user scrolls through the timeline */
+				function updateLine() {
+					var rect = wrapper.getBoundingClientRect();
+					var wrapperTop = rect.top + window.scrollY;
+					var wrapperHeight = rect.height;
+					var scrollY = window.scrollY + window.innerHeight * 0.6;
+					var progress = (scrollY - wrapperTop) / wrapperHeight;
+					progress = Math.max(0, Math.min(1, progress));
+					fill.style.height = (progress * wrapperHeight) + "px";
+					requestAnimationFrame(updateLine);
+				}
+				requestAnimationFrame(updateLine);
+			})();
+		</script>
+
+		<!-- ===== SKILL BAR ANIMATION ===== -->
+		<script>
+			(function () {
+				var bars = document.querySelectorAll(".skill-bar-fill");
+				if (!bars.length) return;
+
+				var obs = new IntersectionObserver(function (entries) {
+					entries.forEach(function (entry) {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("animated");
+							obs.unobserve(entry.target);
+						}
+					});
+				}, { threshold: 0.3 });
+
+				bars.forEach(function (bar) { obs.observe(bar); });
+			})();
+		</script>
+
+		<!-- ===== TYPING HERO ANIMATION ===== -->
+		<script>
+			(function () {
 				var textEl = document.querySelector(".typing-text");
 				if (!textEl) return;
 
@@ -528,16 +1326,13 @@
 					var fullText = textEl.textContent;
 					var teamEnd = 13;
 					var prefix = "Meet the ";
-
 					for (var j = fullText.length; j > teamEnd; j--) {
 						var after = fullText.substring(teamEnd, j - 1);
 						textEl.innerHTML = prefix + '<span class="typing-strikethrough">Team</span>' + after;
 						await sleep(DELETE_SPEED);
 					}
-
 					textEl.textContent = fullText.substring(0, teamEnd);
 					await sleep(DELETE_SPEED);
-
 					for (var k = teamEnd; k > 0; k--) {
 						textEl.textContent = fullText.substring(0, k - 1);
 						await sleep(DELETE_SPEED);
@@ -549,7 +1344,7 @@
 					var currentText = textEl.textContent;
 					var pre = currentText.substring(0, currentText.length - 4);
 					var team = currentText.substring(currentText.length - 4);
-					textEl.innerHTML = pre + '<span class="typing-strikethrough">' + team + '</span>';
+					textEl.innerHTML = pre + '<span class="typing-strikethrough">' + team + "</span>";
 				}
 
 				async function typeAfterStrikethrough(text) {

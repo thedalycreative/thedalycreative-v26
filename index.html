@@ -18,8 +18,9 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
 		/>
-		<!-- Lordicon Script -->
-		<script src="https://cdn.lordicon.com/lordicon.js"></script>
+		<!-- Flaticon UICONS -->
+		<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+		<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css" />
 		<!--Main Stylesheet-->
 		<link rel="stylesheet" href="styles.css" />
 		<!--Tailwind CSS -->
@@ -27,11 +28,39 @@
 	</head>
 	<body>
 		<!-- ===== NAV BAR ===== -->
-		<div id="navbar"></div>
+		<nav>
+			<div class="nav-container">
+				<a href="index.html" class="logo">
+					<img src="images/icons/logo-1300x507.png" alt="The Daly Creative" height="48" />
+				</a>
+				<input type="checkbox" id="nav-toggle" class="nav-toggle" />
+				<label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"></label>
+				<ul class="nav-links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="ai-tools.html">AI-Tools</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="blueprint.html">Blueprint</a></li>
+					<li><a href="portfolio.html">Projects</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+				<a class="nav-cta" href="contact.html">Book a Call</a>
+			</div>
+		</nav>
 
 		<!-- ===== LANDING HERO SECTION ===== -->
 		<section id="home" class="hero">
+			<div class="hero-shapes">
+				<div class="hero-shape hero-shape-1"></div>
+				<div class="hero-shape hero-shape-2"></div>
+				<div class="hero-shape hero-shape-3"></div>
+				<div class="hero-shape hero-shape-4"></div>
+			</div>
 			<div class="hero-content">
+				<span class="hero-badge">
+					<i class="fi fi-rr-sparkles icon-pulse" style="font-size: 0.9rem;"></i>
+					Design &middot; Technology &middot; Strategy
+				</span>
 				<h1>
 					Creative Strategy<br />
 					Meets Smart Automation
@@ -49,7 +78,7 @@
 		<section id="services" class="services-section">
 			<div class="container">
 				<!--Services Section Header-->
-				<div class="section-header">
+				<div class="section-header reveal">
 					<h2>What We Offer</h2>
 					<p>Six products built to sharpen your brand and scale your growth</p>
 				</div>
@@ -57,15 +86,9 @@
 				<!--Services Cards Grid-->
 				<div class="services-grid">
 					<!--Service Card 1: Brand Identity -->
-					<div class="service-card">
+					<div class="service-card reveal stagger-1">
 						<div class="service-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/etwtznjn.json"
-								trigger="loop"
-								colors="primary:#ff8a3d,secondary:#2f9ea0"
-								style="width: 48px; height: 48px"
-							>
-							</lord-icon>
+							<i class="fi fi-rr-paint-brush icon-float" style="font-size: 2rem; color: #ff8a3d;"></i>
 						</div>
 						<h3>Brand Identity</h3>
 						<p>
@@ -78,15 +101,9 @@
 					</div>
 
 					<!--Service Card 2: Web Design & Development -->
-					<div class="service-card">
+					<div class="service-card reveal stagger-2">
 						<div class="service-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/tdxypxgp.json"
-								trigger="loop"
-								colors="primary:#4c8cbc,secondary:#334155"
-								style="width: 48px; height: 48px"
-							>
-							</lord-icon>
+							<i class="fi fi-rr-browser icon-pulse" style="font-size: 2rem; color: #4c8cbc;"></i>
 						</div>
 						<h3>Web Design & Development</h3>
 						<p>
@@ -99,15 +116,9 @@
 					</div>
 
 					<!--Service Card 3: AI Agents & Automation -->
-					<div class="service-card">
+					<div class="service-card reveal stagger-3">
 						<div class="service-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/puvaffet.json"
-								trigger="loop"
-								colors="primary:#a079cb,secondary:#fb837d"
-								style="width: 48px; height: 48px"
-							>
-							</lord-icon>
+							<i class="fi fi-rr-brain icon-glow" style="font-size: 2rem; color: #a079cb;"></i>
 						</div>
 						<h3>AI Agents & Automation</h3>
 						<p>
@@ -120,15 +131,9 @@
 					</div>
 
 					<!--Service Card 4: Market Research -->
-					<div class="service-card">
+					<div class="service-card reveal stagger-4">
 						<div class="service-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/qhviklqn.json"
-								trigger="loop"
-								colors="primary:#e3b156,secondary:#48c9b0"
-								style="width: 48px; height: 48px"
-							>
-							</lord-icon>
+							<i class="fi fi-rr-chart-pie icon-float" style="font-size: 2rem; color: #e3b156;"></i>
 						</div>
 						<h3>Market Research</h3>
 						<p>
@@ -139,15 +144,9 @@
 					</div>
 
 					<!--Service Card 5: Content Systems -->
-					<div class="service-card">
+					<div class="service-card reveal stagger-5">
 						<div class="service-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/ecprnyfy.json"
-								trigger="loop"
-								colors="primary:#fa9361,secondary:#ff8a3d"
-								style="width: 48px; height: 48px"
-							>
-							</lord-icon>
+							<i class="fi fi-rr-edit icon-pulse" style="font-size: 2rem; color: #fa9361;"></i>
 						</div>
 						<h3>Content Systems</h3>
 						<p>
@@ -160,15 +159,9 @@
 					</div>
 
 					<!--Service Card 6: Growth Analytics -->
-					<div class="service-card">
+					<div class="service-card reveal stagger-6">
 						<div class="service-icon">
-							<lord-icon
-								src="https://cdn.lordicon.com/xfftupbb.json"
-								trigger="loop"
-								colors="primary:#48c9b0,secondary:#2f9ea0"
-								style="width: 48px; height: 48px"
-							>
-							</lord-icon>
+							<i class="fi fi-rr-chart-line-up icon-bounce" style="font-size: 2rem; color: #48c9b0;"></i>
 						</div>
 						<h3>Growth Analytics</h3>
 						<p>
@@ -215,7 +208,7 @@
 		<!-- ===== ABOUT SECTION ===== -->
 		<section id="about" class="about-preview">
 			<div class="container">
-				<div class="about-content">
+				<div class="about-content reveal-left">
 					<h2>Built by Creators, <br />for Creators</h2>
 					<p class="about-text">
 						At The Daly Creative, we believe that great brands are built at the
@@ -236,14 +229,14 @@
 		<!-- ===== WHY CHOOSE US SECTION ===== -->
 		<section class="why-section">
 			<div class="container">
-				<div class="section-header">
+				<div class="section-header reveal">
 					<h2>Why Choose The Daly Creative?</h2>
 					<p>We don't just serve clients — we empower them</p>
 				</div>
 				<div class="why-grid">
-					<div class="why-item">
+					<div class="why-item reveal stagger-1">
 						<div class="why-icon">
-							<i class="bi bi-lightbulb"></i>
+							<i class="fi fi-rr-lightbulb icon-float" style="font-size: 1.8rem;"></i>
 						</div>
 						<h3>Creative Intelligence</h3>
 						<p>
@@ -251,9 +244,9 @@
 							that are both beautiful and effective.
 						</p>
 					</div>
-					<div class="why-item">
+					<div class="why-item reveal stagger-2">
 						<div class="why-icon">
-							<i class="bi bi-cpu"></i>
+							<i class="fi fi-rr-settings icon-pulse" style="font-size: 1.8rem;"></i>
 						</div>
 						<h3>Future-Ready Tech</h3>
 						<p>
@@ -261,9 +254,9 @@
 							give you a competitive edge.
 						</p>
 					</div>
-					<div class="why-item">
+					<div class="why-item reveal stagger-3">
 						<div class="why-icon">
-							<i class="bi bi-people"></i>
+							<i class="fi fi-rr-users icon-float" style="font-size: 1.8rem;"></i>
 						</div>
 						<h3>Partnership Approach</h3>
 						<p>
@@ -279,7 +272,7 @@
 		<section class="testimonials-section">
 			<div class="container">
 				<!--Testimonials Section Header-->
-				<div class="section-header">
+				<div class="section-header reveal">
 					<h2>What Our Clients Say</h2>
 					<p>Real results from real partnerships</p>
 				</div>
@@ -389,14 +382,14 @@
 
 		<!-- ===== FINAL CTA SECTION ===== -->
 		<section class="final-cta">
-			<div class="container text-center">
+			<div class="container text-center reveal-scale">
 				<!--CTA Title-->
 				<h2 class="final-cta-title">Ready to Grow?</h2>
 				<!--CTA Text-->
 				<p class="final-cta-text">Let's build something extraordinary together.</p>
 				<!--CTA Button-->
 				<a href="contact.html" class="cta-button final-cta-button"
-					>Start Your Project</a
+					>Start Your Project <i class="fi fi-rr-arrow-right" style="font-size: 0.9rem; margin-left: 0.3rem;"></i></a
 				>
 			</div>
 		</section>
@@ -558,19 +551,28 @@
 			}
 		</script>
 
-		<!-- ===== NAVBAR INCLUDE ===== -->
+		<!-- ===== SCROLL REVEAL ===== -->
 		<script>
-			fetch("-navbar.html")
-				.then((response) => response.text())
-				.then((html) => {
-					const navbar = document.getElementById("navbar");
-					if (navbar) {
-						navbar.innerHTML = html;
-					}
-				})
-				.catch((error) => {
-					console.error("Navbar load failed:", error);
-				});
+			(function () {
+				const revealEls = document.querySelectorAll(
+					".reveal, .reveal-left, .reveal-right, .reveal-scale"
+				);
+				if (!revealEls.length) return;
+
+				const io = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								entry.target.classList.add("revealed");
+								io.unobserve(entry.target);
+							}
+						});
+					},
+					{ threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+				);
+
+				revealEls.forEach((el) => io.observe(el));
+			})();
 		</script>
 
 		<!-- ===== FOOTER INCLUDE ===== -->
