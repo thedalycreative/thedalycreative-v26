@@ -18,8 +18,9 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
 		/>
-		<!-- Lordicon Script -->
-		<script src="https://cdn.lordicon.com/lordicon.js"></script>
+		<!-- Flaticon UICONS -->
+		<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+		<link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css" />
 		<!-- AOS Animate on Scroll -->
 		<link
 			rel="stylesheet"
@@ -30,7 +31,25 @@
 	</head>
 	<body>
 		<!-- ===== NAV BAR ===== -->
-		<div id="navbar"></div>
+		<nav>
+			<div class="nav-container">
+				<a href="index.html" class="logo">
+					<img src="images/icons/logo-1300x507.png" alt="The Daly Creative" height="48" />
+				</a>
+				<input type="checkbox" id="nav-toggle" class="nav-toggle" />
+				<label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"></label>
+				<ul class="nav-links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="ai-tools.html">AI-Tools</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="blueprint.html" class="active">Blueprint</a></li>
+					<li><a href="portfolio.html">Projects</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+				<a class="nav-cta" href="contact.html">Book a Call</a>
+			</div>
+		</nav>
 
 		<!-- ============================================================
 		     SECTION 1: HERO
@@ -39,12 +58,7 @@
 			<div class="bp-hero-bg"></div>
 			<div class="bp-hero-content">
 				<div class="bp-hero-badge" data-aos="fade-down" data-aos-delay="100">
-					<lord-icon
-						src="https://cdn.lordicon.com/zpxybbhl.json"
-						trigger="loop"
-						colors="primary:#ff8a3d,secondary:#2f9ea0"
-						style="width: 26px; height: 26px"
-					></lord-icon>
+					<i class="fi fi-rr-map icon-pulse" style="font-size: 1.2rem; color: #ff8a3d;"></i>
 					<span>The Blueprint</span>
 				</div>
 				<h1 data-aos="fade-up" data-aos-delay="200">
@@ -68,14 +82,9 @@
 		     ============================================================ -->
 		<section id="bp-method" class="bp-method-section">
 			<div class="container">
-				<div class="category-header" data-aos="fade-up">
+				<div class="category-header reveal" data-aos="fade-up">
 					<div class="category-badge" style="background: rgba(255, 138, 61, 0.1); color: var(--orange);">
-						<lord-icon
-							src="https://cdn.lordicon.com/etwtznjn.json"
-							trigger="loop"
-							colors="primary:#ff8a3d,secondary:#2f9ea0"
-							style="width: 22px; height: 22px"
-						></lord-icon>
+						<i class="fi fi-rr-lightbulb icon-float" style="font-size: 1rem; color: #ff8a3d;"></i>
 						<span>Our Method</span>
 					</div>
 					<h2>Method & Mindset</h2>
@@ -96,12 +105,7 @@
 					<div class="bp-method-content" data-aos="fade-left" data-aos-delay="200">
 						<div class="bp-method-item">
 							<div class="bp-method-icon" style="background: rgba(255, 138, 61, 0.1);">
-								<lord-icon
-									src="https://cdn.lordicon.com/etwtznjn.json"
-									trigger="loop"
-									colors="primary:#ff8a3d,secondary:#2f9ea0"
-									style="width: 32px; height: 32px"
-								></lord-icon>
+								<i class="fi fi-rr-target icon-float" style="font-size: 1.4rem; color: #ff8a3d;"></i>
 							</div>
 							<div>
 								<h3>Strategy Over Guesswork</h3>
@@ -110,12 +114,7 @@
 						</div>
 						<div class="bp-method-item">
 							<div class="bp-method-icon" style="background: rgba(160, 121, 203, 0.1);">
-								<lord-icon
-									src="https://cdn.lordicon.com/puvaffet.json"
-									trigger="loop"
-									colors="primary:#a079cb,secondary:#fb837d"
-									style="width: 32px; height: 32px"
-								></lord-icon>
+								<i class="fi fi-rr-brain icon-pulse" style="font-size: 1.4rem; color: #a079cb;"></i>
 							</div>
 							<div>
 								<h3>Automation With Soul</h3>
@@ -124,12 +123,7 @@
 						</div>
 						<div class="bp-method-item">
 							<div class="bp-method-icon" style="background: rgba(72, 201, 176, 0.1);">
-								<lord-icon
-									src="https://cdn.lordicon.com/zpxybbhl.json"
-									trigger="loop"
-									colors="primary:#48c9b0,secondary:#0f1d2d"
-									style="width: 32px; height: 32px"
-								></lord-icon>
+								<i class="fi fi-rr-heart icon-float" style="font-size: 1.4rem; color: #48c9b0;"></i>
 							</div>
 							<div>
 								<h3>Built for Real People</h3>
@@ -138,12 +132,7 @@
 						</div>
 						<div class="bp-method-item">
 							<div class="bp-method-icon" style="background: rgba(251, 131, 125, 0.1);">
-								<lord-icon
-									src="https://cdn.lordicon.com/tdxypxgp.json"
-									trigger="loop"
-									colors="primary:#fb837d,secondary:#334155"
-									style="width: 32px; height: 32px"
-								></lord-icon>
+								<i class="fi fi-rr-handshake icon-pulse" style="font-size: 1.4rem; color: #fb837d;"></i>
 							</div>
 							<div>
 								<h3>Partnership, Not Projects</h3>
@@ -160,14 +149,9 @@
 		     ============================================================ -->
 		<section class="bp-timeline-section">
 			<div class="container">
-				<div class="category-header" data-aos="fade-up">
+				<div class="category-header reveal" data-aos="fade-up">
 					<div class="category-badge" style="background: rgba(47, 158, 160, 0.1); color: var(--teal);">
-						<lord-icon
-							src="https://cdn.lordicon.com/zpxybbhl.json"
-							trigger="loop"
-							colors="primary:#2f9ea0,secondary:#0f1d2d"
-							style="width: 22px; height: 22px"
-						></lord-icon>
+						<i class="fi fi-rr-route icon-float" style="font-size: 1rem; color: #2f9ea0;"></i>
 						<span>The Journey</span>
 					</div>
 					<h2>Strategy in Motion</h2>
@@ -177,7 +161,7 @@
 				<!-- Timeline -->
 				<div class="bp-timeline">
 					<!-- Phase 1: Trust -->
-					<div class="bp-phase" data-aos="fade-up" data-aos-delay="100">
+					<div class="bp-phase reveal stagger-1" data-aos="fade-up" data-aos-delay="100">
 						<div class="bp-phase-card">
 							<div class="bp-phase-number">01</div>
 							<div class="bp-phase-image">
@@ -189,12 +173,7 @@
 							</div>
 							<div class="bp-phase-body">
 								<div class="bp-phase-icon" style="background: rgba(255, 138, 61, 0.1);">
-									<lord-icon
-										src="https://cdn.lordicon.com/etwtznjn.json"
-										trigger="loop"
-										colors="primary:#ff8a3d,secondary:#2f9ea0"
-										style="width: 36px; height: 36px"
-									></lord-icon>
+									<i class="fi fi-rr-shield-check icon-float" style="font-size: 1.6rem; color: #ff8a3d;"></i>
 								</div>
 								<h3>Build Trust</h3>
 								<p>We start by listening — deeply. A free discovery call maps your goals, challenges, and audience so we can design the right path forward.</p>
@@ -212,7 +191,7 @@
 					</div>
 
 					<!-- Phase 2: Think -->
-					<div class="bp-phase bp-phase-reverse" data-aos="fade-up" data-aos-delay="100">
+					<div class="bp-phase bp-phase-reverse reveal stagger-2" data-aos="fade-up" data-aos-delay="100">
 						<div class="bp-phase-card">
 							<div class="bp-phase-number">02</div>
 							<div class="bp-phase-image">
@@ -224,12 +203,7 @@
 							</div>
 							<div class="bp-phase-body">
 								<div class="bp-phase-icon" style="background: rgba(160, 121, 203, 0.1);">
-									<lord-icon
-										src="https://cdn.lordicon.com/puvaffet.json"
-										trigger="loop"
-										colors="primary:#a079cb,secondary:#fb837d"
-										style="width: 36px; height: 36px"
-									></lord-icon>
+									<i class="fi fi-rr-pencil-ruler icon-pulse" style="font-size: 1.6rem; color: #a079cb;"></i>
 								</div>
 								<h3>Think & Design</h3>
 								<p>Strategy meets creativity. We design solutions — from brand systems to AI workflows — with your feedback woven into every stage.</p>
@@ -247,7 +221,7 @@
 					</div>
 
 					<!-- Phase 3: Connect -->
-					<div class="bp-phase" data-aos="fade-up" data-aos-delay="100">
+					<div class="bp-phase reveal stagger-3" data-aos="fade-up" data-aos-delay="100">
 						<div class="bp-phase-card">
 							<div class="bp-phase-number">03</div>
 							<div class="bp-phase-image">
@@ -259,12 +233,7 @@
 							</div>
 							<div class="bp-phase-body">
 								<div class="bp-phase-icon" style="background: rgba(72, 201, 176, 0.1);">
-									<lord-icon
-										src="https://cdn.lordicon.com/zpxybbhl.json"
-										trigger="loop"
-										colors="primary:#48c9b0,secondary:#0f1d2d"
-										style="width: 36px; height: 36px"
-									></lord-icon>
+									<i class="fi fi-rr-link icon-float" style="font-size: 1.6rem; color: #48c9b0;"></i>
 								</div>
 								<h3>Connect & Build</h3>
 								<p>We bring it all together — launching your website, connecting your tools, and building the automations that make your brand run smoothly.</p>
@@ -282,7 +251,7 @@
 					</div>
 
 					<!-- Phase 4: Grow -->
-					<div class="bp-phase bp-phase-reverse" data-aos="fade-up" data-aos-delay="100">
+					<div class="bp-phase bp-phase-reverse reveal stagger-4" data-aos="fade-up" data-aos-delay="100">
 						<div class="bp-phase-card bp-phase-card-final">
 							<div class="bp-phase-number">04</div>
 							<div class="bp-phase-image">
@@ -294,12 +263,7 @@
 							</div>
 							<div class="bp-phase-body">
 								<div class="bp-phase-icon" style="background: rgba(251, 131, 125, 0.1);">
-									<lord-icon
-										src="https://cdn.lordicon.com/tdxypxgp.json"
-										trigger="loop"
-										colors="primary:#fb837d,secondary:#334155"
-										style="width: 36px; height: 36px"
-									></lord-icon>
+									<i class="fi fi-rr-chart-line-up icon-bounce" style="font-size: 1.6rem; color: #fb837d;"></i>
 								</div>
 								<h3>Grow & Scale</h3>
 								<p>Post-launch, we measure, train, and optimise. Your business evolves, and so does our support — keeping you ahead of the curve.</p>
@@ -320,14 +284,9 @@
 		     ============================================================ -->
 		<section class="bp-impact-section">
 			<div class="container">
-				<div class="category-header" data-aos="fade-up">
+				<div class="category-header reveal" data-aos="fade-up">
 					<div class="category-badge" style="background: rgba(160, 121, 203, 0.1); color: var(--purple);">
-						<lord-icon
-							src="https://cdn.lordicon.com/puvaffet.json"
-							trigger="loop"
-							colors="primary:#a079cb,secondary:#fb837d"
-							style="width: 22px; height: 22px"
-						></lord-icon>
+						<i class="fi fi-rr-bolt icon-glow" style="font-size: 1rem; color: #a079cb;"></i>
 						<span>Our Impact</span>
 					</div>
 					<h2>How We Create Impact</h2>
@@ -335,84 +294,54 @@
 				</div>
 
 				<div class="bp-impact-grid">
-					<div class="bp-impact-card" data-aos="fade-up" data-aos-delay="100">
+					<div class="bp-impact-card reveal stagger-1" data-aos="fade-up" data-aos-delay="100">
 						<div class="bp-impact-stat">
-							<lord-icon
-								src="https://cdn.lordicon.com/etwtznjn.json"
-								trigger="loop"
-								colors="primary:#ff8a3d,secondary:#2f9ea0"
-								style="width: 44px; height: 44px"
-							></lord-icon>
+							<i class="fi fi-rr-paint-brush icon-float" style="font-size: 2rem; color: #ff8a3d;"></i>
 						</div>
 						<h3>Brands That Stand Out</h3>
 						<p>Cohesive visual identities and strategic messaging that cut through the noise and connect with the right audience.</p>
 						<div class="bp-impact-tag" style="--tag-color: #ff8a3d;">Brand & Design</div>
 					</div>
 
-					<div class="bp-impact-card" data-aos="fade-up" data-aos-delay="200">
+					<div class="bp-impact-card reveal stagger-2" data-aos="fade-up" data-aos-delay="200">
 						<div class="bp-impact-stat">
-							<lord-icon
-								src="https://cdn.lordicon.com/tdxypxgp.json"
-								trigger="loop"
-								colors="primary:#4c8cbc,secondary:#334155"
-								style="width: 44px; height: 44px"
-							></lord-icon>
+							<i class="fi fi-rr-browser icon-pulse" style="font-size: 2rem; color: #4c8cbc;"></i>
 						</div>
 						<h3>Sites That Convert</h3>
 						<p>Fast, responsive, SEO-optimised websites built with clean code and designed around your customer's journey.</p>
 						<div class="bp-impact-tag" style="--tag-color: #4c8cbc;">Web Development</div>
 					</div>
 
-					<div class="bp-impact-card" data-aos="fade-up" data-aos-delay="300">
+					<div class="bp-impact-card reveal stagger-3" data-aos="fade-up" data-aos-delay="300">
 						<div class="bp-impact-stat">
-							<lord-icon
-								src="https://cdn.lordicon.com/puvaffet.json"
-								trigger="loop"
-								colors="primary:#a079cb,secondary:#fb837d"
-								style="width: 44px; height: 44px"
-							></lord-icon>
+							<i class="fi fi-rr-brain icon-glow" style="font-size: 2rem; color: #a079cb;"></i>
 						</div>
 						<h3>Systems That Scale</h3>
 						<p>AI agents, workflow automation, and smart chatbots that save hours every week and grow with your business.</p>
 						<div class="bp-impact-tag" style="--tag-color: #a079cb;">AI & Automation</div>
 					</div>
 
-					<div class="bp-impact-card" data-aos="fade-up" data-aos-delay="100">
+					<div class="bp-impact-card reveal stagger-1" data-aos="fade-up" data-aos-delay="100">
 						<div class="bp-impact-stat">
-							<lord-icon
-								src="https://cdn.lordicon.com/zpxybbhl.json"
-								trigger="loop"
-								colors="primary:#48c9b0,secondary:#0f1d2d"
-								style="width: 44px; height: 44px"
-							></lord-icon>
+							<i class="fi fi-rr-chart-pie icon-float" style="font-size: 2rem; color: #48c9b0;"></i>
 						</div>
 						<h3>Decisions That Stick</h3>
 						<p>Data dashboards and market research that turn messy numbers into clear, actionable strategies.</p>
 						<div class="bp-impact-tag" style="--tag-color: #48c9b0;">Data & Insights</div>
 					</div>
 
-					<div class="bp-impact-card" data-aos="fade-up" data-aos-delay="200">
+					<div class="bp-impact-card reveal stagger-2" data-aos="fade-up" data-aos-delay="200">
 						<div class="bp-impact-stat">
-							<lord-icon
-								src="https://cdn.lordicon.com/wwcjmjhn.json"
-								trigger="loop"
-								colors="primary:#fa9361,secondary:#ff8a3d"
-								style="width: 44px; height: 44px"
-							></lord-icon>
+							<i class="fi fi-rr-megaphone icon-pulse" style="font-size: 2rem; color: #fa9361;"></i>
 						</div>
 						<h3>Visibility That Lasts</h3>
 						<p>Local SEO, managed ad campaigns, and organic content strategies that bring qualified traffic to your door.</p>
 						<div class="bp-impact-tag" style="--tag-color: #fa9361;">Marketing</div>
 					</div>
 
-					<div class="bp-impact-card" data-aos="fade-up" data-aos-delay="300">
+					<div class="bp-impact-card reveal stagger-3" data-aos="fade-up" data-aos-delay="300">
 						<div class="bp-impact-stat">
-							<lord-icon
-								src="https://cdn.lordicon.com/etwtznjn.json"
-								trigger="loop"
-								colors="primary:#fb837d,secondary:#334155"
-								style="width: 44px; height: 44px"
-							></lord-icon>
+							<i class="fi fi-rr-users icon-float" style="font-size: 2rem; color: #fb837d;"></i>
 						</div>
 						<h3>Teams That Thrive</h3>
 						<p>Neurodivergent-friendly training, clear documentation, and ongoing support so your team owns the tools we build.</p>
@@ -427,14 +356,9 @@
 		     ============================================================ -->
 		<section class="bp-grow-section">
 			<div class="container">
-				<div class="category-header" data-aos="fade-up">
+				<div class="category-header reveal" data-aos="fade-up">
 					<div class="category-badge" style="background: rgba(72, 201, 176, 0.1); color: var(--ocean);">
-						<lord-icon
-							src="https://cdn.lordicon.com/zpxybbhl.json"
-							trigger="loop"
-							colors="primary:#48c9b0,secondary:#0f1d2d"
-							style="width: 22px; height: 22px"
-						></lord-icon>
+						<i class="fi fi-rr-seedling icon-float" style="font-size: 1rem; color: #48c9b0;"></i>
 						<span>Designed to Grow</span>
 					</div>
 					<h2>Built for What's Next</h2>
@@ -444,21 +368,21 @@
 				<div class="bp-grow-grid">
 					<!-- Left: Growing pillars -->
 					<div class="bp-grow-pillars">
-						<div class="bp-pillar" data-aos="fade-right" data-aos-delay="100">
+						<div class="bp-pillar reveal stagger-1" data-aos="fade-right" data-aos-delay="100">
 							<div class="bp-pillar-bar" style="--bar-color: #ff8a3d; height: 120px;"></div>
 							<div class="bp-pillar-text">
 								<h4>Scalable Systems</h4>
 								<p>Every tool, site, and workflow is modular — ready to expand as your needs grow.</p>
 							</div>
 						</div>
-						<div class="bp-pillar" data-aos="fade-right" data-aos-delay="200">
+						<div class="bp-pillar reveal stagger-2" data-aos="fade-right" data-aos-delay="200">
 							<div class="bp-pillar-bar" style="--bar-color: #a079cb; height: 160px;"></div>
 							<div class="bp-pillar-text">
 								<h4>Continuous Improvement</h4>
 								<p>We don't launch and leave. Monthly reviews, data analysis, and optimisation keep you ahead.</p>
 							</div>
 						</div>
-						<div class="bp-pillar" data-aos="fade-right" data-aos-delay="300">
+						<div class="bp-pillar reveal stagger-3" data-aos="fade-right" data-aos-delay="300">
 							<div class="bp-pillar-bar" style="--bar-color: #48c9b0; height: 200px;"></div>
 							<div class="bp-pillar-text">
 								<h4>Future-Ready Tech</h4>
@@ -485,13 +409,8 @@
 		<section class="bp-cta-section">
 			<div class="bp-cta-bg"></div>
 			<div class="container">
-				<div class="bp-cta-content" data-aos="fade-up">
-					<lord-icon
-						src="https://cdn.lordicon.com/zpxybbhl.json"
-						trigger="loop"
-						colors="primary:#ff8a3d,secondary:#fffaf2"
-						style="width: 64px; height: 64px"
-					></lord-icon>
+				<div class="bp-cta-content reveal-scale" data-aos="fade-up">
+					<i class="fi fi-rr-rocket icon-bounce" style="font-size: 3rem; color: #ff8a3d;"></i>
 					<h2>The Path Forward</h2>
 					<p>
 						Ready to turn strategy into momentum? Let's map your blueprint together —
@@ -524,16 +443,32 @@
 			});
 		</script>
 
+		<!-- ===== SCROLL REVEAL ===== -->
+		<script>
+			(function () {
+				const revealEls = document.querySelectorAll(
+					".reveal, .reveal-left, .reveal-right, .reveal-scale"
+				);
+				if (!revealEls.length) return;
+
+				const io = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								entry.target.classList.add("revealed");
+								io.unobserve(entry.target);
+							}
+						});
+					},
+					{ threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+				);
+
+				revealEls.forEach((el) => io.observe(el));
+			})();
+		</script>
+
 		<!-- Component Includes & Page Scripts -->
 		<script>
-			/* Load navbar */
-			fetch("-navbar.html")
-				.then(function (r) { return r.text(); })
-				.then(function (t) {
-					document.getElementById("navbar").innerHTML = t;
-				})
-				.catch(function (e) { console.error("Navbar:", e); });
-
 			/* Load footer */
 			fetch("-footer.html")
 				.then(function (r) { return r.text(); })

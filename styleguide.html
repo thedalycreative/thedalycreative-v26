@@ -232,7 +232,25 @@
 	<body class="bg-sand text-ink font-sans antialiased">
 		<div id="page-overlay" class="page-overlay" aria-hidden="true"></div>
 		<!-- ===== NAV BAR ===== -->
-		<div id="navbar"></div>
+		<nav>
+			<div class="nav-container">
+				<a href="index.html" class="logo">
+					<img src="images/icons/logo-1300x507.png" alt="The Daly Creative" height="48" />
+				</a>
+				<input type="checkbox" id="nav-toggle" class="nav-toggle" />
+				<label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"></label>
+				<ul class="nav-links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="ai-tools.html">AI-Tools</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="blueprint.html">Blueprint</a></li>
+					<li><a href="portfolio.html">Projects</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+				<a class="nav-cta" href="contact.html">Book a Call</a>
+			</div>
+		</nav>
 
 		<!-- ===== HERO SECTION ===== -->
 		<section
@@ -2802,37 +2820,6 @@
 		<div id="footer"></div>
 
 		<script>
-			// Fetch navbar
-			fetch("-navbar.html")
-				.then((response) => response.text())
-				.then((html) => {
-					const navbar = document.getElementById("navbar");
-					navbar.innerHTML = html;
-					const nav = navbar.querySelector("nav");
-					if (!nav) {
-						return;
-					}
-					nav.classList.add("nav-animate");
-					let lastScrollY = window.scrollY;
-					const minDelta = 6;
-					const toggleNavOnScroll = () => {
-						const currentScrollY = window.scrollY;
-						const delta = currentScrollY - lastScrollY;
-						if (Math.abs(delta) < minDelta) {
-							return;
-						}
-						if (currentScrollY <= 10) {
-							nav.classList.remove("nav-hidden");
-						} else if (delta > 0) {
-							nav.classList.add("nav-hidden");
-						} else {
-							nav.classList.remove("nav-hidden");
-						}
-						lastScrollY = currentScrollY;
-					};
-					window.addEventListener("scroll", toggleNavOnScroll, { passive: true });
-				});
-
 			// Fetch footer
 			fetch("-footer.html")
 				.then((response) => response.text())
