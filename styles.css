@@ -5761,3 +5761,835 @@ footer {
 		display: none;
 	}
 }
+
+/* =============================================
+   CYBER SECURITY PAGE
+   ============================================= */
+
+/* ----- HERO ----- */
+.cy-hero {
+	position: relative;
+	min-height: 100vh;
+	min-height: 100svh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 160px 2rem 110px;
+	color: var(--cream);
+	overflow: hidden;
+	background: linear-gradient(
+		160deg,
+		#0c0612 0%,
+		#1a0a1e 40%,
+		#200e22 70%,
+		#120818 100%
+	);
+}
+
+.cy-hero-bg {
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(
+			ellipse at 20% 50%,
+			rgba(201, 64, 80, 0.12) 0%,
+			transparent 50%
+		),
+		radial-gradient(
+			ellipse at 80% 20%,
+			rgba(139, 92, 246, 0.1) 0%,
+			transparent 40%
+		),
+		radial-gradient(
+			ellipse at 50% 80%,
+			rgba(201, 64, 80, 0.06) 0%,
+			transparent 50%
+		);
+	pointer-events: none;
+}
+
+.cy-hero-content {
+	position: relative;
+	z-index: 1;
+	max-width: 740px;
+}
+
+.cy-hero-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.6rem;
+	background: rgba(201, 64, 80, 0.12);
+	border: 1px solid rgba(201, 64, 80, 0.25);
+	color: #c94050;
+	padding: 0.5rem 1.4rem;
+	border-radius: 999px;
+	font-size: 0.85rem;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	margin-bottom: 2rem;
+}
+
+.cy-hero-content h1 {
+	font-family: "Fraunces", serif;
+	font-size: 4rem;
+	color: var(--cream);
+	line-height: 1.1;
+	margin-bottom: 1.5rem;
+}
+
+.cy-hero-accent {
+	color: #c94050;
+	font-style: italic;
+}
+
+.cy-hero-content > p {
+	font-size: 1.25rem;
+	color: rgba(255, 250, 242, 0.7);
+	line-height: 1.7;
+	margin-bottom: 2.5rem;
+	max-width: 620px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cy-hero-actions {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.cy-hero-icon {
+	position: absolute;
+	bottom: 60px;
+	right: 8%;
+	opacity: 0.15;
+	animation: cy-float 6s ease-in-out infinite;
+}
+
+@keyframes cy-float {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-15px);
+	}
+}
+
+/* ----- CTA BUTTONS ----- */
+.cy-cta-primary {
+	background: #c94050 !important;
+	color: #ffffff !important;
+	border: 2px solid #c94050;
+}
+
+.cy-cta-primary:hover {
+	background: #d95565 !important;
+	border-color: #d95565;
+	transform: translateY(-2px);
+}
+
+.cy-cta-secondary {
+	background: transparent !important;
+	color: var(--cream) !important;
+	border: 2px solid rgba(255, 250, 242, 0.2) !important;
+	box-shadow: none !important;
+}
+
+.cy-cta-secondary:hover {
+	background: rgba(255, 250, 242, 0.06) !important;
+	border-color: rgba(255, 250, 242, 0.35) !important;
+}
+
+/* ----- STATS STRIP ----- */
+.cy-stats-strip {
+	background: #120a18;
+	border-top: 1px solid rgba(201, 64, 80, 0.1);
+	border-bottom: 1px solid rgba(201, 64, 80, 0.1);
+	padding: 0;
+}
+
+.cy-stats-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 0;
+}
+
+.cy-stat {
+	text-align: center;
+	padding: 2.5rem 1.5rem;
+	border-right: 1px solid rgba(201, 64, 80, 0.08);
+}
+
+.cy-stat:last-child {
+	border-right: none;
+}
+
+.cy-stat-number {
+	display: block;
+	font-family: "Fraunces", serif;
+	font-size: 2.4rem;
+	font-weight: 700;
+	color: #c94050;
+	margin-bottom: 0.3rem;
+}
+
+.cy-stat-label {
+	font-size: 0.85rem;
+	color: rgba(255, 250, 242, 0.5);
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-weight: 600;
+}
+
+/* ----- SECTION HEADERS ----- */
+.cy-section-header {
+	text-align: center;
+	margin-bottom: 3.5rem;
+}
+
+.cy-section-header h2 {
+	font-family: "Fraunces", serif;
+	font-size: 2.8rem;
+	color: var(--cream);
+	margin-bottom: 1rem;
+}
+
+.cy-section-header p {
+	font-size: 1.15rem;
+	color: rgba(255, 250, 242, 0.6);
+	max-width: 620px;
+	margin: 0 auto;
+	line-height: 1.7;
+}
+
+.cy-section-tag {
+	display: inline-block;
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 2px;
+	color: #c94050;
+	text-transform: uppercase;
+	margin-bottom: 0.8rem;
+}
+
+/* ----- THREATS GRID ----- */
+.cy-threats-section {
+	padding: 96px 2rem;
+	background: linear-gradient(180deg, #0c0612 0%, #140a1e 100%);
+}
+
+.cy-threats-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+}
+
+.cy-threat-card {
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid rgba(201, 64, 80, 0.1);
+	border-radius: 20px;
+	padding: 2.2rem;
+	transition:
+		transform 0.3s ease,
+		border-color 0.3s ease,
+		box-shadow 0.3s ease;
+}
+
+.cy-threat-card:hover {
+	transform: translateY(-4px);
+	border-color: rgba(201, 64, 80, 0.3);
+	box-shadow: 0 20px 50px rgba(201, 64, 80, 0.08);
+}
+
+.cy-card-icon {
+	width: 56px;
+	height: 56px;
+	border-radius: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1.5rem;
+	font-size: 1.4rem;
+}
+
+.cy-icon-red {
+	background: rgba(201, 64, 80, 0.12);
+	color: #c94050;
+}
+
+.cy-icon-purple {
+	background: rgba(139, 92, 246, 0.12);
+	color: #8b5cf6;
+}
+
+.cy-icon-crimson {
+	background: rgba(224, 82, 96, 0.12);
+	color: #e05260;
+}
+
+.cy-icon-maroon {
+	background: rgba(160, 48, 80, 0.12);
+	color: #c04868;
+}
+
+.cy-threat-card h3 {
+	font-size: 1.3rem;
+	color: var(--cream);
+	margin-bottom: 0.8rem;
+	font-weight: 600;
+}
+
+.cy-threat-card > p {
+	font-size: 0.95rem;
+	color: rgba(255, 250, 242, 0.55);
+	line-height: 1.7;
+	margin-bottom: 1.5rem;
+}
+
+.cy-threat-stat {
+	border-top: 1px solid rgba(201, 64, 80, 0.08);
+	padding-top: 1.2rem;
+}
+
+.cy-threat-number {
+	display: block;
+	font-family: "Fraunces", serif;
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: #c94050;
+	margin-bottom: 0.2rem;
+}
+
+.cy-threat-context {
+	font-size: 0.85rem;
+	color: rgba(255, 250, 242, 0.4);
+}
+
+/* ----- SCENARIOS (RELATABLE STORIES) ----- */
+.cy-scenarios-section {
+	padding: 96px 2rem;
+	background: #120a18;
+}
+
+.cy-scenarios-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1.5rem;
+}
+
+.cy-scenario {
+	text-align: center;
+	padding: 2.5rem 1.5rem;
+	background: rgba(255, 255, 255, 0.02);
+	border: 1px solid rgba(255, 255, 255, 0.04);
+	border-radius: 20px;
+	transition:
+		transform 0.3s ease,
+		border-color 0.3s ease;
+}
+
+.cy-scenario:hover {
+	transform: translateY(-4px);
+	border-color: rgba(201, 64, 80, 0.15);
+}
+
+.cy-scenario-icon {
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	background: rgba(201, 64, 80, 0.08);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 1.2rem;
+	font-size: 1.5rem;
+	color: #c94050;
+}
+
+.cy-scenario h4 {
+	font-size: 1.15rem;
+	color: var(--cream);
+	margin-bottom: 0.8rem;
+	font-weight: 600;
+}
+
+.cy-scenario p {
+	font-size: 0.9rem;
+	color: rgba(255, 250, 242, 0.5);
+	line-height: 1.65;
+	margin-bottom: 1rem;
+}
+
+.cy-scenario-industry {
+	display: inline-block;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	color: #8b5cf6;
+	text-transform: uppercase;
+	background: rgba(139, 92, 246, 0.1);
+	padding: 0.3rem 0.8rem;
+	border-radius: 999px;
+}
+
+/* ----- SERVICES GRID ----- */
+.cy-services-section {
+	padding: 96px 2rem;
+	background: linear-gradient(180deg, #140a1e 0%, #0c0612 100%);
+}
+
+.cy-services-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+}
+
+.cy-service-card {
+	background: rgba(255, 255, 255, 0.03);
+	border: 1px solid rgba(201, 64, 80, 0.1);
+	border-radius: 20px;
+	padding: 2.2rem;
+	transition:
+		transform 0.3s ease,
+		border-color 0.3s ease,
+		box-shadow 0.3s ease;
+}
+
+.cy-service-card:hover {
+	transform: translateY(-4px);
+	border-color: rgba(201, 64, 80, 0.3);
+	box-shadow: 0 20px 50px rgba(201, 64, 80, 0.08);
+}
+
+.cy-service-card h3 {
+	font-size: 1.3rem;
+	color: var(--cream);
+	margin-bottom: 0.8rem;
+	font-weight: 600;
+}
+
+.cy-service-card > p {
+	font-size: 0.95rem;
+	color: rgba(255, 250, 242, 0.55);
+	line-height: 1.7;
+	margin-bottom: 1.5rem;
+}
+
+.cy-card-features {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border-top: 1px solid rgba(201, 64, 80, 0.08);
+	padding-top: 1.2rem;
+}
+
+.cy-card-features li {
+	font-size: 0.88rem;
+	color: rgba(255, 250, 242, 0.5);
+	padding: 0.35rem 0;
+	padding-left: 1.4rem;
+	position: relative;
+}
+
+.cy-card-features li::before {
+	content: "~";
+	position: absolute;
+	left: 0;
+	color: #c94050;
+	font-weight: 600;
+}
+
+/* ----- IMPACT / RESULTS ----- */
+.cy-impact-section {
+	padding: 96px 2rem;
+	background: #120a18;
+	border-top: 1px solid rgba(201, 64, 80, 0.06);
+	border-bottom: 1px solid rgba(201, 64, 80, 0.06);
+}
+
+.cy-impact-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1.5rem;
+}
+
+.cy-impact-card {
+	text-align: center;
+	padding: 2.5rem 1.5rem;
+	background: linear-gradient(
+		135deg,
+		rgba(201, 64, 80, 0.06),
+		rgba(139, 92, 246, 0.04)
+	);
+	border: 1px solid rgba(201, 64, 80, 0.1);
+	border-radius: 20px;
+	transition:
+		transform 0.3s ease,
+		border-color 0.3s ease;
+}
+
+.cy-impact-card:hover {
+	transform: translateY(-4px);
+	border-color: rgba(201, 64, 80, 0.25);
+}
+
+.cy-impact-number {
+	display: block;
+	font-family: "Fraunces", serif;
+	font-size: 2.8rem;
+	font-weight: 700;
+	color: #c94050;
+	margin-bottom: 0.3rem;
+	line-height: 1;
+}
+
+.cy-impact-label {
+	display: block;
+	font-size: 0.9rem;
+	font-weight: 600;
+	color: var(--cream);
+	margin-bottom: 0.8rem;
+}
+
+.cy-impact-card p {
+	font-size: 0.88rem;
+	color: rgba(255, 250, 242, 0.45);
+	line-height: 1.6;
+}
+
+/* ----- PROCESS ----- */
+.cy-process-section {
+	padding: 96px 2rem;
+	background: linear-gradient(180deg, #0c0612 0%, #140a1e 100%);
+}
+
+.cy-process-grid {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 0;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.cy-process-step {
+	flex: 1;
+	max-width: 320px;
+	text-align: center;
+	padding: 2.5rem 2rem;
+	background: rgba(255, 255, 255, 0.02);
+	border: 1px solid rgba(201, 64, 80, 0.08);
+	border-radius: 20px;
+}
+
+.cy-step-number {
+	font-family: "Fraunces", serif;
+	font-size: 3rem;
+	font-weight: 700;
+	color: rgba(201, 64, 80, 0.2);
+	margin-bottom: 1rem;
+	line-height: 1;
+	display: block;
+}
+
+.cy-process-step h3 {
+	font-size: 1.3rem;
+	color: var(--cream);
+	margin-bottom: 0.8rem;
+}
+
+.cy-process-step p {
+	font-size: 0.95rem;
+	color: rgba(255, 250, 242, 0.5);
+	line-height: 1.7;
+}
+
+.cy-process-connector {
+	display: flex;
+	align-items: center;
+	padding: 0 1rem;
+	margin-top: 3rem;
+}
+
+.cy-process-connector i {
+	font-size: 1.5rem;
+	color: rgba(201, 64, 80, 0.3);
+}
+
+/* ----- CTA SECTION ----- */
+.cy-cta-section {
+	padding: 96px 2rem;
+	background: #0c0612;
+}
+
+.cy-cta-card {
+	display: grid;
+	grid-template-columns: 1.5fr 1fr;
+	align-items: center;
+	background: linear-gradient(
+		135deg,
+		rgba(201, 64, 80, 0.08),
+		rgba(139, 92, 246, 0.04)
+	);
+	border: 1px solid rgba(201, 64, 80, 0.15);
+	border-radius: 28px;
+	padding: 4rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.cy-cta-content h2 {
+	font-family: "Fraunces", serif;
+	font-size: 2.8rem;
+	color: var(--cream);
+	margin-bottom: 1rem;
+}
+
+.cy-cta-content p {
+	font-size: 1.15rem;
+	color: rgba(255, 250, 242, 0.6);
+	margin-bottom: 2rem;
+	line-height: 1.7;
+	max-width: 480px;
+}
+
+.cy-cta-visual {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.cy-cta-visual > i {
+	font-size: 8rem;
+	color: rgba(201, 64, 80, 0.15);
+	position: relative;
+	z-index: 1;
+}
+
+.cy-cta-glow {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: radial-gradient(
+		circle,
+		rgba(201, 64, 80, 0.15) 0%,
+		transparent 70%
+	);
+	animation: cy-glow-pulse 4s ease-in-out infinite;
+}
+
+@keyframes cy-glow-pulse {
+	0%,
+	100% {
+		transform: scale(1);
+		opacity: 0.5;
+	}
+	50% {
+		transform: scale(1.3);
+		opacity: 1;
+	}
+}
+
+/* ----- SCROLL ANIMATIONS ----- */
+.cy-animate-on-scroll {
+	opacity: 0;
+	transform: translateY(30px);
+	transition:
+		opacity 0.6s ease-out,
+		transform 0.6s ease-out;
+}
+
+.cy-animate-on-scroll.cy-animated {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.cy-threat-card.cy-animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+.cy-threat-card.cy-animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+.cy-threat-card.cy-animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+.cy-threat-card.cy-animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
+.cy-threat-card.cy-animate-on-scroll:nth-child(6) { transition-delay: 0.5s; }
+
+.cy-service-card.cy-animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+.cy-service-card.cy-animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+.cy-service-card.cy-animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+.cy-service-card.cy-animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
+.cy-service-card.cy-animate-on-scroll:nth-child(6) { transition-delay: 0.5s; }
+
+.cy-stat.cy-animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+.cy-stat.cy-animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+.cy-stat.cy-animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+
+.cy-impact-card.cy-animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+.cy-impact-card.cy-animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+.cy-impact-card.cy-animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+
+/* ----- RESPONSIVE — 1024px ----- */
+@media (max-width: 1024px) {
+	.cy-threats-grid,
+	.cy-services-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.cy-scenarios-grid,
+	.cy-impact-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.cy-cta-card {
+		grid-template-columns: 1fr;
+		text-align: center;
+		padding: 3rem;
+	}
+
+	.cy-cta-content p {
+		max-width: 100%;
+	}
+
+	.cy-cta-visual {
+		display: none;
+	}
+
+	.cy-hero h1,
+	.cy-hero-content h1 {
+		font-size: 3.2rem;
+	}
+
+	.cy-process-grid {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.cy-process-step {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	.cy-process-connector {
+		transform: rotate(90deg);
+		padding: 0.5rem 0;
+		margin-top: 0;
+	}
+}
+
+/* ----- RESPONSIVE — 768px ----- */
+@media (max-width: 768px) {
+	.cy-hero {
+		padding: 140px 1.5rem 80px;
+	}
+
+	.cy-hero-content h1 {
+		font-size: 2.6rem;
+	}
+
+	.cy-hero-content > p {
+		font-size: 1.1rem;
+	}
+
+	.cy-hero-icon {
+		display: none;
+	}
+
+	.cy-stats-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.cy-stat {
+		border-right: none;
+		border-bottom: 1px solid rgba(201, 64, 80, 0.06);
+		padding: 1.8rem 1rem;
+	}
+
+	.cy-stat:nth-child(odd) {
+		border-right: 1px solid rgba(201, 64, 80, 0.06);
+	}
+
+	.cy-stat:nth-last-child(-n + 2) {
+		border-bottom: none;
+	}
+
+	.cy-threats-grid,
+	.cy-services-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.cy-section-header h2 {
+		font-size: 2.2rem;
+	}
+
+	.cy-threats-section,
+	.cy-scenarios-section,
+	.cy-services-section,
+	.cy-impact-section,
+	.cy-process-section,
+	.cy-cta-section {
+		padding: 64px 1.5rem;
+	}
+
+	.cy-cta-card {
+		padding: 2.5rem 2rem;
+	}
+
+	.cy-cta-content h2 {
+		font-size: 2.2rem;
+	}
+
+	.cyber-page .nav-links {
+		background: rgba(12, 6, 18, 0.98);
+	}
+}
+
+/* ----- RESPONSIVE — 480px ----- */
+@media (max-width: 480px) {
+	.cy-hero-content h1 {
+		font-size: 2.2rem;
+	}
+
+	.cy-hero-badge {
+		font-size: 0.78rem;
+		padding: 0.4rem 1rem;
+	}
+
+	.cy-stats-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.cy-stat {
+		border-right: none !important;
+		border-bottom: 1px solid rgba(201, 64, 80, 0.06);
+		padding: 1.5rem 1rem;
+	}
+
+	.cy-stat:last-child {
+		border-bottom: none;
+	}
+
+	.cy-stat-number {
+		font-size: 2rem;
+	}
+
+	.cy-scenarios-grid,
+	.cy-impact-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.cy-section-header h2 {
+		font-size: 1.8rem;
+	}
+
+	.cy-cta-content h2 {
+		font-size: 1.8rem;
+	}
+
+	.cy-cta-card {
+		padding: 2rem 1.5rem;
+	}
+}
+
+/* ===== END CYBER SECURITY PAGE ===== */
