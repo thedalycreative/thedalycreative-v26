@@ -364,6 +364,7 @@
 			<div class="service-card reveal stagger-8">
 				<div class="service-icon">
 					<i class="fi fi-rr-universal-access" style="font-size: 2rem; color: #2f9ea0;"></i>
+					<i class="fi fi-rr-accessibility icon-float" style="font-size: 2rem; color: #48c9b0;"></i>
 				</div>
 				<h3>Accessibility Assessment</h3>
 				<p>
@@ -377,6 +378,7 @@
 			<div class="service-card reveal stagger-9">
 				<div class="service-icon">
 					<i class="fi fi-rr-users-alt" style="font-size: 2rem; color: #fb837d;"></i>
+					<i class="fi fi-rr-users-alt icon-pulse" style="font-size: 2rem; color: #fa9361;"></i>
 				</div>
 				<h3>Workshops & Training</h3>
 				<p>
@@ -398,6 +400,24 @@
 					<div class="featured-service-content">
 						<div class="featured-service-icon">
 							<i class="bi bi-shield-lock-fill"></i>
+	<!-- ===== AI TOOLS SECTION ===== -->
+		<section id="ai-tools" class="ai-tools-section">
+			<div class="container">
+				<div class="ai-tools-feature">
+					<div class="ai-feature-content">
+						<div class="ai-feature-text">
+
+							<h2>Automate with Personality</h2>
+							<p>Build tools that speak your brand — and scale your impact.</p>
+							<ul class="ai-feature-list">
+								<li>Custom GPT-based assistants tailored to your brand voice</li>
+								<li>Dynamic learning tools that evolve with your business</li>
+								<li>Automated content creation that maintains quality</li>
+								<li>AI dashboards with actionable insights</li>
+								<li>24/7 intelligent support agents</li>
+								
+							</ul>
+							<a href="contact.html" class="cta-button">Build Your AI Agent</a>
 						</div>
 						<h3>Don't Wait for the Breach</h3>
 						<p>
@@ -423,6 +443,32 @@
 			</div>
 		</div>
 	</section>
+		</section>
+	<!-- ===== CYBERSECURITY SECTION ===== -->
+	<section id="cybersecurity" class="cybersecurity-section">
+		<div class="container">
+			<div class="cybersecurity-feature">
+				<div class="cyber-feature-content">
+					<div class="cyber-feature-text">
+						<h2>Secure Your Enterprise</h2>
+						<p>Comprehensive cybersecurity solutions designed to protect your business, maintain compliance, and build customer trust.</p>
+						<ul class="cyber-feature-list">
+							<li>Full-spectrum security audits and vulnerability assessments</li>
+							<li>Advanced threat detection and incident response</li>
+							<li>Compliance management (GDPR, HIPAA, SOC 2)</li>
+							<li>Penetration testing and security training</li>
+							<li>24/7 security monitoring and support</li>
+						</ul>
+						<a href="cyber-security.html" class="cta-button">Explore Security Solutions</a>
+					</div>
+					<div class="cyber-feature-visual">
+						<img src="images/methods-page/method2-secure.png" alt="Cybersecurity Solutions"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 
 	<!-- ===== ABOUT SECTION ===== -->
 	<section id="about" class="about-preview" style="background-image: linear-gradient(135deg, rgba(15, 29, 45, 0.75) 0%, rgba(16, 17, 22, 0.75) 100%), url('images/hero-images/hero-landing.png'); background-attachment: fixed; background-size: cover; background-position: center;">
@@ -758,6 +804,179 @@
 			);
 
 			revealEls.forEach((el) => io.observe(el));
+		})();
+	</script>
+
+	<!-- ===== MODAL SYSTEM ===== -->
+	<script>
+		(function() {
+			const serviceCardData = {
+				'brand-identity': {
+					title: 'Brand Identity',
+					icon: 'fi-rr-paint-brush',
+					color: '#ff8a3d',
+					description: 'Visual identity design, messaging & voice, logos, color systems, and typography that tells your unique story.',
+					link: 'services.html#service-branding'
+				},
+				'web-design': {
+					title: 'Web Design & Development',
+					icon: 'fi-rr-browser',
+					color: '#4c8cbc',
+					description: 'Modern responsive sites with content-first structure, SEO optimization, and intuitive CMS setup.',
+					link: 'services.html#service-web-dev'
+				},
+				'ai-agents': {
+					title: 'AI Agents & Automation',
+					icon: 'fi-rr-brain',
+					color: '#a079cb',
+					description: 'Custom GPT assistants, automation flows, 24/7 support agents, and AI-powered insights.',
+					link: 'services.html#service-ai-strategy'
+				},
+				'market-research': {
+					title: 'Market Research',
+					icon: 'fi-rr-chart-pie',
+					color: '#e3b156',
+					description: 'Surveys, audits, personas, competitor analysis, and messaging fit to position your brand perfectly.',
+					link: 'services.html#service-data'
+				},
+				'content-systems': {
+					title: 'Content Systems',
+					icon: 'fi-rr-edit',
+					color: '#fa9361',
+					description: 'Content strategy, creative direction, and reusable templates that keep your brand consistent across every channel.',
+					link: 'services.html#service-content'
+				},
+				'growth-analytics': {
+					title: 'Growth Analytics',
+					icon: 'fi-rr-chart-line-up',
+					color: '#48c9b0',
+					description: 'Dashboards, KPI tracking, and conversion optimization to turn insights into measurable growth.',
+					link: 'services.html#service-future'
+				},
+				'cyber-security': {
+					title: 'Cyber Security',
+					icon: 'bi-shield-lock-fill',
+					color: '#c94050',
+					description: 'Security audits, employee training, threat monitoring, and incident response — built for businesses that cannot afford to be caught off guard.',
+					link: 'cyber-security.html'
+				},
+				'accessibility': {
+					title: 'Accessibility Assessment',
+					icon: 'fi-rr-accessibility',
+					color: '#48c9b0',
+					description: 'WCAG compliance audits, accessibility testing, and remediation strategies to ensure your digital products are inclusive for all users.',
+					link: 'services.html#service-accessibility'
+				},
+				'training': {
+					title: 'Workshops & Training',
+					icon: 'fi-rr-users-alt',
+					color: '#fa9361',
+					description: 'Custom team training programs, skill development sessions, and knowledge transfer to empower your organization with new capabilities.',
+					link: 'services.html#service-training'
+				}
+			};
+
+			function createModal(id, data) {
+				const modal = document.createElement('div');
+				modal.className = 'modal';
+				modal.id = 'modal-' + id;
+
+				const backdrop = document.createElement('div');
+				backdrop.className = 'modal-backdrop';
+
+				const content = document.createElement('div');
+				content.className = 'modal-content';
+
+				const closeBtn = document.createElement('button');
+				closeBtn.className = 'modal-close';
+				closeBtn.setAttribute('aria-label', 'Close modal');
+				closeBtn.textContent = '×';
+
+				const header = document.createElement('div');
+				header.className = 'modal-header';
+
+				const iconDiv = document.createElement('div');
+				iconDiv.className = 'modal-icon';
+
+				const icon = document.createElement('i');
+				icon.className = 'fi ' + data.icon;
+				icon.style.color = data.color;
+
+				iconDiv.appendChild(icon);
+				header.appendChild(iconDiv);
+
+				const title = document.createElement('h2');
+				title.textContent = data.title;
+
+				const desc = document.createElement('p');
+				desc.textContent = data.description;
+
+				const link = document.createElement('a');
+				link.href = data.link;
+				link.className = 'cta-button';
+				link.textContent = 'Learn More';
+
+				content.appendChild(closeBtn);
+				content.appendChild(header);
+				content.appendChild(title);
+				content.appendChild(desc);
+				content.appendChild(link);
+
+				modal.appendChild(backdrop);
+				modal.appendChild(content);
+
+				backdrop.addEventListener('click', () => closeModal(id));
+				closeBtn.addEventListener('click', () => closeModal(id));
+
+				return modal;
+			}
+
+			function openModal(id) {
+				const modal = document.getElementById('modal-' + id);
+				if (modal) {
+					modal.classList.add('active');
+					document.body.style.overflow = 'hidden';
+				}
+			}
+
+			function closeModal(id) {
+				const modal = document.getElementById('modal-' + id);
+				if (modal) {
+					modal.classList.remove('active');
+					document.body.style.overflow = 'auto';
+				}
+			}
+
+			// Create modals for each service
+			const servicesContainer = document.querySelector('.services-grid');
+			if (servicesContainer) {
+				const serviceCards = servicesContainer.querySelectorAll('.service-card');
+				const cardKeys = Object.keys(serviceCardData);
+				serviceCards.forEach((card, index) => {
+					if (index < cardKeys.length) {
+						const dataKey = cardKeys[index];
+						const data = serviceCardData[dataKey];
+						const modal = createModal(dataKey, data);
+						document.body.appendChild(modal);
+
+						card.addEventListener('click', (e) => {
+							e.preventDefault();
+							openModal(dataKey);
+						});
+					}
+				});
+			}
+
+			// Close modal on ESC key
+			document.addEventListener('keydown', (e) => {
+				if (e.key === 'Escape') {
+					const activeModals = document.querySelectorAll('.modal.active');
+					activeModals.forEach(modal => {
+						const id = modal.id.replace('modal-', '');
+						closeModal(id);
+					});
+				}
+			});
 		})();
 	</script>
 
