@@ -41,36 +41,104 @@
 			<ul class="nav-links">
 				<li data-color="teal"><a href="index.html" class="active"><i
 							class="fi fi-rr-home nav-icon"></i><span>Home</span></a></li>
-				<li data-color="amber"><a href="about.html"><i class="fi fi-rr-user nav-icon"></i><span>About</span></a>
+				<li class="nav-has-dropdown" data-color="amber">
+				<a href="about.html"><i class="fi fi-rr-user nav-icon"></i><span>About</span><i
+						class="fi fi-rr-angle-small-down nav-chevron"></i></a>
+				<div class="nav-dropdown">
+					<div class="nav-dropdown-grid">
+						<a href="about.html#what-drives-us" class="nav-dropdown-card"
+							style="--card-accent: var(--amber);"><i
+								class="fi fi-rr-bulb nav-dropdown-icon"></i>
+							<div><strong>What Drives Us</strong><span>Our values &amp; mission</span></div>
+						</a>
+						<a href="about.html#the-journey" class="nav-dropdown-card"
+							style="--card-accent: var(--amber);"><i
+								class="fi fi-rr-time-past nav-dropdown-icon"></i>
+							<div><strong>The Journey So Far</strong><span>Experience &amp; expertise</span></div>
+						</a>
+						<a href="about.html#academic-background" class="nav-dropdown-card"
+							style="--card-accent: var(--amber);"><i
+								class="fi fi-rr-book nav-dropdown-icon"></i>
+							<div><strong>Academic Background</strong><span>Education &amp; credentials</span></div>
+						</a>
+					</div>
+				</div>
 				</li>
 				<li class="nav-has-dropdown" data-color="orange">
 					<a href="services.html"><i class="fi fi-rr-apps nav-icon"></i><span>Services</span><i
 							class="fi fi-rr-angle-small-down nav-chevron"></i></a>
 					<div class="nav-dropdown">
 						<div class="nav-dropdown-grid">
+							<!-- Build Your Foundation -->
+							<a href="services.html#cat-brand" class="nav-dropdown-card"
+								style="--card-accent: var(--orange);"><i
+									class="fi fi-rr-globe nav-dropdown-icon"></i>
+								<div><strong>Custom Website Development</strong></div>
+							</a>
 							<a href="services.html#cat-brand" class="nav-dropdown-card"
 								style="--card-accent: var(--orange);"><i
 									class="fi fi-rr-paint-brush nav-dropdown-icon"></i>
-								<div><strong>Brand &amp; Digital</strong><span>Web, branding, SEO, ads</span></div>
+								<div><strong>Strategic Branding &amp; Identity</strong></div>
 							</a>
+							<a href="services.html#cat-brand" class="nav-dropdown-card"
+								style="--card-accent: var(--orange);"><i
+									class="fi fi-rr-search nav-dropdown-icon"></i>
+								<div><strong>Localized SEO Visibility</strong></div>
+							</a>
+							<a href="services.html#cat-brand" class="nav-dropdown-card"
+								style="--card-accent: var(--orange);"><i
+									class="fi fi-rr-megaphone nav-dropdown-icon"></i>
+								<div><strong>Managed Ad Campaigns</strong></div>
+							</a>
+							<!-- Work Smarter, Not Harder -->
 							<a href="services.html#cat-ai" class="nav-dropdown-card"
 								style="--card-accent: var(--purple);"><i class="fi fi-rr-brain nav-dropdown-icon"></i>
-								<div><strong>AI &amp; Automation</strong><span>Agents, workflows, chatbots</span></div>
+								<div><strong>AI Strategy &amp; Navigation</strong></div>
 							</a>
+							<a href="services.html#cat-ai" class="nav-dropdown-card"
+								style="--card-accent: var(--purple);"><i class="fi fi-rr-bolt nav-dropdown-icon"></i>
+								<div><strong>Workflow Automation</strong></div>
+							</a>
+							<a href="services.html#cat-ai" class="nav-dropdown-card"
+								style="--card-accent: var(--purple);"><i class="fi fi-rr-magic-wand nav-dropdown-icon"></i>
+								<div><strong>AI Content Support</strong></div>
+							</a>
+							<a href="services.html#cat-ai" class="nav-dropdown-card"
+								style="--card-accent: var(--purple);"><i class="fi fi-rr-comment-dots nav-dropdown-icon"></i>
+								<div><strong>Smart Chatbots</strong></div>
+							</a>
+							<!-- Grow with Confidence -->
 							<a href="services.html#cat-growth" class="nav-dropdown-card"
 								style="--card-accent: var(--teal);"><i
 									class="fi fi-rr-chart-line-up nav-dropdown-icon"></i>
-								<div><strong>Growth &amp; Strategy</strong><span>Data, support, training</span></div>
+								<div><strong>Data Insights</strong></div>
 							</a>
-							<a href="ai-tools.html" class="nav-dropdown-card nav-dropdown-card--dark"
-								style="--card-accent: #a079cb; --card-bg: #0a1628;"><i
-									class="fi fi-rr-brain nav-dropdown-icon"></i>
-								<div><strong>AI Tools</strong><span>GPT agents, smart integrations</span></div>
+							<a href="services.html#cat-growth" class="nav-dropdown-card"
+								style="--card-accent: var(--teal);"><i
+									class="fi fi-rr-handshake nav-dropdown-icon"></i>
+								<div><strong>Grow &amp; Support Plan</strong></div>
 							</a>
+							<a href="services.html#cat-growth" class="nav-dropdown-card"
+								style="--card-accent: var(--teal);"><i
+									class="fi fi-rr-book nav-dropdown-icon"></i>
+								<div><strong>Training &amp; Empowerment</strong></div>
+							</a>
+							<a href="services.html#cat-growth" class="nav-dropdown-card"
+								style="--card-accent: var(--teal);"><i
+									class="fi fi-rr-sparkles nav-dropdown-icon"></i>
+								<div><strong>Future-Proofing</strong></div>
+							</a>
+							<div class="nav-dropdown-divider"></div>
+							<!-- Featured Services -->
 							<a href="cyber-security.html" class="nav-dropdown-card nav-dropdown-card--dark"
-								style="--card-accent: #a079cb; --card-bg: #0c0612;"><i
+								style="--card-accent: #c94050; --card-bg: #0c0612;"><i
 									class="bi bi-shield-lock nav-dropdown-icon"></i>
 								<div><strong>Cyber Security</strong><span>Audits, monitoring, response</span></div>
+							</a>
+							<a href="ai-tools.html" class="nav-dropdown-card nav-dropdown-card--dark"
+								style="--card-accent: #0d1b2a; --card-bg: #0a1628;"><i
+									class="fi fi-rr-brain nav-dropdown-icon"></i>
+								<div><strong>AI Tools</strong><span>GPT agents, smart integrations</span></div>
 							</a>
 						</div>
 					</div>
@@ -82,7 +150,7 @@
 						<div class="nav-dropdown-grid">
 							<a href="blueprint.html#bp-method" class="nav-dropdown-card"
 								style="--card-accent: var(--orange);"><i
-									class="fi fi-rr-lightbulb nav-dropdown-icon"></i>
+									class="fi fi-rr-bulb nav-dropdown-icon"></i>
 								<div><strong>Our Method</strong><span>Strategy &amp; mindset</span></div>
 							</a>
 							<a href="blueprint.html#bp-timeline" class="nav-dropdown-card"
@@ -103,7 +171,7 @@
 				<li class="nav-has-dropdown" data-color="coral">
 					<a href="portfolio.html"><i class="fi fi-rr-briefcase nav-icon"></i><span>Work</span><i
 							class="fi fi-rr-angle-small-down nav-chevron"></i></a>
-					<div class="nav-dropdown nav-dropdown--wide">
+					<div class="nav-dropdown">
 						<div class="nav-dropdown-grid">
 							<a href="portfolio.html#skywings" class="nav-dropdown-card"
 								style="--card-accent: #4c8cbc;"><i
@@ -139,13 +207,11 @@
 						</div>
 					</div>
 				</li>
-				<li data-color="peach"><a href="contact.html"><i
-							class="fi fi-rr-envelope nav-icon"></i><span>Contact</span></a></li>
 				<li class="nav-mobile-cta-item"><a class="nav-mobile-cta" href="contact.html"><i
-							class="fi fi-rr-calendar nav-icon"></i> Book a Call</a></li>
+							class="fi fi-rr-calendar nav-icon"></i> Enquire Now</a></li>
 			</ul>
 			<div class="nav-overlay"></div>
-			<a class="nav-cta" href="contact.html"><i class="fi fi-rr-calendar nav-icon"></i> Book a Call</a>
+			<a class="nav-cta" href="contact.html"><i class="fi fi-rr-calendar nav-icon"></i> Enquire Now</a>
 		</div>
 	</nav>
 	<script>
@@ -198,7 +264,7 @@
 			<!--Services Section Header-->
 			<div class="section-header reveal">
 				<h2>What We Offer</h2>
-				<p>Seven products built to sharpen your brand and scale your growth</p>
+				<p>Nine products built to sharpen your brand and scale your growth</p>
 			</div>
 
 			<!--Services Cards Grid-->
@@ -206,7 +272,7 @@
 				<!--Service Card 1: Brand Identity -->
 				<div class="service-card reveal stagger-1">
 					<div class="service-icon">
-						<i class="fi fi-rr-paint-brush icon-float" style="font-size: 2rem; color: #ff8a3d;"></i>
+						<i class="fi fi-rr-paint-brush" style="font-size: 2rem; color: #ff8a3d;"></i>
 					</div>
 					<h3>Brand Identity</h3>
 					<p>
@@ -219,7 +285,7 @@
 				<!--Service Card 2: Web Design & Development -->
 				<div class="service-card reveal stagger-2">
 					<div class="service-icon">
-						<i class="fi fi-rr-browser icon-pulse" style="font-size: 2rem; color: #4c8cbc;"></i>
+						<i class="fi fi-rr-browser" style="font-size: 2rem; color: #4c8cbc;"></i>
 					</div>
 					<h3>Web Design & Development</h3>
 					<p>
@@ -232,7 +298,7 @@
 				<!--Service Card 3: AI Agents & Automation -->
 				<div class="service-card reveal stagger-3">
 					<div class="service-icon">
-						<i class="fi fi-rr-brain icon-glow" style="font-size: 2rem; color: #a079cb;"></i>
+						<i class="fi fi-rr-brain" style="font-size: 2rem; color: #a079cb;"></i>
 					</div>
 					<h3>AI Agents & Automation</h3>
 					<p>
@@ -245,7 +311,7 @@
 				<!--Service Card 4: Market Research -->
 				<div class="service-card reveal stagger-4">
 					<div class="service-icon">
-						<i class="fi fi-rr-chart-pie icon-float" style="font-size: 2rem; color: #e3b156;"></i>
+						<i class="fi fi-rr-chart-pie" style="font-size: 2rem; color: #e3b156;"></i>
 					</div>
 					<h3>Market Research</h3>
 					<p>
@@ -258,7 +324,7 @@
 				<!--Service Card 5: Content Systems -->
 				<div class="service-card reveal stagger-5">
 					<div class="service-icon">
-						<i class="fi fi-rr-edit icon-pulse" style="font-size: 2rem; color: #fa9361;"></i>
+						<i class="fi fi-rr-edit" style="font-size: 2rem; color: #fa9361;"></i>
 					</div>
 					<h3>Content Systems</h3>
 					<p>
@@ -271,7 +337,7 @@
 				<!--Service Card 6: Growth Analytics -->
 				<div class="service-card reveal stagger-6">
 					<div class="service-icon">
-						<i class="fi fi-rr-chart-line-up icon-bounce" style="font-size: 2rem; color: #48c9b0;"></i>
+						<i class="fi fi-rr-chart-line-up" style="font-size: 2rem; color: #48c9b0;"></i>
 					</div>
 					<h3>Growth Analytics</h3>
 					<p>
@@ -284,7 +350,7 @@
 				<!--Service Card 7: Cyber Security -->
 				<div class="service-card reveal stagger-7">
 					<div class="service-icon">
-						<i class="bi bi-shield-lock-fill icon-bounce" style="font-size: 2rem; color: #c94050;"></i>
+						<i class="bi bi-shield-lock-fill" style="font-size: 2rem; color: #c94050;"></i>
 					</div>
 					<h3>Cyber Security</h3>
 					<p>
@@ -293,43 +359,73 @@
 					</p>
 					<a href="cyber-security.html" class="learn-more">Learn More →</a>
 				</div>
+
+			<!--Service Card 8: Accessibility Assessment -->
+			<div class="service-card reveal stagger-8">
+				<div class="service-icon">
+					<i class="fi fi-rr-universal-access" style="font-size: 2rem; color: #2f9ea0;"></i>
+				</div>
+				<h3>Accessibility Assessment</h3>
+				<p>
+					WCAG compliance audits, accessibility testing, and remediation strategies
+					to ensure your digital products are inclusive for all users.
+				</p>
+				<a href="services.html#service-accessibility" class="learn-more">Learn More →</a>
+			</div>
+
+			<!--Service Card 9: Workshops & Training -->
+			<div class="service-card reveal stagger-9">
+				<div class="service-icon">
+					<i class="fi fi-rr-users-alt" style="font-size: 2rem; color: #fb837d;"></i>
+				</div>
+				<h3>Workshops & Training</h3>
+				<p>
+					Custom team training programs, skill development sessions, and knowledge
+					transfer to empower your organization with new capabilities.
+				</p>
+				<a href="services.html#service-training" class="learn-more">Learn More →</a>
+			</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- ===== AI TOOLS SECTION ===== --
-		<section id="ai-tools" class="ai-tools-section">
-			<div class="container">
-				<div class="ai-tools-feature">
-					<div class="ai-feature-content">
-						<div class="ai-feature-text">
-
-							<h2>Automate with Personality</h2>
-							<p>Build tools that speak your brand — and scale your impact.</p>
-							<ul class="ai-feature-list">
-								<li>Custom GPT-based assistants tailored to your brand voice</li>
-								<li>Dynamic learning tools that evolve with your business</li>
-								<li>Automated content creation that maintains quality</li>
-								<li>AI dashboards with actionable insights</li>
-								<li>24/7 intelligent support agents</li>
-								
-							</ul>
-							<a href="contact.html" class="cta-button">Build Your AI Agent</a>
+	<!-- ===== FEATURED SERVICES SECTION ===== -->
+	<section class="featured-services-section">
+		<div class="container">
+			<div class="featured-services-grid">
+				<!-- Cyber Security Tile -->
+				<div class="featured-service-tile featured-service-cyber" style="--accent-color: #c94050;">
+					<div class="featured-service-content">
+						<div class="featured-service-icon">
+							<i class="bi bi-shield-lock-fill"></i>
 						</div>
+						<h3>Don't Wait for the Breach</h3>
+						<p>
+							Every day without protection is another day your business is exposed. Book a free security audit and find out exactly where you stand — before someone else does.
+						</p>
+						<a href="cyber-security.html" class="cta-button featured-service-btn">Book Your Free Audit</a>
+					</div>
+				</div>
 
-						<div class="ai-feature-visual">
-							<img
-								src="images/methods-page/method1-trust.png"
-								alt="AI Tools and Automation"
-							/>
+				<!-- AI Tools Tile -->
+				<div class="featured-service-tile featured-service-ai" style="--accent-color: #a079cb;">
+					<div class="featured-service-content">
+						<div class="featured-service-icon">
+							<i class="bi bi-robot"></i>
 						</div>
+						<h3>Ready to Automate?</h3>
+						<p>
+							Book a free 30-minute discovery call. We'll map out where AI can save you time, money, and headaches.
+						</p>
+						<a href="ai-tools.html" class="cta-button featured-service-btn">Let's Talk</a>
 					</div>
 				</div>
 			</div>
-		</section> -->
+		</div>
+	</section>
 
 	<!-- ===== ABOUT SECTION ===== -->
-	<section id="about" class="about-preview">
+	<section id="about" class="about-preview" style="background-image: linear-gradient(135deg, rgba(15, 29, 45, 0.75) 0%, rgba(16, 17, 22, 0.75) 100%), url('images/hero-images/hero-landing.png'); background-attachment: fixed; background-size: cover; background-position: center;">
 		<div class="container">
 			<div class="about-content reveal-left">
 				<h2>Built by Creators, <br />for Creators</h2>
@@ -359,7 +455,7 @@
 			<div class="why-grid">
 				<div class="why-item reveal stagger-1">
 					<div class="why-icon">
-						<i class="fi fi-rr-lightbulb icon-float" style="font-size: 1.8rem;"></i>
+						<i class="fi fi-rr-brain icon-float"></i>
 					</div>
 					<h3>Creative Intelligence</h3>
 					<p>
@@ -369,7 +465,7 @@
 				</div>
 				<div class="why-item reveal stagger-2">
 					<div class="why-icon">
-						<i class="fi fi-rr-settings icon-pulse" style="font-size: 1.8rem;"></i>
+						<i class="fi fi-rr-settings icon-pulse"></i>
 					</div>
 					<h3>Future-Ready Tech</h3>
 					<p>
@@ -379,7 +475,7 @@
 				</div>
 				<div class="why-item reveal stagger-3">
 					<div class="why-icon">
-						<i class="fi fi-rr-users icon-float" style="font-size: 1.8rem;"></i>
+						<i class="fi fi-rr-users icon-float"></i>
 					</div>
 					<h3>Partnership Approach</h3>
 					<p>
@@ -391,112 +487,77 @@
 		</div>
 	</section>
 
-	<!-- ===== TESTIMONIALS SECTION ===== -->
-	<section class="testimonials-section">
+	<!-- ===== OUR AFFILIATES SECTION ===== -->
+	<section class="affiliates-section">
 		<div class="container">
-			<!--Testimonials Section Header-->
+			<!--Affiliates Section Header-->
 			<div class="section-header reveal">
-				<h2>What Our Clients Say</h2>
-				<p>Real results from real partnerships</p>
+				<h2>Our Affiliates</h2>
+				<p>Trusted partners we work with</p>
 			</div>
 
-			<!--Testimonials Carousel-->
-			<div class="testimonial-carousel" data-autoplay="true">
+			<!--Affiliates Logo Carousel-->
+			<div class="affiliates-carousel" data-autoplay="true">
 				<!--Carousel Control: Previous-->
-				<button class="carousel-btn prev" type="button" aria-label="Previous testimonials">
+				<button class="carousel-btn prev" style="display: none;" type="button" aria-label="Previous affiliates">
 					<i class="bi bi-chevron-left"></i>
 				</button>
 
 				<div class="carousel-viewport">
 					<div class="carousel-track">
-						<!--Testimonial Tile 1-->
-						<article class="testimonial-tile">
-							<p class="testimonial-quote">
-								"Translated complex requirements into clear, human-centered assets."
-							</p>
-							<p class="testimonial-source">- Client, 2025</p>
-						</article>
-						<!--Testimonial Tile 2-->
-						<article class="testimonial-tile">
-							<p class="testimonial-quote">
-								"Created a voice guide our team and partners can use consistently."
-							</p>
-							<p class="testimonial-source">- Client, 2025</p>
-						</article>
-						<!--Testimonial Tile 3-->
-						<article class="testimonial-tile">
-							<p class="testimonial-quote">
-								"Refined service naming into plain-English options that were easy to
-								find."
-							</p>
-							<p class="testimonial-source">- Client, 2025</p>
-						</article>
-						<!--Testimonial Tile 4-->
-						<article class="testimonial-tile">
-							<p class="testimonial-quote">
-								"Onboarding documentation reduced admin friction and improved trust."
-							</p>
-							<p class="testimonial-source">- Client, 2025</p>
-						</article>
-						<!--Testimonial Tile 5-->
-						<article class="testimonial-tile">
-							<p class="testimonial-quote">
-								"Wireframes and information architecture prioritized accessibility and
-								conversion."
-							</p>
-							<p class="testimonial-source">- Client, 2025</p>
-						</article>
-						<!--Testimonial Tile 6-->
-						<article class="testimonial-tile">
-							<p class="testimonial-quote">
-								"Mapped metadata and internal links, then seeded a practical content
-								pipeline."
-							</p>
-							<p class="testimonial-source">- Client, 2025</p>
-						</article>
-						<!--Testimonial Tile 7-->
-						<article class="testimonial-tile">
-							<p class="testimonial-quote">
-								"Coordinated stakeholders, reconciled priorities, and kept momentum
-								steady."
-							</p>
-							<p class="testimonial-source">- Client, 2025</p>
-						</article>
-						<!--Testimonial Tile 8-->
-						<article class="testimonial-tile">
-							<p class="testimonial-quote">
-								"Set up checklists and templates so non-technical staff maintain
-								standards."
-							</p>
-							<p class="testimonial-source">- Client, 2025</p>
-						</article>
-						<!--Testimonial Tile 9-->
-						<article class="testimonial-tile">
-							<p class="testimonial-quote">
-								"Balanced warm language with the rigor required in regulated settings."
-							</p>
-							<p class="testimonial-source">- Client, 2025</p>
-						</article>
-						<!--Testimonial Tile 10-->
-						<article class="testimonial-tile">
-							<p class="testimonial-quote">
-								"Bridged strategy and execution while keeping everyone aligned."
-							</p>
-							<p class="testimonial-source">- Client, 2025</p>
-						</article>
+						<!--Affiliate Logo 1-->
+						<div class="affiliate-tile">
+							<img src="images/affilliates/DORA-logo-virtical circle.png" alt="Affiliate Logo 1" class="affiliate-logo">
+						</div>
+						<!--Affiliate Logo 2-->
+						<div class="affiliate-tile">
+							<img src="images/affilliates/and-logo.png" alt="Affiliate Logo 2" class="affiliate-logo">
+						</div>
+						<!--Affiliate Logo 3-->
+						<div class="affiliate-tile">
+							<img src="images/affilliates/angharadoflynnlim-logo.png" alt="Affiliate Logo 3" class="affiliate-logo">
+						</div>
+						<!--Affiliate Logo 4-->
+						<div class="affiliate-tile">
+							<img src="images/affilliates/atq-logo.png" alt="Affiliate Logo 4" class="affiliate-logo">
+						</div>
+						<!--Affiliate Logo 5-->
+						<div class="affiliate-tile">
+							<img src="images/affilliates/brellock-logo.png" alt="Affiliate Logo 5" class="affiliate-logo">
+						</div>
+						<!--Affiliate Logo 6-->
+						<div class="affiliate-tile">
+							<img src="images/affilliates/drumplings-logo.png" alt="Affiliate Logo 6" class="affiliate-logo">
+						</div>
+						<!--Affiliate Logo 7-->
+						<div class="affiliate-tile">
+							<img src="images/affilliates/drumps-logo.png" alt="Affiliate Logo 7" class="affiliate-logo">
+						</div>
+						<!--Affiliate Logo 8-->
+						<div class="affiliate-tile">
+							<img src="images/affilliates/mwm-logo.png" alt="Affiliate Logo 8" class="affiliate-logo">
+						</div>
+						<!--Affiliate Logo 9-->
+						<div class="affiliate-tile">
+							<img src="images/affilliates/preservation logo.png" alt="Affiliate Logo 9" class="affiliate-logo">
+						</div>
+						<!--Affiliate Logo 10-->
+						<div class="affiliate-tile">
+							<img src="images/affilliates/projecta-logo.png" alt="Affiliate Logo 10" class="affiliate-logo">
+						</div>
 					</div>
 				</div>
 				<!--Carousel Control: Next-->
-				<button class="carousel-btn next" type="button" aria-label="Next testimonials">
+				<button class="carousel-btn next" style="display: none;" type="button" aria-label="Next affiliates">
 					<i class="bi bi-chevron-right"></i>
 				</button>
 			</div>
-			<!--End Testimonials Carousel-->
+			<!--End Affiliates Carousel-->
 		</div>
 	</section>
 
 	<!-- ===== FINAL CTA SECTION ===== -->
-	<section class="final-cta">
+	<section class="final-cta" style="background-image: linear-gradient(135deg, rgba(15, 29, 45, 0.75) 0%, rgba(16, 17, 22, 0.75) 100%), url('images/hero-images/hero-landing.png'); background-attachment: fixed; background-size: cover; background-position: center;">
 		<div class="container text-center reveal-scale">
 			<!--CTA Title-->
 			<h2 class="final-cta-title">Ready to Grow?</h2>
